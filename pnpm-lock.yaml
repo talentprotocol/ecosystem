@@ -12,9 +12,10 @@ importers:
       prettier: 2.8.3
       turbo: 1.7.1
 
-  apps/docs:
+  apps/dapp:
     specifiers:
       '@babel/core': ^7.0.0
+      '@talentprotocol/design-system': workspace:*
       '@types/node': ^17.0.12
       '@types/react': ^18.0.22
       '@types/react-dom': ^18.0.7
@@ -24,13 +25,12 @@ importers:
       react: 18.2.0
       react-dom: 18.2.0
       tsconfig: workspace:*
-      typescript: ^4.5.3
-      ui: workspace:*
+      typescript: latest
     dependencies:
+      '@talentprotocol/design-system': link:../../packages/design-system
       next: 13.1.6_pjwopsidmaokadturxaafygjp4
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      ui: link:../../packages/ui
     devDependencies:
       '@babel/core': 7.20.12
       '@types/node': 17.0.45
@@ -41,33 +41,22 @@ importers:
       tsconfig: link:../../packages/tsconfig
       typescript: 4.9.5
 
-  apps/web:
+  packages/design-system:
     specifiers:
-      '@babel/core': ^7.0.0
-      '@types/node': ^17.0.12
-      '@types/react': ^18.0.22
-      '@types/react-dom': ^18.0.7
-      eslint: 7.32.0
+      '@types/react': ^18.0.17
+      '@types/react-dom': ^18.0.6
+      eslint: ^7.32.0
       eslint-config-custom: workspace:*
-      next: ^13.1.1
-      react: 18.2.0
-      react-dom: 18.2.0
+      react: ^18.2.0
       tsconfig: workspace:*
-      typescript: ^4.5.3
-      ui: workspace:*
-    dependencies:
-      next: 13.1.6_pjwopsidmaokadturxaafygjp4
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
-      ui: link:../../packages/ui
+      typescript: latest
     devDependencies:
-      '@babel/core': 7.20.12
-      '@types/node': 17.0.45
       '@types/react': 18.0.27
       '@types/react-dom': 18.0.10
       eslint: 7.32.0
-      eslint-config-custom: link:../../packages/eslint-config-custom
-      tsconfig: link:../../packages/tsconfig
+      eslint-config-custom: link:../eslint-config-custom
+      react: 18.2.0
+      tsconfig: link:../tsconfig
       typescript: 4.9.5
 
   packages/eslint-config-custom:
@@ -77,7 +66,7 @@ importers:
       eslint-config-prettier: ^8.3.0
       eslint-config-turbo: latest
       eslint-plugin-react: 7.31.8
-      typescript: ^4.7.4
+      typescript: latest
     dependencies:
       eslint: 7.32.0
       eslint-config-next: 13.0.0_jofidmxrjzhj7l6vknpw5ecvfe
@@ -89,24 +78,6 @@ importers:
 
   packages/tsconfig:
     specifiers: {}
-
-  packages/ui:
-    specifiers:
-      '@types/react': ^18.0.17
-      '@types/react-dom': ^18.0.6
-      eslint: ^7.32.0
-      eslint-config-custom: workspace:*
-      react: ^18.2.0
-      tsconfig: workspace:*
-      typescript: ^4.5.2
-    devDependencies:
-      '@types/react': 18.0.27
-      '@types/react-dom': 18.0.10
-      eslint: 7.32.0
-      eslint-config-custom: link:../eslint-config-custom
-      react: 18.2.0
-      tsconfig: link:../tsconfig
-      typescript: 4.9.5
 
 packages:
 

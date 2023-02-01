@@ -1,4 +1,4 @@
-import { Button } from "ui";
+import { Button } from "@talentprotocol/design-system";
 
 export default function Web() {
   return (
