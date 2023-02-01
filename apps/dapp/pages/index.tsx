@@ -1,11 +1,27 @@
-import { Button } from "@talentprotocol/design-system";
-import { envConf } from "@talentprotocol/conf";
+import {
+  fetchPage,
+  useFetchInterceptor,
+} from "@talentprotocol/legacy-dapp-page-fetcher-middleware";
 
-export default function Web() {
+interface Props {
+  page: string;
+}
+
+export async function getServerSideProps(): Promise<{props: Props}> {
+  const page = await fetchPage("/", "", "homepage", true);
+  return {
+    props: { page },
+  };
+}
+
+export default function Web(props: Props) {
+  useFetchInterceptor();
   return (
     <div>
-      <p>{JSON.stringify(envConf)}</p>
-      <Button />
+      <section
+        dangerouslySetInnerHTML={{ __html: props.page }}
+        style={{ width: "100%", height: "100vh" }}
+      />
     </div>
   );
 }

@@ -11,9 +11,10 @@
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "graph": "turbo run build --graph=graph.png"
+    "graph": "turbo run build --graph=graph.svg"
   },
   "devDependencies": {
+    "@types/axios": "^0.14.0",
     "@types/node": "^17.0.12",
     "eslint-config-custom": "workspace:*",
     "prettier": "latest",
