@@ -1,4 +1,4 @@
 module.exports = {
   reactStrictMode: true,
-  transpilePackages: ["@talentprotocol/design-system"],
+  transpilePackages: ["@talentprotocol/design-system, @talentprotocol/conf"],
 };

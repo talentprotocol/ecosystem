@@ -1,9 +1,10 @@
 import { Button } from "@talentprotocol/design-system";
+import { envConf } from "@talentprotocol/conf";
 
 export default function Web() {
   return (
     <div>
-      <h1>Web</h1>
+      <p>{JSON.stringify(envConf)}</p>
       <Button />
     </div>
   );
