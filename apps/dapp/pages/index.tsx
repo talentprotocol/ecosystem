@@ -17,11 +17,9 @@ export async function getServerSideProps(): Promise<{props: Props}> {
 export default function Web(props: Props) {
   useFetchInterceptor();
   return (
-    <div>
-      <section
-        dangerouslySetInnerHTML={{ __html: props.page }}
-        style={{ width: "100%", height: "100vh" }}
-      />
-    </div>
+    <section
+      dangerouslySetInnerHTML={{ __html: props.page }}
+      style={{ width: "100%", height: "100vh" }}
+    />
   );
 }
