@@ -11,9 +11,9 @@
     "node": "16"
   },
   "dependencies": {
+    "@talentprotocol/design-system": "workspace:*",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "@talentprotocol/design-system": "workspace:*"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
@@ -23,6 +23,7 @@
     "@storybook/addon-links": "^6.5.16",
     "@storybook/builder-vite": "^0.4.0",
     "@storybook/cli": "^6.5.16",
+    "@storybook/preview-web": "^6.5.16",
     "@storybook/react": "^6.5.16",
     "@storybook/testing-library": "^0.0.13",
     "@types/react": "^18.0.27",
