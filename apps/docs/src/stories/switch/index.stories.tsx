@@ -6,8 +6,9 @@ export default {
   component: Switch,
 } as ComponentMeta<typeof Switch>;
 
-const Template: ComponentStory<typeof Switch> = (args) => 
+const Template: ComponentStory<typeof Switch> = (args) => (
   // @ts-ignore
-  <Switch {...args} />;
+  <Switch {...args} />
+);
 
 export const Primary = Template.bind({});
