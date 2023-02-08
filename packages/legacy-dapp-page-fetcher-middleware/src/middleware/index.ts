@@ -15,9 +15,10 @@ export const fetchPage = async (
     return memoizedPages.get(pageKey);
   }
   try {
-    const { data } = await axios.get(`${envConf.LEGACY_WEB_DAPP_URL}/${url}`, {
+    const { data, headers } = await axios.get(`${envConf.LEGACY_WEB_DAPP_URL}/${url}`, {
       headers: { cookie },
     });
+    console.log(headers)
     const content = parsePage(data);
     if (isCacheable) {
       memoizedPages.update(pageKey, content);

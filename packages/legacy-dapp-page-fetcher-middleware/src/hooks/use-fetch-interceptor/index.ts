@@ -1,5 +1,5 @@
-import { envConf } from "@talentprotocol/conf";
 import { useEffect } from "react";
+import { envConf } from "@talentprotocol/conf";
 
 export const useFetchInterceptor = () => {
   useEffect(() => {
