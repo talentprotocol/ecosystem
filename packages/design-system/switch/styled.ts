@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 import { SliderProps, SwitchState } from "./types";
 
-const buildStyles = (isChecked: boolean, state: SwitchState) => {
+const buildStyles = (isChecked: boolean, isDarkTheme: boolean, state: SwitchState) => {
   switch (state) {
     case "disabled":
       return css`
@@ -9,6 +9,11 @@ const buildStyles = (isChecked: boolean, state: SwitchState) => {
       `;
     case "enabled":
     default:
+      if (isDarkTheme) {
+        return css`
+          background-color: ${isChecked ? "#BBED55" : "#56595F"};
+        `;
+      }
       return css`
         background-color: ${isChecked ? "#7857ED" : "#AEBBC5"};
       `;
@@ -50,7 +55,7 @@ export const Slider = styled.span<SliderProps>`
   transition: 0.4s;
   border-radius: 34px;
   outline: none;
-  ${({ isChecked, state }) => buildStyles(isChecked, state)}
+  ${({ isChecked, isDarkTheme, state }) => buildStyles(isChecked, isDarkTheme, state)}
 
   &:before {
     position: absolute;
