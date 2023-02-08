@@ -6,7 +6,7 @@ export interface Props {
   isChecked: boolean;
   isDarkTheme: boolean;
   state: SwitchState;
-  onChange?: MouseEventHandler<HTMLLabelElement>;
+  onChange?: MouseEventHandler<HTMLInputElement>;
 }
 
 export interface SliderProps {
