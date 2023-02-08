@@ -1,11 +1,12 @@
 {
   "name": "@talentprotocol/design-system",
-  "version": "0.0.0",
-  "main": "./index.tsx",
-  "types": "./index.tsx",
+  "version": "0.0.0-switch-v3",
+  "main": "./index",
+  "types": "./index.d.ts",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint *.ts*"
+    "lint": "eslint *.ts*",
+    "build": "tsc"
   },
   "devDependencies": {
     "@types/react": "^18.0.17",

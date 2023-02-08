@@ -1,9 +1,13 @@
-import { envConf } from "@talentprotocol/conf";
+import { Switch } from "@talentprotocol/design-system";
+import { useState } from "react";
 
 export default function Web() {
   return (
     <div>
-      <p>{JSON.stringify(envConf)}</p>
+      <Switch
+        isChecked={true}
+        state="disabled"
+      />
     </div>
   );
 }
