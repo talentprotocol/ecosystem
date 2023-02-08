@@ -61,7 +61,6 @@ importers:
       '@storybook/addon-links': ^6.5.16
       '@storybook/builder-vite': ^0.4.0
       '@storybook/cli': ^6.5.16
-      '@storybook/preview-web': ^6.5.16
       '@storybook/react': ^6.5.16
       '@storybook/testing-library': ^0.0.13
       '@talentprotocol/design-system': workspace:*
@@ -85,7 +84,6 @@ importers:
       '@storybook/addon-links': 6.5.16_biqbaboplfbrettd7655fr4n2y
       '@storybook/builder-vite': 0.4.0_tp67kjbly5rteeufjuxllojwbu
       '@storybook/cli': 6.5.16_aed6vusvogjrl3ch6j2aqnpvhe
-      '@storybook/preview-web': 6.5.16_biqbaboplfbrettd7655fr4n2y
       '@storybook/react': 6.5.16_bmok6ag4rw2uvepybr4husxtbm
       '@storybook/testing-library': 0.0.13_biqbaboplfbrettd7655fr4n2y
       '@types/react': 18.0.27
