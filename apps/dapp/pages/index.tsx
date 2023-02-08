@@ -1,9 +1,9 @@
-import { envConf } from "@talentprotocol/conf";
+import { Switch } from "@talentprotocol/design-system";
 
 export default function Web() {
   return (
     <div>
-      <p>{JSON.stringify(envConf)}</p>
+      <Switch isDarkTheme={false} isChecked={true} state="disabled" />
     </div>
   );
 }
