@@ -8,6 +8,11 @@ const buildStyles = (
 ) => {
   switch (state) {
     case "disabled":
+      if (isDarkTheme) {
+        return css`
+          background-color: #27282B;
+        `;
+      }
       return css`
         background-color: #f2f3f5;
       `;
