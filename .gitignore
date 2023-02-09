@@ -34,6 +34,7 @@ yarn-error.log*
 
 # turbo
 .turbo
+graph.svg
 graph.png
 
 # npmrc

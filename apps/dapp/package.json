@@ -13,7 +13,8 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "@talentprotocol/design-system": "workspace:*",
-    "@talentprotocol/conf": "workspace:*"
+    "@talentprotocol/conf": "workspace:*",
+    "@talentprotocol/legacy-dapp-page-fetcher-middleware": "workspace:*"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",

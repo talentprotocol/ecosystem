@@ -4,6 +4,7 @@ importers:
 
   .:
     specifiers:
+      '@types/axios': ^0.14.0
       '@types/node': ^17.0.12
       '@types/styled-components': ^5.1.26
       axios: ^1.3.0
@@ -15,6 +16,7 @@ importers:
       axios: 1.3.0
       styled-components: 5.3.6_pumtretovylab5lwhztzjp2kuy
     devDependencies:
+      '@types/axios': 0.14.0
       '@types/node': 17.0.45
       '@types/styled-components': 5.1.26
       eslint-config-custom: link:packages/eslint-config-custom
@@ -26,6 +28,7 @@ importers:
       '@babel/core': ^7.0.0
       '@talentprotocol/conf': workspace:*
       '@talentprotocol/design-system': workspace:*
+      '@talentprotocol/legacy-dapp-page-fetcher-middleware': workspace:*
       '@types/node': ^17.0.12
       '@types/react': ^18.0.22
       '@types/react-dom': ^18.0.7
@@ -39,6 +42,7 @@ importers:
     dependencies:
       '@talentprotocol/conf': link:../../packages/conf
       '@talentprotocol/design-system': link:../../packages/design-system
+      '@talentprotocol/legacy-dapp-page-fetcher-middleware': link:../../packages/legacy-dapp-page-fetcher-middleware
       next: 13.1.6_pjwopsidmaokadturxaafygjp4
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
@@ -138,6 +142,27 @@ importers:
       eslint-config-turbo: 0.0.7_eslint@7.32.0
       eslint-plugin-react: 7.31.8_eslint@7.32.0
     devDependencies:
+      typescript: 4.9.5
+
+  packages/legacy-dapp-page-fetcher-middleware:
+    specifiers:
+      '@talentprotocol/conf': workspace:*
+      '@types/react': ^18.0.17
+      '@types/react-dom': ^18.0.6
+      eslint: ^7.32.0
+      eslint-config-custom: workspace:*
+      react: ^18.2.0
+      tsconfig: workspace:*
+      typescript: latest
+    dependencies:
+      '@talentprotocol/conf': link:../conf
+    devDependencies:
+      '@types/react': 18.0.27
+      '@types/react-dom': 18.0.10
+      eslint: 7.32.0
+      eslint-config-custom: link:../eslint-config-custom
+      react: 18.2.0
+      tsconfig: link:../tsconfig
       typescript: 4.9.5
 
   packages/tsconfig:
@@ -3828,6 +3853,15 @@ packages:
     resolution: {integrity: sha512-XTIieEY+gvJ39ChLcB4If5zHtPxt3Syj5rgZR+e1ctpmK8NjPf0zFqsz4JpLJT0xla9GFDKjy8Cpu331nrmE1Q==}
     dev: true
 
+  /@types/axios/0.14.0:
+    resolution: {integrity: sha512-KqQnQbdYE54D7oa/UmYVMZKq7CO4l8DEENzOKc4aBRwxCXSlJXGz83flFx5L7AWrOQnmuN3kVsRdt+GZPPjiVQ==}
+    deprecated: This is a stub types definition for axios (https://github.com/mzabriskie/axios). axios provides its own type definitions, so you don't need @types/axios installed!
+    dependencies:
+      axios: 1.3.0
+    transitivePeerDependencies:
+      - debug
+    dev: true
+
   /@types/eslint-scope/3.7.4:
     resolution: {integrity: sha512-9K4zoImiZc3HlIp6AVUDE4CWYx22a+lhSZMYNpbjW04+YF0KWj4pJXnEMjdnFTiQibFFmElcsasJXDbdI/EPhA==}
     dependencies:
@@ -4812,7 +4846,6 @@ packages:
       proxy-from-env: 1.1.0
     transitivePeerDependencies:
       - debug
-    dev: false
 
   /axobject-query/3.1.1:
     resolution: {integrity: sha512-goKlv8DZrK9hUh975fnHzhNIO4jUnFCfv/dszV5VwUGDFjI6vQ2VwoyjYjYNEbBE8AH87TduWP5uyDR1D+Iteg==}
@@ -7280,7 +7313,6 @@ packages:
     peerDependenciesMeta:
       debug:
         optional: true
-    dev: false
 
   /for-each/0.3.3:
     resolution: {integrity: sha512-jqYfLp7mo9vIyQf8ykW2v7A+2N4QjeCeI5+Dz9XraiO1ign81wjiH7Fb9vSOWvQfNtmSa4H2RoQTrrXivdUZmw==}
@@ -7376,7 +7408,6 @@ packages:
       asynckit: 0.4.0
       combined-stream: 1.0.8
       mime-types: 2.1.35
-    dev: false
 
   /forwarded/0.2.0:
     resolution: {integrity: sha512-buRG0fpBtRHSTCOASe6hD258tEubFoRLb4ZNA6NxMVHNw2gOcwHo9wyablzMzOA5z9xA9L1KNjk/Nt6MT9aYow==}
