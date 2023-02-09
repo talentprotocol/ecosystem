@@ -8,6 +8,9 @@ node_modules
 # testing
 coverage
 
+# storybook
+storybook-static
+
 # next.js
 .next/
 out/
@@ -32,3 +35,7 @@ yarn-error.log*
 # turbo
 .turbo
 graph.svg
+graph.png
+
+# npmrc
+packages/**/.npmrc

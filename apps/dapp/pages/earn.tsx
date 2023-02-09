@@ -8,9 +8,9 @@ interface Props {
 }
 
 export async function getServerSideProps(context: any): Promise<{ props: Props }> {
-  const page = await fetchPage("/earn", context.req.headers.cookie, "earn", false);
+  const { content } = await fetchPage("/earn", context.req.headers.cookie, "earn", false);
   return {
-    props: { page },
+    props: { page: content },
   };
 }
 

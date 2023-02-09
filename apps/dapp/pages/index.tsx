@@ -1,3 +1,4 @@
+import { NextApiRequest, NextApiResponse } from "next";
 import {
   fetchPage,
   useFetchInterceptor,
@@ -7,10 +8,12 @@ interface Props {
   page: string;
 }
 
-export async function getServerSideProps(context: any): Promise<{ props: Props }> {
-  const page = await fetchPage("/", context.req.headers.cookie, "homepage", false);
+export async function getServerSideProps(context: { req: NextApiRequest, res: NextApiResponse}): Promise<{ props: Props }> {
+  const { req, res } = context;
+  const { content, setCookies } = await fetchPage("/", req.headers.cookie || "", "homepage", false);
+  res.setHeader('Set-Cookie', setCookies);
   return {
-    props: { page },
+    props: { page: content },
   };
 }
 
