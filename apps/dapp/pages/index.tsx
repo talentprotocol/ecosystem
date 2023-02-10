@@ -11,7 +11,10 @@ interface Props {
 export async function getServerSideProps(context: { req: NextApiRequest, res: NextApiResponse}): Promise<{ props: Props }> {
   const { req, res } = context;
   const { content, setCookies } = await fetchPage("/", req.headers.cookie || "", "homepage", false);
-  res.setHeader('Set-Cookie', setCookies);
+  const parsedCookies = setCookies.map(cookie => {
+    return cookie + "; Domain=.talentprotocol.com";
+  });
+  res.setHeader('Set-Cookie', parsedCookies);
   return {
     props: { page: content },
   };
