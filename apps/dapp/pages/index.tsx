@@ -15,6 +15,7 @@ export async function getServerSideProps(context: { req: NextApiRequest, res: Ne
     return cookie + "; Domain=.talentprotocol.com";
   });
   res.setHeader('Set-Cookie', parsedCookies);
+  console.log(parsedCookies);
   return {
     props: { page: content },
   };
