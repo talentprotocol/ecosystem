@@ -8,9 +8,9 @@ interface Props {
   page: string;
 }
 
-export async function getServerSideProps(context: { req: NextApiRequest, res: NextApiResponse}): Promise<{ props: Props }> {
-  const { req, res } = context;
-  const { content, setCookies } = await fetchPage("/", req.headers.cookie || "", "homepage", false);
+export async function getServerSideProps(context: { req: NextApiRequest, res: NextApiResponse, params: any }): Promise<{ props: Props }> {
+  const { req, res, params } = context;
+  const { content, setCookies } = await fetchPage(`/u/${params.username}`, req.headers.cookie || "", "user-page", false);
   const parsedCookies = setCookies.map(cookie => {
     return cookie + "; Domain=.talentprotocol.com";
   });
