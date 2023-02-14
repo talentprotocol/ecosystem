@@ -7,8 +7,15 @@ interface Props {
   page: string;
 }
 
-export async function getServerSideProps(context: any): Promise<{ props: Props }> {
-  const { content } = await fetchPage("/portfolio", context.req.headers.cookie, "portfolio", false);
+export async function getServerSideProps(
+  context: any
+): Promise<{ props: Props }> {
+  const { content } = await fetchPage(
+    "/portfolio",
+    context.req.headers.cookie,
+    "portfolio",
+    false
+  );
   return {
     props: { page: content },
   };
