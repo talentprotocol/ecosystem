@@ -5,6 +5,11 @@ node_modules
 .pnp
 .pnp.js
 
+# public packages
+packages/design-system/**/*.d.ts
+packages/design-system/**/*.d.ts.map
+packages/design-system/**/*.js
+
 # testing
 coverage
 
