@@ -32,7 +32,7 @@ jobs:
       - name: Publish package to NPM
         working-directory: packages/design-system
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           npm publish || exit 1
 
