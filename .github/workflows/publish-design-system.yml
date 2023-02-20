@@ -1,4 +1,4 @@
-name: Publish Design-System
+name: Publish @talentprotocol/design-system
 
 on:
   workflow_dispatch:
@@ -27,7 +27,7 @@ jobs:
 
       - name: Increment version number
         working-directory: packages/design-system
-        run: npm version patch
+        run: npm --prefix packages/design-system version patch
 
       - name: Commit and push version increment
         run: |
