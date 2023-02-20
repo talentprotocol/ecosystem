@@ -25,10 +25,6 @@ jobs:
         working-directory: packages/design-system
         run: pnpm build
 
-      - name: Increment version number
-        working-directory: packages/design-system
-        run: pnpm version patch
-
       - name: Commit and push version increment
         run: |
           cd packages/design-system
@@ -39,9 +35,4 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           npm publish || exit 1
-
-      - name: Push version increment
-        run: |
-          git add . && git commit -m "Bump version to $(node -p -e "require('./package.json').version")" && git push -u origin main
-
 
