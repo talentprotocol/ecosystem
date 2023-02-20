@@ -1,5 +1,5 @@
 {
-  "name": "ecosystem",
+  "name": "@talentprotocol/ecosystem",
   "version": "0.0.0",
   "private": true,
   "workspaces": [

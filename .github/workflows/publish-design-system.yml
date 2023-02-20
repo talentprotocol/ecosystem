@@ -1,0 +1,44 @@
+name: Publish Design-System
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build package
+        working-directory: packages/design-system
+        run: pnpm build
+
+      - name: Increment version number
+        working-directory: packages/design-system
+        run: npm version patch
+
+      - name: Commit and push version increment
+        run: |
+          cd packages/design-system
+
+      - name: Publish package to NPM
+        working-directory: packages/design-system
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          npm publish || exit 1
+
+      - name: Push version increment
+        run: |
+          git add . && git commit -m "Bump version to $(node -p -e "require('./package.json').version")" && git push -u origin main
+
+
