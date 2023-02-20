@@ -8,10 +8,18 @@ interface Props {
   page: string;
 }
 
-export async function getServerSideProps(context: { req: NextApiRequest, res: NextApiResponse}): Promise<{ props: Props }> {
+export async function getServerSideProps(context: {
+  req: NextApiRequest;
+  res: NextApiResponse;
+}): Promise<{ props: Props }> {
   const { req, res } = context;
-  const { content, setCookies } = await fetchPage("/", req.headers.cookie || "", "homepage", false);
-  res.setHeader('Set-Cookie', setCookies);
+  const { content, setCookies } = await fetchPage(
+    "/",
+    req.headers.cookie || "",
+    "homepage",
+    false
+  );
+  res.setHeader("Set-Cookie", setCookies);
   return {
     props: { page: content },
   };
