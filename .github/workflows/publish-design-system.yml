@@ -25,10 +25,6 @@ jobs:
         working-directory: packages/design-system
         run: pnpm build
 
-      - name: Commit and push version increment
-        run: |
-          cd packages/design-system
-
       - name: Publish package to NPM
         working-directory: packages/design-system
         env:
