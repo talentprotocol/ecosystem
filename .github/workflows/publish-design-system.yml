@@ -22,7 +22,7 @@ jobs:
         run: pnpm install
 
       - name: Recreating .npmrc
-        run: echo "${{ secrets.NPM_TOKEN }}" > .npmrc
+        run: base64 -d ${{ secrets.NPM_TOKEN }} > .npmrc
 
       - name: Build package
         working-directory: packages/design-system
