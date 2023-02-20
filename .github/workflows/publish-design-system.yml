@@ -27,7 +27,7 @@ jobs:
 
       - name: Increment version number
         working-directory: packages/design-system
-        run: npm --prefix packages/design-system version patch
+        run: pnpm version patch
 
       - name: Commit and push version increment
         run: |
