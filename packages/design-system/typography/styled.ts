@@ -13,9 +13,11 @@ import {
 } from "./types";
 
 const baseStyles = (color: PaletteTokens) => css`
-  font-family: "Acid Grotesk TP";
+  font-family: "AcidGrotesk";
   font-style: normal;
-  color: ${buildColor(true, color)};
+  color: ${buildColor(color)};
+  margin: 0;
+  padding: 0;
 `;
 
 const buildHeaderStyles = (type: HeaderTypes): FlattenSimpleInterpolation => {

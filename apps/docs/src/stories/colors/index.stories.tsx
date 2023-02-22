@@ -1,6 +1,11 @@
+import { useContext } from "react";
 import styled from "styled-components";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { buildColor } from "@talentprotocol/design-system";
+import {
+  TalentThemeProvider,
+  buildColor,
+  TalentThemeUpdateContext,
+} from "@talentprotocol/design-system";
 import { lightPalette } from "@talentprotocol/design-system/colors/palette/light-theme";
 import { PaletteTokens } from "@talentprotocol/design-system/colors/palette/types";
 
@@ -28,26 +33,49 @@ const Label = styled.label`
   font-family: sans-serif;
 `;
 
-const ColorList = ({ isDarkTheme }: { isDarkTheme: boolean }) => (
-  <Container>
-    {Object.keys(lightPalette).map((color) => (
-      <ColorSquareContainer key={`${isDarkTheme}-${color}`}>
-        <ColorSquare color={buildColor(isDarkTheme, color as PaletteTokens)} />
-        <Label>{color}</Label>
-      </ColorSquareContainer>
-    ))}
-  </Container>
+const ToggleThemeButton = styled.button`
+  width: 200px;
+  height: 80px;
+  color: white;
+  border: 1px solid black;
+  border-radius: 8px;
+  margin-bottom: 16px;
+`;
+
+const ColorStoryParentComponent = () => (
+  <TalentThemeProvider>
+    <ColorList />
+  </TalentThemeProvider>
 );
+
+const ColorList = () => {
+  const toggleTheme = useContext(TalentThemeUpdateContext);
+  return (
+    <>
+      <ToggleThemeButton onClick={toggleTheme}>toggle</ToggleThemeButton>
+      <Container>
+        {Object.keys(lightPalette).map((color) => {
+          const squareColor = buildColor(color as PaletteTokens);
+          return (
+            <ColorSquareContainer>
+              <ColorSquare color={squareColor} key={squareColor} />
+              <Label>{color}</Label>
+            </ColorSquareContainer>
+          );
+        })}
+      </Container>
+    </>
+  );
+};
 
 export default {
   title: "Desgin System/Colors",
-  component: ColorList,
-} as ComponentMeta<typeof ColorList>;
+  component: ColorStoryParentComponent,
+} as ComponentMeta<typeof ColorStoryParentComponent>;
 
-const Template: ComponentStory<typeof ColorList> = (args) => (
+const Template: ComponentStory<typeof ColorStoryParentComponent> = (args) => (
   // @ts-ignore
-  <ColorList {...args} />
+  <ColorStoryParentComponent {...args} />
 );
 
 export const Default = Template.bind({});
-Default.args = { isDarkTheme: false };

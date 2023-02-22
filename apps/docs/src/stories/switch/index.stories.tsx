@@ -7,13 +7,13 @@ export default {
 } as ComponentMeta<typeof Switch>;
 
 const Template: ComponentStory<typeof Switch> = (args) => (
-    // @ts-ignore
-    <Switch {...args} />
-  );
+  // @ts-ignore
+  <Switch {...args} />
+);
 
 export const Default = Template.bind({});
 Default.args = {
   isChecked: false,
   isDarkTheme: false,
-  state: "disabled"
+  state: "disabled",
 };

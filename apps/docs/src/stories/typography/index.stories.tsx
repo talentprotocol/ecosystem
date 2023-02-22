@@ -12,4 +12,7 @@ const Template: ComponentStory<typeof Typography> = (args) => (
 );
 
 export const Default = Template.bind({});
-Default.args = { children: "This is some text", specs: { variant: "h1", type:"bold" }}
+Default.args = {
+  children: "This is some text",
+  specs: { variant: "h1", type: "bold" },
+};
