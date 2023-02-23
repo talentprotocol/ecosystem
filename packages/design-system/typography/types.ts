@@ -1,11 +1,14 @@
 import { PaletteTokens } from "../colors/palette/types";
 
+export type HeaderVariants = "h1" | "h2" | "h3" | "h4" | "h5";
 export type HeaderTypes = "bold" | "regular";
+export type ParagraphVariants = "p1" | "p2" | "p3";
 export type ParagraphTypes = "bold" | "medium" | "regular";
+export type LabelVariants = "label1" | "label2" | "label3";
 export type LabelTypes = "medium" | "regular";
 
 export interface HeaderProps {
-  variant: "h1" | "h2" | "h3" | "h4" | "h5";
+  variant: HeaderVariants;
   type: HeaderTypes;
 }
 
@@ -15,7 +18,7 @@ export interface StyledHeaderProps {
 }
 
 export interface ParagraphProps {
-  variant: "p1" | "p2" | "p3";
+  variant: ParagraphVariants;
   type: ParagraphTypes;
 }
 
@@ -25,7 +28,7 @@ export interface StyledParagraphProps {
 }
 
 export interface LabelProps {
-  variant: "label1" | "label2" | "label3";
+  variant: LabelVariants;
   type: LabelTypes;
 }
 
@@ -45,6 +48,6 @@ export interface StyledCaptionProps {
 
 export interface Props {
   specs: HeaderProps | ParagraphProps | LabelProps | CaptionProps;
-  color: PaletteTokens;
+  color?: PaletteTokens;
   children: string;
 }

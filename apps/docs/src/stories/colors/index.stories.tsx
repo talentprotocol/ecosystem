@@ -35,11 +35,12 @@ const Label = styled.label`
 
 const ToggleThemeButton = styled.button`
   width: 200px;
-  height: 80px;
-  color: white;
+  height: 32px;
+  color: black;
   border: 1px solid black;
   border-radius: 8px;
   margin-bottom: 16px;
+  cursor: pointer;
 `;
 
 const ColorStoryParentComponent = () => (
@@ -52,7 +53,7 @@ const ColorList = () => {
   const toggleTheme = useContext(TalentThemeUpdateContext);
   return (
     <>
-      <ToggleThemeButton onClick={toggleTheme}>toggle</ToggleThemeButton>
+      <ToggleThemeButton onClick={toggleTheme}>Toggle Theme</ToggleThemeButton>
       <Container>
         {Object.keys(lightPalette).map((color) => {
           const squareColor = buildColor(color as PaletteTokens);
@@ -71,6 +72,12 @@ const ColorList = () => {
 export default {
   title: "Desgin System/Colors",
   component: ColorStoryParentComponent,
+  parameters: {
+    viewMode: "docs",
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  },
 } as ComponentMeta<typeof ColorStoryParentComponent>;
 
 const Template: ComponentStory<typeof ColorStoryParentComponent> = (args) => (
@@ -79,3 +86,6 @@ const Template: ComponentStory<typeof ColorStoryParentComponent> = (args) => (
 );
 
 export const Default = Template.bind({});
+Default.bind({
+  hierarchy: "small",
+});

@@ -1,23 +1,36 @@
 import styled, { css } from "styled-components";
 import { buildColor } from "../colors";
-import { ButtonHierarchy, ButtonSize, StyledProps } from "./types";
+import {
+  ButtonHierarchy,
+  HierarchyToTextColorMapInterface,
+  StyledProps,
+  StyledSizeButtonMap,
+} from "./types";
 
-const buildSizeButtons = (size: ButtonSize) => {
-  switch (size) {
-    case "large":
-      return css`
-        padding: 14px 32px;
-      `;
-    case "medium":
-      return css`
-        padding: 8px 32px;
-      `;
-    case "small":
-    default:
-      return css`
-        padding: 4px 16px;
-      `;
-  }
+export const TEXT_COLOR_MAP: HierarchyToTextColorMapInterface = {
+  primary: "bg01",
+  secondary: "primary01",
+  tertiary: "primary01",
+  danger: "bg01",
+};
+
+export const DISABLED_COLORS_MAP: HierarchyToTextColorMapInterface = {
+  primary: "primaryDisable",
+  secondary: "primaryDisable",
+  tertiary: "primaryDisable",
+  danger: "dangerTint03",
+};
+
+const SIZE_BUTTONS_MAP: StyledSizeButtonMap = {
+  large: css`
+    padding: 14px 32px;
+  `,
+  medium: css`
+    padding: 8px 32px;
+  `,
+  small: css`
+    padding: 4px 16px;
+  `,
 };
 
 const buildHierarchyButtons = (
@@ -28,98 +41,101 @@ const buildHierarchyButtons = (
     case "primary":
       return css`
         background: ${buildColor("primary")};
-        color: ${buildColor("bg01")};
         border-radius: 200px;
-        ${isDisabled &&
-        css`
-          background: ${buildColor("surfaceDisable")};
-          color: ${buildColor("primaryDisable")};
-        `}
 
-        :hover {
-          background: ${buildColor("primaryHover")};
-        }
+        ${isDisabled
+          ? css`
+              border: none;
+              background: ${buildColor("surfaceDisable")};
+            `
+          : css`
+              :hover {
+                background: ${buildColor("primaryHover")};
+              }
 
-        :active {
-          background: ${buildColor("primaryText")};
-        }
+              :active {
+                background: ${buildColor("primaryText")};
+              }
 
-        :focus {
-          border: 3px solid ${buildColor("primaryTint02")};
-        }
+              :focus {
+                border: 3px solid ${buildColor("primaryTint02")};
+              }
+            `}
       `;
     case "secondary":
       return css`
         background: transparent;
-        color: ${buildColor("primary01")};
         border: 1px solid ${buildColor("surfaceHover02")};
         border-radius: 200px;
-        ${isDisabled &&
-        css`
-          background: ${buildColor("surfaceDisable")};
-          color: ${buildColor("primaryDisable")};
-        `}
 
-        :hover {
-          border-color: ${buildColor("primary01")};
-        }
+        ${isDisabled
+          ? css`
+              border: none;
+              background: ${buildColor("surfaceDisable")};
+            `
+          : css`
+              :hover {
+                border-color: ${buildColor("primary01")};
+              }
 
-        :active {
-          background: ${buildColor("surface01")};
-        }
+              :active {
+                background: ${buildColor("surface01")};
+              }
 
-        :focus {
-          border-color: ${buildColor("surfaceHover02")};
-          box-shadow: 0px 0px 0px 3px ${buildColor("primaryTint02")};
-        }
+              :focus {
+                border-color: ${buildColor("surfaceHover02")};
+                box-shadow: 0px 0px 0px 3px ${buildColor("primaryTint02")};
+              }
+            `}
       `;
     case "tertiary":
       return css`
         background: transparent;
-        color: ${buildColor("primary01")};
-        ${isDisabled &&
-        css`
-          background: ${buildColor("surfaceDisable")};
-          color: ${buildColor("dangerTint03")};
-        `}
+        border-radius: 200px;
 
-        :hover {
-          background: ${buildColor("surfaceHover01")};
-        }
+        ${isDisabled
+          ? css`
+              border: none;
+              background: ${buildColor("surfaceDisable")};
+            `
+          : css`
+              :hover {
+                background: ${buildColor("surfaceHover01")};
+              }
 
-        :active {
-          background: ${buildColor("surfaceHover02")};
-        }
+              :active {
+                background: ${buildColor("surfaceHover02")};
+              }
 
-        :focus {
-          border: 3px solid ${buildColor("primaryTint02")};
-        }
+              :focus {
+                border: 3px solid ${buildColor("primaryTint02")};
+              }
+            `}
       `;
     case "danger":
     default:
       return css`
-        background: transparent;
-        color: ${buildColor("bg01")};
-        border: 1px solid ${buildColor("dangerTint01")};
+        background: ${buildColor("danger")};
         border-radius: 200px;
-        ${isDisabled &&
-        css`
-          background: ${buildColor("dangerDisable")};
-          color: ${buildColor("primaryDisable")};
-        `}
 
-        :hover {
-          background: ${buildColor("danger")};
-        }
+        ${isDisabled
+          ? css`
+              background: ${buildColor("dangerDisable")};
+            `
+          : css`
+              :hover {
+                background: ${buildColor("dangerShade01")};
+              }
 
-        :active {
-          background: ${buildColor("dangerShade01")};
-        }
+              :active {
+                background: ${buildColor("dangerTint02")};
+              }
 
-        :focus {
-          background: ${buildColor("dangerTint01")};
-          border: 3px solid ${buildColor("dangerTint02")};
-        }
+              :focus {
+                background: ${buildColor("dangerTint01")};
+                border: 3px solid ${buildColor("dangerTint02")};
+              }
+            `}
       `;
   }
 };
@@ -135,8 +151,10 @@ export const StyledButton = styled.button<StyledProps>`
   justify-content: center;
   align-items: center;
   transition-duration: 0.25s;
+  border: none;
+  outline: none;
   background-color: ${buildColor("primary")};
-  ${({ size }) => buildSizeButtons(size)}
+  ${({ size }) => SIZE_BUTTONS_MAP[size]}
   ${({ hierarchy, isDisabled }) => buildHierarchyButtons(hierarchy, isDisabled)}
   ${({ isStretched }) => buildIsStretched(isStretched)}
 `;

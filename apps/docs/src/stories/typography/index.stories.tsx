@@ -4,10 +4,13 @@ import { Typography } from "@talentprotocol/design-system";
 export default {
   title: "Desgin System/Typography",
   component: Typography,
+  viewMode: "docs",
+  previewTabs: {
+    canvas: { hidden: true },
+  },
 } as ComponentMeta<typeof Typography>;
 
 const Template: ComponentStory<typeof Typography> = (args) => (
-  // @ts-ignore
   <Typography {...args} />
 );
 
