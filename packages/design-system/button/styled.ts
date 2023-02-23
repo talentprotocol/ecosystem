@@ -115,7 +115,7 @@ const buildHierarchyButtons = (
     case "danger":
     default:
       return css`
-        background: ${buildColor("danger")};
+        background: ${buildColor("dangerTint01")};
         border-radius: 200px;
 
         ${isDisabled
@@ -124,7 +124,7 @@ const buildHierarchyButtons = (
             `
           : css`
               :hover {
-                background: ${buildColor("dangerShade01")};
+                background: ${buildColor("danger")};
               }
 
               :active {
@@ -153,6 +153,7 @@ export const StyledButton = styled.button<StyledProps>`
   transition-duration: 0.25s;
   border: none;
   outline: none;
+  cursor: pointer;
   background-color: ${buildColor("primary")};
   ${({ size }) => SIZE_BUTTONS_MAP[size]}
   ${({ hierarchy, isDisabled }) => buildHierarchyButtons(hierarchy, isDisabled)}
