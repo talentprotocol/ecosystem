@@ -14,7 +14,7 @@ import {
 } from "./styled";
 import { Props } from "./types";
 
-export const Typography = ({ specs, color = "primary", children }: Props) => {
+export const Typography = ({ specs, color, children }: Props) => {
   switch (specs.variant) {
     case "h1":
       return (

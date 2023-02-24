@@ -48,6 +48,6 @@ export interface StyledCaptionProps {
 
 export interface Props {
   specs: HeaderProps | ParagraphProps | LabelProps | CaptionProps;
-  color?: PaletteTokens;
+  color: PaletteTokens;
   children: string;
 }
