@@ -14,11 +14,11 @@ export default {
 
 const Template: ComponentStory<typeof SliderSelector> = (args) => {
   return <SliderSelector {...args} />;
-}
+};
 
 export const Default = Template.bind({});
 Default.args = {
   variant: "primary",
   size: 4,
-  selectedIndex: 0
+  selectedIndex: 0,
 };

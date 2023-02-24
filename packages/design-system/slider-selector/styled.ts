@@ -4,20 +4,20 @@ import { StyledSelectorMark, VariantToMaskColorMapType } from "./types";
 
 const VARIANT_TO_ACTIVE_MARK_COLOR_MAP: VariantToMaskColorMapType = {
   primary: css`
-    background: ${buildColor("primary")}
+    background: ${buildColor("primary")};
   `,
   secondary: css`
-    background: ${buildColor("bg01")}
+    background: ${buildColor("bg01")};
   `,
 };
 const VARIANT_TO_INACTIVE_MARK_COLOR_MAP: VariantToMaskColorMapType = {
   primary: css`
     opacity: 0.3;
-    background: ${buildColor("surfaceHover02")}
+    background: ${buildColor("surfaceHover02")};
   `,
   secondary: css`
     opacity: 0.3;
-    background: ${buildColor("bg01")}
+    background: ${buildColor("bg01")};
   `,
 };
 

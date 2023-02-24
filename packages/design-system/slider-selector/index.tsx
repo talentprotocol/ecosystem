@@ -3,7 +3,12 @@ import { Props } from "./types";
 
 export * from "./hooks/use-slider-selector";
 
-export const SliderSelector = ({ size, variant, selectedIndex, selectElement }: Props) => {
+export const SliderSelector = ({
+  size,
+  variant,
+  selectedIndex,
+  selectElement,
+}: Props) => {
   return (
     <Container>
       {new Array(size).fill(undefined).map((_, index) => (
