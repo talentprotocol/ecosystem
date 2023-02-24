@@ -1,6 +1,7 @@
 export * from "./theme";
 export * from "./colors";
 export * from "./button";
+export * from "./pills";
 export * from "./input";
 export * from "./text-area";
 export * from "./icon";
