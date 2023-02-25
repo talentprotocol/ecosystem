@@ -14,53 +14,53 @@ import {
 } from "./styled";
 import { Props } from "./types";
 
-export const Typography = ({ specs, color, children }: Props) => {
+export const Typography = ({ specs, color, children, className }: Props) => {
   switch (specs.variant) {
     case "h1":
       return (
-        <H1 type={specs.type} color={color}>
+        <H1 type={specs.type} color={color} className={className}>
           {children}
         </H1>
       );
     case "h2":
       return (
-        <H2 type={specs.type} color={color}>
+        <H2 type={specs.type} color={color} className={className}>
           {children}
         </H2>
       );
     case "h3":
       return (
-        <H3 type={specs.type} color={color}>
+        <H3 type={specs.type} color={color} className={className}>
           {children}
         </H3>
       );
     case "h4":
       return (
-        <H4 type={specs.type} color={color}>
+        <H4 type={specs.type} color={color} className={className}>
           {children}
         </H4>
       );
     case "h5":
       return (
-        <H5 type={specs.type} color={color}>
+        <H5 type={specs.type} color={color} className={className}>
           {children}
         </H5>
       );
     case "p1":
       return (
-        <P1 type={specs.type} color={color}>
+        <P1 type={specs.type} color={color} className={className}>
           {children}
         </P1>
       );
     case "p2":
       return (
-        <P2 type={specs.type} color={color}>
+        <P2 type={specs.type} color={color} className={className}>
           {children}
         </P2>
       );
     case "p3":
       return (
-        <P3 type={specs.type} color={color}>
+        <P3 type={specs.type} color={color} className={className}>
           {children}
         </P3>
       );
@@ -68,20 +68,20 @@ export const Typography = ({ specs, color, children }: Props) => {
       return <Caption color={color}>{children}</Caption>;
     case "label1":
       return (
-        <Label1 type={specs.type} color={color}>
+        <Label1 type={specs.type} color={color} className={className}>
           {children}
         </Label1>
       );
     case "label2":
       return (
-        <Label2 type={specs.type} color={color}>
+        <Label2 type={specs.type} color={color} className={className}>
           {children}
         </Label2>
       );
     case "label3":
     default:
       return (
-        <Label3 type={specs.type} color={color}>
+        <Label3 type={specs.type} color={color} className={className}>
           {children}
         </Label3>
       );

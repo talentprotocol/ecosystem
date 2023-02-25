@@ -50,4 +50,5 @@ export interface Props {
   specs: HeaderProps | ParagraphProps | LabelProps | CaptionProps;
   color: PaletteTokens;
   children: string;
+  className?: string;
 }
