@@ -1,190 +1,190 @@
-import flags from "./flags.svg";
-import pin from "./pin.svg";
-import alert from "./alert.svg";
-import amazon from "./amazon.svg";
-import apple from "./apple.svg";
-import binance from "./binance.svg";
-import binoculars from "./binoculars.svg";
-import bold from "./bold.svg";
-import bookmarks from "./bookmarks.svg";
-import bulb from "./bulb.svg";
-import burn from "./burn.svg";
-import calendar from "./calendar.svg";
-import camera from "./camera.svg";
-import celo from "./celo.svg";
-import chat from "./chat.svg";
-import check from "./check.svg";
-import coinPurse from "./coin-purse.svg";
-import coins from "./coins.svg";
-import copy from "./copy.svg";
-import danger from "./danger.svg";
-import deleteIcon from "./delete.svg";
-import discord from "./discord.svg";
-import earth from "./earth.svg";
-import editFill from "./edit-fill.svg";
-import edit from "./edit.svg";
-import email from "./email.svg";
-import eth from "./eth.svg";
-import expand from "./expand.svg";
-import externalLink from "./external-link.svg";
-import facebook from "./facebook.svg";
-import file from "./file.svg";
-import flag from "./flag.svg";
-import flame from "./flame.svg";
-import flash from "./flash.svg";
-import gif from "./gif.svg";
-import gift from "./gift.svg";
-import globe from "./globe.svg";
-import gnosis from "./gnosis.svg";
-import graph1 from "./graph-1.svg";
-import graph2 from "./graph-2.svg";
-import helpWheel from "./help-wheel.svg";
-import help from "./help.svg";
-import home from "./home.svg";
-import img from "./img.svg";
-import information from "./information.svg";
-import learn from "./learn.svg";
-import linkedin from "./linkedin.svg";
-import loading from "./loading.svg";
-import metamask from "./metamask.svg";
-import mic from "./mic.svg";
-import mobileMenu from "./mobile-menu.svg";
-import monitor from "./monitor.svg";
-import navigation from "./navigation.svg";
-import newChat from "./new-chat.svg";
-import newMessage from "./new-message.svg";
-import nfts from "./nfts.svg";
-import padlock from "./padlock.svg";
-import pause from "./pause.svg";
-import pig from "./pig.svg";
-import planet from "./planet.svg";
-import polygon from "./polygon.svg";
-import progress from "./progress.svg";
-import quests from "./quests.svg";
-import rating from "./rating.svg";
-import refresh from "./refresh.svg";
-import revolut from "./revolut.svg";
-import reward from "./reward.svg";
-import rocket from "./rocket.svg";
-import search from "./search.svg";
-import send from "./send.svg";
-import settings from "./settings.svg";
-import share2 from "./share-2.svg";
-import share from "./share.svg";
-import signOut from "./sign-out.svg";
-import smile from "./smile.svg";
-import spotify from "./spotify.svg";
-import success from "./success.svg";
-import support from "./support.svg";
-import supporters from "./supporters.svg";
-import supporting from "./supporting.svg";
-import swap from "./swap.svg";
-import talentProtocol from "./talent-protocol.svg";
-import talent from "./talent.svg";
-import telegram from "./telegram.svg";
-import toolBox from "./tool-box.svg";
-import trophy from "./trophy.svg";
-import twitter from "./twitter.svg";
-import typing from "./typing.svg";
-import uniswap from "./uniswap.svg";
-import unstoppable from "./unstoppable.svg";
-import verified2 from "./verified-2.svg";
-import wallet2 from "./wallet-2.svg";
-import wallet from "./wallet.svg";
+import { Flags } from "./flags";
+import { Pin } from "./pin";
+import { Alert } from "./alert";
+import { Amazon } from "./amazon";
+import { Apple } from "./apple";
+import { Binance } from "./binance";
+import { Binoculars } from "./binoculars";
+import { Bold } from "./bold";
+import { Bookmarks } from "./bookmarks";
+import { Bulb } from "./bulb";
+import { Burn } from "./burn";
+import { Calendar } from "./calendar";
+import { Camera } from "./camera";
+import { Celo } from "./celo";
+import { Chat } from "./chat";
+import { Check } from "./check";
+import { CoinPurse } from "./coin-purse";
+import { Coins } from "./coins";
+import { Copy } from "./copy";
+import { Danger } from "./danger";
+import { DeleteIcon } from "./delete";
+import { Discord } from "./discord";
+import { Earth } from "./earth";
+import { EditFill } from "./edit-fill";
+import { Edit } from "./edit";
+import { Email } from "./email";
+import { Eth } from "./eth";
+import { Expand } from "./expand";
+import { ExternalLink } from "./external-link";
+import { Facebook } from "./facebook";
+import { File } from "./file";
+import { Flag } from "./flag";
+import { Flame } from "./flame";
+import { Flash } from "./flash";
+import { Gif } from "./gif";
+import { Gift } from "./gift";
+import { Globe } from "./globe";
+import { Gnosis } from "./gnosis";
+import { Graph1 } from "./graph-1";
+import { Graph2 } from "./graph-2";
+import { HelpWheel } from "./help-wheel";
+import { Help } from "./help";
+import { Home } from "./home";
+import { Img } from "./img";
+import { Information } from "./information";
+import { Learn } from "./learn";
+import { Linkedin } from "./linkedin";
+import { Loading } from "./loading";
+import { Metamask } from "./metamask";
+import { Mic } from "./mic";
+import { MobileMenu } from "./mobile-menu";
+import { Monitor } from "./monitor";
+import { Navigation } from "./navigation";
+import { NewChat } from "./new-chat";
+import { NewMessage } from "./new-message";
+import { NFTs } from "./nfts";
+import { PadLock } from "./padlock";
+import { Pause } from "./pause";
+import { Pig } from "./pig";
+import { Planet } from "./planet";
+import { Polygon } from "./polygon";
+import { Progrss } from "./progress";
+import { Quests } from "./quests";
+import { Rating } from "./rating";
+import { Refresh } from "./refresh";
+import { Revolut } from "./revolut";
+import { Reward } from "./reward";
+import { Rocket } from "./rocket";
+import { Search } from "./search";
+import { Send } from "./send";
+import { Settings } from "./settings";
+import { Share2 } from "./share-2";
+import { Share } from "./share";
+import { SignOut } from "./sign-out";
+import { Smile } from "./smile";
+import { Spotify } from "./spotify";
+import { Success } from "./success";
+import { Support } from "./support";
+import { Supporters } from "./supporters";
+import { Supporting } from "./supporting";
+import { Swap } from "./swap";
+import { TalentProtocol } from "./talent-protocol";
+import { Talent } from "./talent";
+import { Telegram } from "./telegram";
+import { ToolBox } from "./tool-box";
+import { Trophy } from "./trophy";
+import { Twitter } from "./twitter";
+import { Typing } from "./typing";
+import { Uniswap } from "./uniswap";
+import { Unstoppable } from "./unstoppable";
+import { Verified2 } from "./verified-2";
+import { Wallet2 } from "./wallet-2";
+import { Wallet } from "./wallet";
 import { IconMapType } from "../types";
 
 export const icons: IconMapType = {
-  flags,
-  pin,
-  alert,
-  amazon,
-  apple,
-  binance,
-  binoculars,
-  bold,
-  bookmarks,
-  bulb,
-  burn,
-  calendar,
-  camera,
-  celo,
-  chat,
-  check,
-  "coin-purse": coinPurse,
-  coins,
-  copy,
-  danger,
-  delete: deleteIcon,
-  discord,
-  earth,
-  "edit-fill": editFill,
-  edit,
-  email,
-  eth,
-  expand,
-  "external-link": externalLink,
-  facebook,
-  file,
-  flag,
-  flame,
-  flash,
-  gif,
-  gift,
-  globe,
-  gnosis,
-  "graph-1": graph1,
-  "graph-2": graph2,
-  "help-wheel": helpWheel,
-  help,
-  home,
-  img,
-  information,
-  learn,
-  linkedin,
-  loading,
-  metamask,
-  mic,
-  "mobile-menu": mobileMenu,
-  monitor,
-  navigation,
-  "new-chat": newChat,
-  "new-message": newMessage,
-  nfts,
-  padlock,
-  pause,
-  pig,
-  planet,
-  polygon,
-  progress,
-  quests,
-  rating,
-  refresh,
-  revolut,
-  reward,
-  rocket,
-  search,
-  send,
-  settings,
-  "share-2": share2,
-  share,
-  "sign-out": signOut,
-  smile,
-  spotify,
-  success,
-  support,
-  supporters,
-  supporting,
-  swap,
-  "talent-protocol": talentProtocol,
-  talent,
-  telegram,
-  "tool-box": toolBox,
-  trophy,
-  twitter,
-  typing,
-  uniswap,
-  unstoppable,
-  "verified-2": verified2,
-  "wallet-2": wallet2,
-  wallet,
+  flags: Flags,
+  pin: Pin,
+  alert: Alert,
+  amazon: Amazon,
+  apple: Apple,
+  binance: Binance,
+  binoculars: Binoculars,
+  bold: Bold,
+  bookmarks: Bookmarks,
+  bulb: Bulb,
+  burn: Burn,
+  calendar: Calendar,
+  camera: Camera,
+  celo: Celo,
+  chat: Chat,
+  check: Check,
+  "coin-purse": CoinPurse,
+  coins: Coins,
+  copy: Copy,
+  danger: Danger,
+  delete: DeleteIcon,
+  discord: Discord,
+  earth: Earth,
+  "edit-fill": EditFill,
+  edit: Edit,
+  email: Email,
+  eth: Eth,
+  expand: Expand,
+  "external-link": ExternalLink,
+  facebook: Facebook,
+  file: File,
+  flag: Flag,
+  flame: Flame,
+  flash: Flash,
+  gif: Gif,
+  gift: Gift,
+  globe: Globe,
+  gnosis: Gnosis,
+  "graph-1": Graph1,
+  "graph-2": Graph2,
+  "help-wheel": HelpWheel,
+  help: Help,
+  home: Home,
+  img: Img,
+  information: Information,
+  learn: Learn,
+  linkedin: Linkedin,
+  loading: Loading,
+  metamask: Metamask,
+  mic: Mic,
+  "mobile-menu": MobileMenu,
+  monitor: Monitor,
+  navigation: Navigation,
+  "new-chat": NewChat,
+  "new-message": NewMessage,
+  nfts: NFTs,
+  padlock: PadLock,
+  pause: Pause,
+  pig: Pig,
+  planet: Planet,
+  polygon: Polygon,
+  progress: Progrss,
+  quests: Quests,
+  rating: Rating,
+  refresh: Refresh,
+  revolut: Revolut,
+  reward: Reward,
+  rocket: Rocket,
+  search: Search,
+  send: Send,
+  settings: Settings,
+  "share-2": Share2,
+  share: Share,
+  "sign-out": SignOut,
+  smile: Smile,
+  spotify: Spotify,
+  success: Success,
+  support: Support,
+  supporters: Supporters,
+  supporting: Supporting,
+  swap: Swap,
+  "talent-protocol": TalentProtocol,
+  talent: Talent,
+  telegram: Telegram,
+  "tool-box": ToolBox,
+  trophy: Trophy,
+  twitter: Twitter,
+  typing: Typing,
+  uniswap: Uniswap,
+  unstoppable: Unstoppable,
+  "verified-2": Verified2,
+  "wallet-2": Wallet2,
+  wallet: Wallet,
 };

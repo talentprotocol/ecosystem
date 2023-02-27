@@ -1,6 +1,8 @@
+import { useMemo } from "react";
 import { icons } from "./icons";
 import { Props } from "./types";
 
-export const Icon = ({ name }: Props) => {
-  return <img src={icons[name]} alt={`icon ${name}`} />;
-};
+export const Icon = ({ name, color = "primary" }: Props) => {
+    const Component = useMemo(() => icons[name], [name]);
+    return <Component color={color} />
+}

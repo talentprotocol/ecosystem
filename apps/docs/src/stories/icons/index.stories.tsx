@@ -17,4 +17,5 @@ const Template: ComponentStory<typeof Icon> = (args) => <Icon {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   name: "alert",
+  color: "primary",
 };

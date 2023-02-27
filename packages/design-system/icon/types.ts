@@ -1,3 +1,10 @@
+import { ElementType } from "react";
+import { PaletteTokens } from "../colors/palette/types";
+
+export interface SVGProps {
+  color?: PaletteTokens;
+}
+
 export type SVGList =
   | "flags"
   | "pin"
@@ -93,8 +100,9 @@ export type SVGList =
   | "wallet-2"
   | "wallet";
 
-export type IconMapType = Record<SVGList, string>;
+export type IconMapType = Record<SVGList, ElementType>;
 
 export interface Props {
   name: SVGList;
+  color?: PaletteTokens;
 }
