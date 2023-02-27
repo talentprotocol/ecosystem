@@ -1,3 +1,4 @@
+import { buildColor } from "../../colors";
 import { SVGProps } from "../types";
 
 export const Camera = ({ color = "primary" }: SVGProps) => (

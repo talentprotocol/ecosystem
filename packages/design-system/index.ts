@@ -2,6 +2,8 @@ export * from "./theme";
 export * from "./colors";
 export * from "./button";
 export * from "./pills";
+export * from "./tabs";
+export * from "./card";
 export * from "./avatar";
 export * from "./input";
 export * from "./text-area";
