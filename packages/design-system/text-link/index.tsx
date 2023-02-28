@@ -10,9 +10,14 @@ export const TextLink = ({
   text,
   size,
   href,
+  newPage = false,
 }: Props) => (
   <Container>
-    <InnerContainer href={href} color={color}>
+    <InnerContainer
+      href={href}
+      color={color}
+      target={newPage ? "_blank" : "_self"}
+    >
       {!!leftIcon && <Icon name={leftIcon} color={color} />}
       <Typography
         specs={{

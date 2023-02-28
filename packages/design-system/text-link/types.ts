@@ -14,4 +14,5 @@ export interface Props {
   text: string;
   size: TextLinkSizes;
   href: string;
+  newPage?: boolean;
 }

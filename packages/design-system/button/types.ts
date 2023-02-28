@@ -35,7 +35,10 @@ export interface StyledButtonTypography {
 export interface Props {
   size: ButtonSize;
   hierarchy: ButtonHierarchy;
+  isLink?: boolean;
+  newPage?: boolean;
   text?: string;
+  href?: string;
   iconColor?: PaletteTokens;
   isDisabled?: boolean;
   isStretched?: boolean;

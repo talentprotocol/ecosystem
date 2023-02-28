@@ -19,14 +19,14 @@ export default {
   },
 } as ComponentMeta<typeof Button>;
 
-const Template: ComponentStory<typeof Button> = (args) => (
+const ButtonTemplate: ComponentStory<typeof Button> = (args) => (
   <Container>
     <Button {...args} />
   </Container>
 );
 
-export const Default = Template.bind({});
-Default.args = {
+export const ButtonComponent = ButtonTemplate.bind({});
+ButtonComponent.args = {
   hierarchy: "primary",
   size: "large",
   text: "Button Content",

@@ -175,6 +175,33 @@ export const StyledButton = styled.button<StyledProps>`
   background-color: ${buildColor("primary")};
   ${({ size }) => SIZE_BUTTONS_MAP[size]}
   ${({ hierarchy, isDisabled }) => buildHierarchyButtons(hierarchy, isDisabled)}
+    ${({ isStretched }) => buildIsStretched(isStretched)}
+    ${({ hasNoText, size }) =>
+    hasNoText &&
+    css`
+      padding: 12px;
+      border-radius: 50%;
+
+      ${NO_TEXT_BUTTON_SIZE[size]}
+    `}
+  
+      label {
+    cursor: pointer;
+  }
+`;
+
+export const StyledButtonLink = styled.a<StyledProps>`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.25s;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: ${buildColor("primary")};
+  ${({ size }) => SIZE_BUTTONS_MAP[size]}
+  ${({ hierarchy, isDisabled }) => buildHierarchyButtons(hierarchy, isDisabled)}
   ${({ isStretched }) => buildIsStretched(isStretched)}
   ${({ hasNoText, size }) =>
     hasNoText &&
@@ -184,4 +211,8 @@ export const StyledButton = styled.button<StyledProps>`
 
       ${NO_TEXT_BUTTON_SIZE[size]}
     `}
+
+    label {
+    cursor: pointer;
+  }
 `;
