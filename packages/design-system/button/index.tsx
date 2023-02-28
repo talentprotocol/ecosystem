@@ -23,19 +23,18 @@ export const Button = ({
   iconColor = "bg01",
   leftIcon,
   rightIcon,
-  isLink,
   newPage,
   href,
   onClick,
 }: Props) => {
   return (
     <StyledButton
-      as={isLink ? "a" : "button"}
+      as={!!href ? "a" : "button"}
       hierarchy={hierarchy}
       size={size}
       isStretched={isStretched}
       isDisabled={isDisabled}
-      disabled={!isLink && isDisabled}
+      disabled={!href && isDisabled}
       href={href}
       target={newPage ? "_blank" : "_self"}
       onClick={onClick}
