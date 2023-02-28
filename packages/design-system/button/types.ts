@@ -1,5 +1,7 @@
+import { MouseEventHandler } from "react";
 import { FlattenSimpleInterpolation } from "styled-components";
 import { PaletteTokens } from "../colors/palette/types";
+import { SVGList } from "../icon/types";
 import { LabelVariants } from "../typography/types";
 
 export type ButtonSize = "small" | "medium" | "large";
@@ -22,6 +24,7 @@ export interface StyledProps {
   hierarchy: ButtonHierarchy;
   isDisabled: boolean;
   isStretched: boolean;
+  hasNoText: boolean;
 }
 
 export interface StyledButtonTypography {
@@ -32,7 +35,11 @@ export interface StyledButtonTypography {
 export interface Props {
   size: ButtonSize;
   hierarchy: ButtonHierarchy;
-  text: string;
+  text?: string;
+  iconColor?: PaletteTokens;
   isDisabled?: boolean;
   isStretched?: boolean;
+  leftIcon?: SVGList;
+  rightIcon?: SVGList;
+  onClick?: MouseEventHandler;
 }

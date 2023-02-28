@@ -3,7 +3,6 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Button } from "@talentprotocol/design-system";
 
 const Container = styled.div`
-  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,4 +30,5 @@ Default.args = {
   hierarchy: "primary",
   size: "large",
   text: "Button Content",
+  iconColor: "bg01",
 };

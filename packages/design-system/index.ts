@@ -3,6 +3,7 @@ export * from "./colors";
 export * from "./button";
 export * from "./pills";
 export * from "./tabs";
+export * from "./text-link";
 export * from "./card";
 export * from "./avatar";
 export * from "./input";

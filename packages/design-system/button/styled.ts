@@ -33,6 +33,24 @@ const SIZE_BUTTONS_MAP: StyledSizeButtonMap = {
   `,
 };
 
+const NO_TEXT_BUTTON_SIZE: StyledSizeButtonMap = {
+  large: css`
+    padding: 8px;
+    width: 32px;
+    height: 32px;
+  `,
+  medium: css`
+    padding: 12px;
+    width: 40px;
+    height: 40px;
+  `,
+  small: css`
+    padding: 16px;
+    width: 52px;
+    height: 52px;
+  `,
+};
+
 const buildHierarchyButtons = (
   hierarchy: ButtonHierarchy,
   isDisabled: boolean
@@ -58,7 +76,7 @@ const buildHierarchyButtons = (
               }
 
               :focus {
-                border: 3px solid ${buildColor("primaryTint02")};
+                box-shadow: 0px 0px 0px 3px ${buildColor("primaryTint02")};
               }
             `}
       `;
@@ -108,7 +126,7 @@ const buildHierarchyButtons = (
               }
 
               :focus {
-                border: 3px solid ${buildColor("primaryTint02")};
+                box-shadow: 0px 0px 0px 3px ${buildColor("primaryTint02")};
               }
             `}
       `;
@@ -133,7 +151,7 @@ const buildHierarchyButtons = (
 
               :focus {
                 background: ${buildColor("dangerTint01")};
-                border: 3px solid ${buildColor("dangerTint02")};
+                box-shadow: 0px 0px 0px 3px ${buildColor("dangerTint02")};
               }
             `}
       `;
@@ -158,4 +176,12 @@ export const StyledButton = styled.button<StyledProps>`
   ${({ size }) => SIZE_BUTTONS_MAP[size]}
   ${({ hierarchy, isDisabled }) => buildHierarchyButtons(hierarchy, isDisabled)}
   ${({ isStretched }) => buildIsStretched(isStretched)}
+  ${({ hasNoText, size }) =>
+    hasNoText &&
+    css`
+      padding: 12px;
+      border-radius: 50%;
+
+      ${NO_TEXT_BUTTON_SIZE[size]}
+    `}
 `;

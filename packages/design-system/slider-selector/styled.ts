@@ -24,7 +24,7 @@ const VARIANT_TO_INACTIVE_MARK_COLOR_MAP: VariantToMaskColorMapType = {
 export const Container = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 24px;
+  gap: 4px;
 `;
 
 export const SelectorMark = styled.div<StyledSelectorMark>`
