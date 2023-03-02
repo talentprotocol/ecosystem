@@ -12,26 +12,26 @@ export const Swap = ({ color = "primary" }: SVGProps) => (
     <path
       d="M7 10H15.5"
       stroke={buildColor(color)}
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M13.5 8L15.5 10L13.5 12"
       stroke={buildColor(color)}
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M9 6H0.5"
       stroke={buildColor(color)}
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M2.5 8L0.5 6L2.5 4"
       stroke={buildColor(color)}
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );

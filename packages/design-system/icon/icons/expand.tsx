@@ -9,30 +9,30 @@ export const Expand = ({ color = "primary" }: SVGProps) => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <g clip-path="url(#clip0_81_48)">
+    <g clipPath="url(#clip0_81_48)">
       <path
         d="M6.5 9.49867L0.5 15.4987"
         stroke={buildColor(color)}
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M15.5 4.99867V0.498672H11"
         stroke={buildColor(color)}
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M0.5 10.9987V15.4987H5"
         stroke={buildColor(color)}
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M15.5 0.498672L9.5 6.49867"
         stroke={buildColor(color)}
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </g>
     <defs>

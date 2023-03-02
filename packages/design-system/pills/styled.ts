@@ -14,17 +14,21 @@ export const PillContainer = styled.div<StyledPill>`
   border-radius: 200px;
   border: 1px solid ${buildColor("surfaceHover02")};
   background: transparent;
-  cursor: pointer;
   transition-duration: 0.25s;
 
-  label {
-    cursor: pointer;
-  }
+  ${({ isClickable }) =>
+    isClickable &&
+    css`
+      cursor: pointer;
 
-  :hover {
-    border: 1px solid ${buildColor("primary01")};
-  }
+      label {
+        cursor: pointer;
+      }
 
+      :hover {
+        border: 1px solid ${buildColor("primary01")};
+      }
+    `}
   ${({ isSelected }) =>
     isSelected &&
     css`

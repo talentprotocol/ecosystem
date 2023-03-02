@@ -12,20 +12,20 @@ export const Monitor = ({ color = "primary" }: SVGProps) => (
     <path
       d="M14.8333 1.91667H1.16667C0.798477 1.91667 0.5 2.21515 0.5 2.58334V11.25C0.5 11.6182 0.798477 11.9167 1.16667 11.9167H14.8333C15.2015 11.9167 15.5 11.6182 15.5 11.25V2.58334C15.5 2.21515 15.2015 1.91667 14.8333 1.91667Z"
       stroke={buildColor(color)}
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M5 14.4167H11"
       stroke={buildColor(color)}
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M8 11.9167V14.4167"
       stroke={buildColor(color)}
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );

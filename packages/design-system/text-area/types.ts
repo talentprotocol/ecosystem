@@ -1,4 +1,4 @@
-import { ChangeEventHandler } from "react";
+import { ChangeEventHandler, FocusEventHandler } from "react";
 
 export interface StyledTextAreaProps {
   isDisabled: boolean;
@@ -6,8 +6,10 @@ export interface StyledTextAreaProps {
 }
 
 export interface Props {
-  ref: React.RefObject<HTMLInputElement>;
-  onChange: ChangeEventHandler;
+  textAreaRef?: React.RefObject<HTMLInputElement>;
+  onChange?: ChangeEventHandler;
+  onBlur?: FocusEventHandler;
+  onFocus?: FocusEventHandler;
   defaultValue: string;
   isDisabled?: boolean;
   label?: string;

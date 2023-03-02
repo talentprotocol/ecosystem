@@ -31,6 +31,7 @@ export const SelectorMark = styled.div<StyledSelectorMark>`
   min-width: 24px;
   min-height: 2px;
   border-radius: 16px;
+  cursor: pointer;
   ${({ isActive, variant }) =>
     isActive
       ? VARIANT_TO_ACTIVE_MARK_COLOR_MAP[variant]

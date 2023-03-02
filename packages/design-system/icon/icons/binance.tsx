@@ -8,7 +8,7 @@ export const Binance = ({}: SVGProps) => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <g clip-path="url(#clip0_5387_8778)">
+    <g clipPath="url(#clip0_5387_8778)">
       <path
         d="M7.34149 10.0845L12.0027 5.42516L16.6659 10.0883L19.3766 7.37572L12.0027 0L4.62891 7.37383L7.34149 10.0845Z"
         fill="#F3BA2F"

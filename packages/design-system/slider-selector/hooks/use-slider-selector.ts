@@ -3,7 +3,7 @@ import { useCallback, useState } from "react";
 export const useSliderSelector = (size: number) => {
   const [selectedElement, setSelectedElement] = useState(0);
   const jumpElement = useCallback(() => {
-    if (selectedElement === size) {
+    if (selectedElement === size - 1) {
       setSelectedElement(0);
       return;
     }

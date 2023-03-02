@@ -3,8 +3,10 @@ import { Container, InputContainer, LabelBar, StyledTextArea } from "./styled";
 import { Props } from "./types";
 
 export const TextArea = ({
-  ref,
+  textAreaRef,
   onChange,
+  onFocus,
+  onBlur,
   defaultValue,
   isDisabled = false,
   label,
@@ -35,8 +37,10 @@ export const TextArea = ({
     <InputContainer isDisabled={isDisabled} hasError={hasError}>
       <StyledTextArea
         placeholder="Input"
-        ref={ref}
+        ref={textAreaRef}
         onChange={onChange}
+        onFocus={onFocus}
+        onBlur={onBlur}
         defaultValue={defaultValue}
         disabled={isDisabled}
       />

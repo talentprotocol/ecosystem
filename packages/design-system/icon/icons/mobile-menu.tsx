@@ -12,14 +12,14 @@ export const MobileMenu = ({ color = "primary" }: SVGProps) => (
     <path
       d="M0.5 5H15.5"
       stroke={buildColor(color)}
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M0.5 11H15.5"
       stroke={buildColor(color)}
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );

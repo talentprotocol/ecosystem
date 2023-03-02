@@ -31,4 +31,7 @@ Default.args = {
       isDisabled: true,
     },
   ],
+  onClick: (pill, index) => {
+    console.log(`clicked ${pill} on index ${index}`);
+  },
 };

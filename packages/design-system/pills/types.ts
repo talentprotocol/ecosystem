@@ -2,6 +2,7 @@ export type PillVariant = "primary" | "secondary";
 
 export interface StyledPill {
   isSelected: boolean;
+  isClickable: boolean;
   isDisabled?: boolean;
 }
 
@@ -13,5 +14,5 @@ export interface Pill {
 
 export interface Props {
   pillList: Pill[];
-  onClick: (N: number, P: Pill) => void;
+  onClick?: (N: number, P: Pill) => void;
 }

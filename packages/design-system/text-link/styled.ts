@@ -14,6 +14,7 @@ export const InnerContainer = styled.a<StyledTextLinkProps>`
   gap: 12px;
   border-bottom: 1px solid transparent;
   cursor: pointer;
+  text-decoration: none;
 
   label {
     cursor: pointer;

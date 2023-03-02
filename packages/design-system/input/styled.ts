@@ -68,6 +68,6 @@ export const StyledInput = styled.input<StyledInputProps>`
       `) ||
     (hasError &&
       css`
-        color: ${buildColor("primaryTint02")};
+        color: ${buildColor("primary01")};
       `)}
 `;

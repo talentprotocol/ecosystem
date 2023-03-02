@@ -7,9 +7,11 @@ export const Pills = ({ pillList, onClick }: Props) => {
     <Container>
       {pillList.map((pill, index) => (
         <PillContainer
+          key={pill.content}
+          isClickable={!!onClick}
           isSelected={pill.isSelected}
           isDisabled={pill.isDisabled}
-          onClick={() => onClick(index, pill)}
+          onClick={onClick && (() => onClick(index, pill))}
         >
           <Typography
             specs={{ variant: "label2", type: "medium" }}
