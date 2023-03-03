@@ -2,7 +2,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Icon } from "@talentprotocol/design-system";
 
 export default {
-  title: "Desgin System/Icon",
+  title: "Design System/Icon",
   component: Icon,
   parameters: {
     viewMode: "docs",

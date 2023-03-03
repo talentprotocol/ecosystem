@@ -3,6 +3,8 @@ import {
   FocusEventHandler,
   HTMLInputTypeAttribute,
 } from "react";
+import { PaletteTokens } from "../colors/palette/types";
+import { SVGList } from "../icon/types";
 
 export interface StyledInputProps {
   isDisabled: boolean;
@@ -22,4 +24,6 @@ export interface Props {
   caption?: string;
   hasError?: boolean;
   type?: HTMLInputTypeAttribute;
+  iconColor?: PaletteTokens;
+  rightIcon?: SVGList;
 }

@@ -10,7 +10,7 @@ const Container = styled.div`
 `;
 
 export default {
-  title: "Desgin System/Input",
+  title: "Design System/Input",
   component: Input,
   parameters: {
     viewMode: "docs",

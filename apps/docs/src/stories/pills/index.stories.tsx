@@ -2,7 +2,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Pills } from "@talentprotocol/design-system";
 
 export default {
-  title: "Desgin System/Pills",
+  title: "Design System/Pills",
   component: Pills,
   parameters: {
     viewMode: "docs",

@@ -1,3 +1,4 @@
+import { Icon } from "../icon";
 import { Typography } from "../typography";
 import { Container, InputContainer, LabelBar, StyledInput } from "./styled";
 import { Props } from "./types";
@@ -15,6 +16,8 @@ export const Input = ({
   caption,
   hasError = false,
   type,
+  iconColor,
+  rightIcon,
 }: Props) => (
   <Container>
     <LabelBar>
@@ -52,6 +55,7 @@ export const Input = ({
         hasError={hasError}
         type={type}
       />
+      {rightIcon && <Icon name={rightIcon} color={iconColor} />}
     </InputContainer>
     {shortDescription && (
       <Typography

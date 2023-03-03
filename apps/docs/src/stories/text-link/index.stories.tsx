@@ -5,7 +5,7 @@ import { TextLink } from "@talentprotocol/design-system";
 const Container = styled.div``;
 
 export default {
-  title: "Desgin System/TextLink",
+  title: "Design System/TextLink",
   component: TextLink,
   parameters: {
     viewMode: "docs",

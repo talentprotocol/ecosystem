@@ -2,7 +2,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Switch } from "@talentprotocol/design-system";
 
 export default {
-  title: "Desgin System/Switch",
+  title: "Design System/Switch",
   component: Switch,
   viewMode: "docs",
   previewTabs: {

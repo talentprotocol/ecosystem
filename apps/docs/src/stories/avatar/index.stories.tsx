@@ -10,7 +10,7 @@ const Container = styled.div`
 `;
 
 export default {
-  title: "Desgin System/Avatar",
+  title: "Design System/Avatar",
   component: Avatar,
   parameters: {
     viewMode: "docs",

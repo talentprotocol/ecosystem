@@ -2,7 +2,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { SliderSelector } from "@talentprotocol/design-system";
 
 export default {
-  title: "Desgin System/SliderSelector",
+  title: "Design System/SliderSelector",
   component: SliderSelector,
   parameters: {
     viewMode: "docs",

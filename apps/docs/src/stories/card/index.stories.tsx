@@ -2,7 +2,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Card } from "@talentprotocol/design-system";
 
 export default {
-  title: "Desgin System/Card",
+  title: "Design System/Card",
   component: Card,
   parameters: {
     viewMode: "docs",

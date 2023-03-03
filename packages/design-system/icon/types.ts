@@ -3,6 +3,7 @@ import { PaletteTokens } from "../colors/palette/types";
 
 export interface SVGProps {
   color?: PaletteTokens;
+  size: number;
 }
 
 export type SVGList =
@@ -98,11 +99,15 @@ export type SVGList =
   | "unstoppable"
   | "verified-2"
   | "wallet-2"
-  | "wallet";
+  | "wallet"
+  | "order-by"
+  | "order-by-active"
+  | "remove";
 
 export type IconMapType = Record<SVGList, ElementType>;
 
 export interface Props {
   name: SVGList;
   color?: PaletteTokens;
+  size?: number;
 }

@@ -70,7 +70,7 @@ const ColorList = () => {
 };
 
 export default {
-  title: "Desgin System/Colors",
+  title: "Design System/Colors",
   component: ColorStoryParentComponent,
   parameters: {
     viewMode: "docs",

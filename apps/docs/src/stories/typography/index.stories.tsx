@@ -2,7 +2,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Typography } from "@talentprotocol/design-system";
 
 export default {
-  title: "Desgin System/Typography",
+  title: "Design System/Typography",
   component: Typography,
   viewMode: "docs",
   previewTabs: {

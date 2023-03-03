@@ -10,7 +10,7 @@ const Container = styled.div`
 `;
 
 export default {
-  title: "Desgin System/TextArea",
+  title: "Design System/TextArea",
   component: TextArea,
   parameters: {
     viewMode: "docs",

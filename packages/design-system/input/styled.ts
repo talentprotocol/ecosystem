@@ -22,6 +22,7 @@ export const InputContainer = styled.div<StyledInputProps>`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  padding: 4px 6px 4px 0;
   gap: 10px;
   border: 1px solid ${buildColor("surfaceHover02")};
   border-radius: 8px;

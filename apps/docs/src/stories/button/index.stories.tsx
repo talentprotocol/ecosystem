@@ -9,7 +9,7 @@ const Container = styled.div`
 `;
 
 export default {
-  title: "Desgin System/Button",
+  title: "Design System/Button",
   component: Button,
   parameters: {
     viewMode: "docs",

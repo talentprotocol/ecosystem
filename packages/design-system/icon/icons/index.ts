@@ -91,7 +91,10 @@ import { Unstoppable } from "./unstoppable";
 import { Verified2 } from "./verified-2";
 import { Wallet2 } from "./wallet-2";
 import { Wallet } from "./wallet";
+import { OrderBy } from "./order-by";
+import { OrderByActive } from "./order-by-active";
 import { IconMapType } from "../types";
+import { Remove } from "./remove";
 
 export const icons: IconMapType = {
   flags: Flags,
@@ -187,4 +190,7 @@ export const icons: IconMapType = {
   "verified-2": Verified2,
   "wallet-2": Wallet2,
   wallet: Wallet,
+  "order-by": OrderBy,
+  "order-by-active": OrderByActive,
+  "remove": Remove
 };
