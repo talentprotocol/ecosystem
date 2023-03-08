@@ -1,10 +1,10 @@
 import { buildColor } from "../../colors";
 import { SVGProps } from "../types";
 
-export const Danger = ({ color = "primary" }: SVGProps) => (
+export const Danger = ({ color = "primary", size }: SVGProps) => (
   <svg
-    width="64"
-    height="64"
+    width={size}
+    height={size}
     viewBox="0 0 64 64"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

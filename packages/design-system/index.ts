@@ -6,6 +6,8 @@ export * from "./tabs";
 export * from "./modal";
 export * from "./text-link";
 export * from "./dropdown";
+export * from "./breakpoints";
+export * from "./spinner";
 export * from "./card";
 export * from "./avatar";
 export * from "./input";

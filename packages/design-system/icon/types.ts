@@ -102,7 +102,9 @@ export type SVGList =
   | "wallet"
   | "order-by"
   | "order-by-active"
-  | "remove";
+  | "remove"
+  | "logo-light"
+  | "question";
 
 export type IconMapType = Record<SVGList, ElementType>;
 

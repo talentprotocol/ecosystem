@@ -24,7 +24,7 @@ export const Dropdown = ({
         tabIndex={0}
         onFocus={() => setIsOpen(true)}
         onBlur={() => {
-          setTimeout(() => setIsOpen(false), 50);
+          setTimeout(() => setIsOpen(false), 100);
           onBlur();
         }}
       >

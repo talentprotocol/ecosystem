@@ -18,15 +18,15 @@ export const TalentThemeProvider = ({ children }: Props) => {
   const [theme, setTheme] = useState<ThemeInterface>(() => {
     // @ts-ignore
     if (typeof window !== "undefined") {
-      if (
+      // @ts-ignore
+      const hasBodyLightClassname = document.body.className
+        .split(" ")
         // @ts-ignore
-        document.body.className
-          .split(" ")
-          // @ts-ignore
-          .find((name) => name.includes("body")) === "light"
-      )
+        .some((name) => name === "light-body");
+      if (hasBodyLightClassname) {
         return inMemoryTheme;
-      inMemoryTheme.isDarkTheme = false;
+      }
+      inMemoryTheme.isDarkTheme = true;
       return inMemoryTheme;
     } else {
       return inMemoryTheme;

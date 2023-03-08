@@ -95,6 +95,8 @@ import { OrderBy } from "./order-by";
 import { OrderByActive } from "./order-by-active";
 import { IconMapType } from "../types";
 import { Remove } from "./remove";
+import { LogoLight } from "./logo-light";
+import { Question } from "./question";
 
 export const icons: IconMapType = {
   flags: Flags,
@@ -192,5 +194,7 @@ export const icons: IconMapType = {
   wallet: Wallet,
   "order-by": OrderBy,
   "order-by-active": OrderByActive,
-  "remove": Remove
+  remove: Remove,
+  "logo-light": LogoLight,
+  question: Question,
 };

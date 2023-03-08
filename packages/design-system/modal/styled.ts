@@ -3,6 +3,8 @@ import { buildColor } from "../colors";
 
 export const Container = styled.div`
   position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   display: flex;
@@ -34,9 +36,9 @@ export const TitleRow = styled.div`
 `;
 
 export const IconContainer = styled.div`
-    cursor: pointer;
+  cursor: pointer;
 
-    svg {
-        cursor: pointer;
-    }
+  svg {
+    cursor: pointer;
+  }
 `;

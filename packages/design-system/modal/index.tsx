@@ -5,7 +5,7 @@ import { Props } from "./types";
 
 export const Modal = ({ title, isOpen, children, closeModal }: Props) => {
   return isOpen ? (
-    <Container onClick={closeModal}>
+    <Container>
       <InnerContainer>
         <TitleRow>
           <Typography specs={{ variant: "h5", type: "bold" }} color="primary01">
