@@ -1,10 +1,10 @@
 import { buildColor } from "../../colors";
 import { SVGProps } from "../types";
 
-export const Rocket = ({ color = "primary" }: SVGProps) => (
+export const Rocket = ({ color = "primary", size = 16 }: SVGProps) => (
   <svg
-    width="16"
-    height="16"
+    width={size}
+    height={size}
     viewBox="0 0 16 16"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +49,7 @@ export const Rocket = ({ color = "primary" }: SVGProps) => (
     </g>
     <defs>
       <clipPath id="clip0_74_207">
-        <rect width="16" height="16" fill="transparent" />
+        <rect width={size} height={size} fill="transparent" />
       </clipPath>
     </defs>
   </svg>

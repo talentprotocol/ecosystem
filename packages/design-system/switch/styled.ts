@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { buildColor } from "../colors";
 import { SliderProps, SwitchState } from "./types";
 
 const buildSliderStyles = (
@@ -18,13 +19,8 @@ const buildSliderStyles = (
       `;
     case "enabled":
     default:
-      if (isDarkTheme) {
-        return css`
-          background-color: ${isChecked ? "#BBED55" : "#56595F"};
-        `;
-      }
       return css`
-        background-color: ${isChecked ? "#7857ED" : "#AEBBC5"};
+        background-color: ${isChecked ? buildColor("primary") : buildColor("primaryDisable")};
       `;
   }
 };
@@ -43,10 +39,10 @@ export const buildPosition = (isChecked: boolean) =>
 export const buildCircleStyles = (isDisabled: boolean, isDarkTheme: boolean) =>
   isDisabled
     ? css`
-        background-color: ${isDarkTheme ? "#56595F" : "#AEBBC5"};
+        background-color: ${buildColor("primaryDisable")};
       `
     : css`
-        background-color: #ffffff;
+        background-color: ${buildColor("bg01")};
       `;
 
 export const LabelContainer = styled.label`

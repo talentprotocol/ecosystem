@@ -1,10 +1,10 @@
 import { buildColor } from "../../colors";
 import { SVGProps } from "../types";
 
-export const Flags = ({ color = "primary" }: SVGProps) => (
+export const Flags = ({ color = "primary", size = 16 }: SVGProps) => (
   <svg
-    width="17"
-    height="16"
+    width={size}
+    height={size}
     viewBox="0 0 17 16"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -38,8 +38,8 @@ export const Flags = ({ color = "primary" }: SVGProps) => (
     <defs>
       <clipPath id="clip0_8120_13526">
         <rect
-          width="16"
-          height="16"
+          width={size}
+          height={size}
           fill="transparent"
           transform="translate(0.936035)"
         />

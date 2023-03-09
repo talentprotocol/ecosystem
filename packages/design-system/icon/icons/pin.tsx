@@ -1,11 +1,11 @@
 import { buildColor } from "../../colors";
 import { SVGProps } from "../types";
 
-export const Pin = ({ color = "primary" }: SVGProps) => (
+export const Pin = ({ color = "primary", size = 16 }: SVGProps) => (
   <svg
-    width="17"
-    height="16"
-    viewBox="0 0 17 16"
+    width={size}
+    height={size}
+    viewBox="0 0 16 16"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >

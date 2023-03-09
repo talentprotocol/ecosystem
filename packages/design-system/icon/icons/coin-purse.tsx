@@ -1,10 +1,10 @@
 import { buildColor } from "../../colors";
 import { SVGProps } from "../types";
 
-export const CoinPurse = ({ color = "primary" }: SVGProps) => (
+export const CoinPurse = ({ color = "primary", size = 24 }: SVGProps) => (
   <svg
-    width="24"
-    height="24"
+    width={size}
+    height={size}
     viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +41,7 @@ export const CoinPurse = ({ color = "primary" }: SVGProps) => (
     </g>
     <defs>
       <clipPath id="clip0_4152_6506">
-        <rect width="24" height="24" fill="transparent" />
+        <rect width={size} height={size} fill="transparent" />
       </clipPath>
     </defs>
   </svg>

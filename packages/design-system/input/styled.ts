@@ -16,13 +16,12 @@ export const LabelBar = styled.div`
 `;
 
 export const InputContainer = styled.div<StyledInputProps>`
-  width: 100%;
   color: ${buildColor("primary04")};
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 4px 6px 4px 0;
+  padding: 8px 10px;
   gap: 10px;
   border: 1px solid ${buildColor("surfaceHover02")};
   border-radius: 8px;
@@ -54,7 +53,6 @@ export const InputContainer = styled.div<StyledInputProps>`
 export const StyledInput = styled.input<StyledInputProps>`
   width: 100%;
   ${baseTypographyStyles("primary01")}
-  padding: 10px 8px;
   border: none;
   outline: none;
   background: transparent;

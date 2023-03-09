@@ -8,6 +8,7 @@ export const Input = ({
   onChange,
   onBlur,
   onFocus,
+  onEnterCallback,
   defaultValue,
   placeholder,
   isDisabled = false,
@@ -17,6 +18,7 @@ export const Input = ({
   hasError = false,
   type,
   iconColor,
+  leftIcon,
   rightIcon,
 }: Props) => (
   <Container>
@@ -42,8 +44,25 @@ export const Input = ({
         </Typography>
       )}
     </LabelBar>
-    <InputContainer isDisabled={isDisabled} hasError={hasError}>
+    <InputContainer
+      isDisabled={isDisabled}
+      hasError={hasError}
+      onClick={() => {
+        inputRef?.current?.focus();
+      }}
+    >
+      {leftIcon && (
+        <Icon
+          name={leftIcon}
+          color={isDisabled ? "primaryDisable" : iconColor}
+        />
+      )}
       <StyledInput
+        onKeyDown={(event: React.KeyboardEvent<HTMLInputElement>) => {
+          if (event.key === "Enter" && onEnterCallback) {
+            onEnterCallback();
+          }
+        }}
         placeholder={placeholder}
         ref={inputRef}
         onBlur={onBlur}
@@ -55,7 +74,12 @@ export const Input = ({
         hasError={hasError}
         type={type}
       />
-      {rightIcon && <Icon name={rightIcon} color={iconColor} />}
+      {rightIcon && (
+        <Icon
+          name={rightIcon}
+          color={isDisabled ? "primaryDisable" : iconColor}
+        />
+      )}
     </InputContainer>
     {shortDescription && (
       <Typography

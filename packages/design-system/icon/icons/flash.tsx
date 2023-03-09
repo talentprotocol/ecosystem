@@ -1,11 +1,11 @@
 import { buildColor } from "../../colors";
 import { SVGProps } from "../types";
 
-export const Flash = ({ color = "primary" }: SVGProps) => (
+export const Flash = ({ color = "primary", size = 16 }: SVGProps) => (
   <svg
-    width="17"
-    height="16"
-    viewBox="0 0 17 16"
+    width={size}
+    height={size}
+    viewBox="0 0 16 16"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
@@ -18,8 +18,8 @@ export const Flash = ({ color = "primary" }: SVGProps) => (
     <defs>
       <clipPath id="clip0_8160_13518">
         <rect
-          width="16"
-          height="16"
+          width={size}
+          height={size}
           fill="transparent"
           transform="translate(0.936035)"
         />

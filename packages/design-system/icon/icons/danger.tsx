@@ -1,7 +1,7 @@
 import { buildColor } from "../../colors";
 import { SVGProps } from "../types";
 
-export const Danger = ({ color = "primary", size }: SVGProps) => (
+export const Danger = ({ color = "primary", size = 64 }: SVGProps) => (
   <svg
     width={size}
     height={size}

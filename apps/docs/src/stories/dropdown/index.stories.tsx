@@ -26,5 +26,17 @@ const Template: ComponentStory<typeof Dropdown> = (args) => (
 
 export const Default = Template.bind({});
 Default.args = {
-  options: ["First option", "Second option", "Third option", "Second option", "Third option", "Second option", "Third option", "Second option", "Third option", "Second option", "Third option"],
+  options: [
+    "First option",
+    "Second option",
+    "Third option",
+    "Second option",
+    "Third option",
+    "Second option",
+    "Third option",
+    "Second option",
+    "Third option",
+    "Second option",
+    "Third option",
+  ],
 };

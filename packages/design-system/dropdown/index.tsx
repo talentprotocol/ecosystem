@@ -19,14 +19,17 @@ export const Dropdown = ({
 }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
   const outterContainerRef = useRef<HTMLDivElement>(null);
-  const onBlurCallback = useCallback((e: FocusEvent<HTMLDivElement>) => {
-    if (outterContainerRef.current) {
-      if (!outterContainerRef.current.contains(e.relatedTarget as Node)) {
-        setIsOpen(false);
-        onBlur();
+  const onBlurCallback = useCallback(
+    (e: FocusEvent<HTMLDivElement>) => {
+      if (outterContainerRef.current) {
+        if (!outterContainerRef.current.contains(e.relatedTarget as Node)) {
+          setIsOpen(false);
+          onBlur();
+        }
       }
-    }
-  }, [onBlur, outterContainerRef]);
+    },
+    [onBlur, outterContainerRef]
+  );
   return (
     <OutterContainer
       onFocus={() => setIsOpen(true)}

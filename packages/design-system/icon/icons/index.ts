@@ -59,7 +59,7 @@ import { Pause } from "./pause";
 import { Pig } from "./pig";
 import { Planet } from "./planet";
 import { Polygon } from "./polygon";
-import { Progrss } from "./progress";
+import { Progress } from "./progress";
 import { Quests } from "./quests";
 import { Rating } from "./rating";
 import { Refresh } from "./refresh";
@@ -160,7 +160,7 @@ export const icons: IconMapType = {
   pig: Pig,
   planet: Planet,
   polygon: Polygon,
-  progress: Progrss,
+  progress: Progress,
   quests: Quests,
   rating: Rating,
   refresh: Refresh,

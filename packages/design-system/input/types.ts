@@ -16,6 +16,7 @@ export interface Props {
   onChange?: ChangeEventHandler;
   onBlur?: FocusEventHandler;
   onFocus?: FocusEventHandler;
+  onEnterCallback?: Function;
   defaultValue?: string;
   placeholder?: string;
   isDisabled?: boolean;
@@ -26,4 +27,5 @@ export interface Props {
   type?: HTMLInputTypeAttribute;
   iconColor?: PaletteTokens;
   rightIcon?: SVGList;
+  leftIcon?: SVGList;
 }

@@ -1,6 +1,6 @@
 import { SVGProps } from "../types";
 
-export const Gnosis = ({ color = "primary" }: SVGProps) => (
+export const Gnosis = ({ }: SVGProps) => (
   <svg
     width="24"
     height="24"

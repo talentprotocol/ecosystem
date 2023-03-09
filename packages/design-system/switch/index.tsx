@@ -1,7 +1,6 @@
 import { LabelContainer, Slider } from "./styled";
 import { Props } from "./types";
 
-// TODO: Refactor this component to be according the DS standards
 export const Switch = ({ isChecked, onChange, state, isDarkTheme }: Props) => (
   <LabelContainer>
     <input
