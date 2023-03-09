@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "lib": ["es2021", "dom"]
   },
   "extends": "tsconfig/react-library.json",
   "include": ["."],

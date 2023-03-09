@@ -6,7 +6,7 @@ export interface StyledTextAreaProps {
 }
 
 export interface Props {
-  textAreaRef?: React.RefObject<HTMLInputElement>;
+  textAreaRef?: React.RefObject<HTMLTextAreaElement>;
   onChange?: ChangeEventHandler;
   onBlur?: FocusEventHandler;
   onFocus?: FocusEventHandler;
