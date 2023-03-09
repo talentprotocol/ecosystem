@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState, useRef, FocusEvent } from "react";
 import { Icon } from "../icon";
 import { Typography } from "../typography";
 import {
@@ -18,16 +18,23 @@ export const Dropdown = ({
   selectValue,
 }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
+  const outterContainerRef = useRef<HTMLDivElement>(null);
+  const onBlurCallback = useCallback((e: FocusEvent<HTMLDivElement>) => {
+    if (outterContainerRef.current) {
+      if (!outterContainerRef.current.contains(e.relatedTarget as Node)) {
+        setIsOpen(false);
+        onBlur();
+      }
+    }
+  }, [onBlur, outterContainerRef]);
   return (
-    <OutterContainer>
-      <Container
-        tabIndex={0}
-        onFocus={() => setIsOpen(true)}
-        onBlur={() => {
-          setTimeout(() => setIsOpen(false), 100);
-          onBlur();
-        }}
-      >
+    <OutterContainer
+      onFocus={() => setIsOpen(true)}
+      onBlur={onBlurCallback}
+      tabIndex={0}
+      ref={outterContainerRef}
+    >
+      <Container>
         {!value && (
           <Typography
             specs={{ variant: "label2", type: "regular" }}
@@ -54,10 +61,11 @@ export const Dropdown = ({
           <OptionsInnerContainer>
             {options.map((option) => (
               <Option
+                tabIndex={0}
                 key={option}
                 onClick={() => {
-                  selectValue(option);
                   setIsOpen(false);
+                  selectValue(option);
                 }}
               >
                 <Typography

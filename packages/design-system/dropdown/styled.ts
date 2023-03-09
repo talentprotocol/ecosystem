@@ -43,6 +43,7 @@ export const OptionsContainer = styled.div`
 export const OptionsInnerContainer = styled.div`
   max-height: 336px;
   padding: 8px;
+  overflow-y: scroll;
   display: flex;
   flex-direction: column;
 `;
