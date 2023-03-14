@@ -1,13 +1,13 @@
-import { LabelContainer, Slider } from "./styled";
+import { LabelContainer, Slider, StyledInput } from "./styled";
 import { Props } from "./types";
 
-export const Switch = ({ isChecked, onChange, state, isDarkTheme }: Props) => (
+export const Switch = ({ isChecked, onChange, state }: Props) => (
   <LabelContainer>
-    <input
+    <StyledInput
       type="checkbox"
       defaultChecked={isChecked}
       onClick={state !== "disabled" ? onChange : undefined}
     />
-    <Slider isChecked={isChecked} state={state} isDarkTheme={isDarkTheme} />
+    <Slider isChecked={isChecked} state={state} />
   </LabelContainer>
 );

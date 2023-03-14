@@ -12,17 +12,17 @@ const IMAGE_SIZE_MAP: ImageSizeMapType = {
   sm: css`
     width: 32px;
     height: 32px;
-    border-radiux: 50%;
+    border-radius: 50%;
   `,
   md: css`
     width: 40px;
     height: 40px;
-    border-radiux: 50%;
+    border-radius: 50%;
   `,
   lg: css`
     width: 120px;
     height: 120px;
-    border-radiux: 50%;
+    border-radius: 50%;
   `,
 };
 
@@ -36,6 +36,8 @@ export const Container = styled.div`
 
 export const StyledImage = styled.img<StyledImageProps>`
   ${({ size }) => IMAGE_SIZE_MAP[size]}
+  overflow: hidden;
+  object-fit: cover;
 `;
 
 export const StyledName = styled(Typography)<StyledNameProps>`

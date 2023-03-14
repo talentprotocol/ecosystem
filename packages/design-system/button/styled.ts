@@ -172,6 +172,8 @@ export const StyledButton = styled.button<StyledProps>`
   border: none;
   outline: none;
   cursor: pointer;
+  text-align: center;
+  text-decoration: none;
   background-color: ${buildColor("primary")};
   ${({ size }) => SIZE_BUTTONS_MAP[size]}
   ${({ hierarchy, isDisabled }) => buildHierarchyButtons(hierarchy, isDisabled)}

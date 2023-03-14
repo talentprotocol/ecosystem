@@ -2,25 +2,18 @@ import styled, { css } from "styled-components";
 import { buildColor } from "../colors";
 import { SliderProps, SwitchState } from "./types";
 
-const buildSliderStyles = (
-  isChecked: boolean,
-  isDarkTheme: boolean,
-  state: SwitchState
-) => {
+const buildSliderStyles = (isChecked: boolean, state: SwitchState) => {
   switch (state) {
     case "disabled":
-      if (isDarkTheme) {
-        return css`
-          background-color: #27282b;
-        `;
-      }
       return css`
-        background-color: #f2f3f5;
+        background-color: ${buildColor("surfaceDisable")};
       `;
     case "enabled":
     default:
       return css`
-        background-color: ${isChecked ? buildColor("primary") : buildColor("primaryDisable")};
+        background-color: ${isChecked
+          ? buildColor("primary")
+          : buildColor("primaryDisable")};
       `;
   }
 };
@@ -36,7 +29,7 @@ export const buildPosition = (isChecked: boolean) =>
         top: 2px;
       `;
 
-export const buildCircleStyles = (isDisabled: boolean, isDarkTheme: boolean) =>
+export const buildCircleStyles = (isDisabled: boolean) =>
   isDisabled
     ? css`
         background-color: ${buildColor("primaryDisable")};
@@ -69,8 +62,7 @@ export const Slider = styled.span<SliderProps>`
   transition: 0.4s;
   border-radius: 34px;
   outline: none;
-  ${({ isChecked, isDarkTheme, state }) =>
-    buildSliderStyles(isChecked, isDarkTheme, state)}
+  ${({ isChecked, state }) => buildSliderStyles(isChecked, state)}
 
   &:before {
     position: absolute;
@@ -78,10 +70,11 @@ export const Slider = styled.span<SliderProps>`
     height: 20px;
     width: 20px;
     ${({ isChecked }) => buildPosition(isChecked)}
-    ${({ state, isDarkTheme }) =>
-      buildCircleStyles(state === "disabled", isDarkTheme)}
+    ${({ state }) => buildCircleStyles(state === "disabled")}
     -webkit-transition: 0.4s;
     transition: 0.4s;
     border-radius: 50%;
   }
 `;
+
+export const StyledInput = styled.input``;
