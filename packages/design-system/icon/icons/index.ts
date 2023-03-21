@@ -97,6 +97,7 @@ import { IconMapType } from "../types";
 import { Remove } from "./remove";
 import { LogoLight } from "./logo-light";
 import { Question } from "./question";
+import { Arrow } from "./arrow";
 
 export const icons: IconMapType = {
   flags: Flags,
@@ -197,4 +198,5 @@ export const icons: IconMapType = {
   remove: Remove,
   "logo-light": LogoLight,
   question: Question,
+  arrow: Arrow,
 };

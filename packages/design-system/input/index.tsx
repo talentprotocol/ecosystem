@@ -60,7 +60,7 @@ export const Input = ({
       <StyledInput
         onKeyDown={(event: React.KeyboardEvent<HTMLInputElement>) => {
           if (event.key === "Enter" && onEnterCallback) {
-            onEnterCallback();
+            onEnterCallback(event);
           }
         }}
         placeholder={placeholder}

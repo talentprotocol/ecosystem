@@ -18,6 +18,7 @@ export const InnerContainer = styled.a<StyledTextLinkProps>`
 
   label {
     cursor: pointer;
+    text-decoration: none;
   }
 
   :hover {

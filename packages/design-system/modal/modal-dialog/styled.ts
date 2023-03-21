@@ -1,18 +1,19 @@
 import styled from "styled-components";
-import { buildColor } from "../colors";
+import { buildColor } from "../../colors";
 
 export const Container = styled.div`
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
+  max-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background: ${buildColor("surfaceHover01")}80;
   padding: 16px;
-  cursor: pointer;
+  z-index: 1000;
 `;
 
 export const InnerContainer = styled.section`
@@ -37,6 +38,8 @@ export const TitleRow = styled.div`
 
 export const IconContainer = styled.div`
   cursor: pointer;
+  display: flex;
+  align-items: center;
 
   svg {
     cursor: pointer;
