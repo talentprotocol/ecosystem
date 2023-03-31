@@ -12,14 +12,14 @@ export const Remove = ({ color = "primary", size = 16 }: SVGProps) => (
     <path
       d="M3 13L13 3"
       stroke={buildColor(color)}
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M3 3L13 13"
       stroke={buildColor(color)}
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );

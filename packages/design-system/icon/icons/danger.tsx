@@ -16,14 +16,14 @@ export const Danger = ({ color = "primary", size = 64 }: SVGProps) => (
     <path
       d="M25 39.5L40 24.5"
       stroke={buildColor(color)}
-      stroke-width="3"
+      strokeWidth="3"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
       d="M25 24.5L40 39.5"
       stroke={buildColor(color)}
-      stroke-width="3"
+      strokeWidth="3"
       strokeLinecap="round"
       strokeLinejoin="round"
     />

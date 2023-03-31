@@ -4,7 +4,7 @@ export const useTabs = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const selectElement = useCallback(
     (index: number) => {
-      selectElement(index);
+      setSelectedIndex(index);
     },
     [setSelectedIndex]
   );

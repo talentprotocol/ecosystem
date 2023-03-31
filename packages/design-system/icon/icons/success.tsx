@@ -17,7 +17,7 @@ export const Success = ({ color = "primary", size = 64 }: SVGProps) => (
       <path
         d="M44 20.9999L29.2434 42.0776C29.0487 42.3573 28.7903 42.5868 28.4895 42.7471C28.1887 42.9074 27.8541 42.9939 27.5133 42.9996C27.1725 43.0052 26.8352 42.9298 26.5293 42.7795C26.2234 42.6293 25.9575 42.4084 25.7537 42.1353L22 37.1315"
         stroke={buildColor(color)}
-        stroke-width="3"
+        strokeWidth="3"
         strokeLinecap="round"
         strokeLinejoin="round"
       />

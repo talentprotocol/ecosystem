@@ -105,7 +105,12 @@ export type SVGList =
   | "remove"
   | "logo-light"
   | "question"
-  | "arrow";
+  | "arrow"
+  | "qr"
+  | "check-chat"
+  | "mailbox"
+  | "flower"
+  | "sponsor";
 
 export type IconMapType = Record<SVGList, ElementType>;
 

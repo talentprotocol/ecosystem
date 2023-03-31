@@ -1,5 +1,6 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { buildColor } from "../colors";
+import { getTheme } from "../theme";
 
 export const OutterContainer = styled.div`
   position: relative;
@@ -29,6 +30,12 @@ export const Container = styled.div`
   }
 `;
 
+export const SelectedOptionContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 16px;
+`;
+
 export const OptionsContainer = styled.div`
   width: 100%;
   position: absolute;
@@ -38,6 +45,15 @@ export const OptionsContainer = styled.div`
   border: 1px solid ${buildColor("surfaceHover02")};
   border-radius: 8px;
   z-index: 1;
+
+  ${() =>
+    getTheme().isDarkTheme
+      ? css`
+          box-shadow: 0px 8px 24px rgba(0, 0, 0, 1);
+        `
+      : css`
+          box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.04);
+        `}
 `;
 
 export const OptionsInnerContainer = styled.div`
@@ -52,6 +68,9 @@ export const Option = styled.div`
   cursor: pointer;
   padding: 8px;
   border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 
   label {
     cursor: pointer;

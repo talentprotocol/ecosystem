@@ -33,6 +33,7 @@ Default.args = {
   userId: 1,
   name: "",
   ticker: "",
+  occupation: "",
   isNameUnderlined: false,
   isDisabled: false,
 };

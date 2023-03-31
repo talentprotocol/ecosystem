@@ -2,6 +2,8 @@ import { Typography } from "../typography";
 import { BottomBar, Container, TabContainer } from "./styled";
 import { Props } from "./types";
 
+export * from "./hooks/use-tabs";
+
 export const Tabs = ({
   tabList,
   selectedIndex,

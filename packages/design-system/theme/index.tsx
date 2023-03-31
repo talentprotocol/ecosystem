@@ -7,31 +7,41 @@ let inMemoryTheme: ThemeInterface = {
 };
 
 let memoizedToggleThemeCallback = () => {};
+let didCheckThemeRun = false;
 
-export const getTheme = () => inMemoryTheme;
+const checkTheme = (forceDarktheme = false) => {
+  didCheckThemeRun = true;
+  if (forceDarktheme) {
+    inMemoryTheme.isDarkTheme = true;
+    return inMemoryTheme;
+  }
+  // @ts-ignore
+  if (typeof window !== "undefined") {
+    // @ts-ignore
+    const hasBodyDarkClassname = document.body.className
+      .split(" ")
+      // @ts-ignore
+      .some((name) => name === "dark-body");
+    if (!hasBodyDarkClassname) {
+      return inMemoryTheme;
+    }
+    inMemoryTheme.isDarkTheme = true;
+    return inMemoryTheme;
+  } else {
+    return inMemoryTheme;
+  }
+};
+
+export const getTheme = () => (didCheckThemeRun ? inMemoryTheme : checkTheme());
 
 export const TalentThemeUpdateContext = createContext(() => {
   console.error("Attempting to update theme outside provider");
 });
 
-export const TalentThemeProvider = ({ children }: Props) => {
-  const [theme, setTheme] = useState<ThemeInterface>(() => {
-    // @ts-ignore
-    if (typeof window !== "undefined") {
-      // @ts-ignore
-      const hasBodyLightClassname = document.body.className
-        .split(" ")
-        // @ts-ignore
-        .some((name) => name === "light-body");
-      if (hasBodyLightClassname) {
-        return inMemoryTheme;
-      }
-      inMemoryTheme.isDarkTheme = true;
-      return inMemoryTheme;
-    } else {
-      return inMemoryTheme;
-    }
-  });
+export const TalentThemeProvider = ({ children, forceDarktheme }: Props) => {
+  const [theme, setTheme] = useState<ThemeInterface>(() =>
+    checkTheme(forceDarktheme)
+  );
   const toggleTheme = useCallback(() => {
     const updatedTheme: ThemeInterface = {
       ...theme,

@@ -20,19 +20,31 @@ export const InnerContainer = styled.section`
   width: 100%;
   display: flex;
   flex-direction: column;
-  border-radius: 24px;
+  align-items: space-between;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
   background: ${buildColor("bg01")};
   margin-top: 8px;
 
   ${mobileStyles(css`
     height: 100%;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
   `)}
 
   ${desktopStyles(css`
     max-width: 600px;
     max-height: 670px;
     margin: auto;
+    border-radius: 24px;
   `)}
+`;
+
+export const Wrapper = styled.div`
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const TitleRow = styled.div`
@@ -58,6 +70,6 @@ export const IconContainer = styled.div`
 export const ChildrenContainer = styled.section`
   padding: 16px;
   overflow-y: auto;
-  border-bottom: 1px solid ${buildColor("surfaceHover01")};
-  padding: 24px 16px 16px;
+  padding: 24px 16px;
+  flex-grow: 1;
 `;

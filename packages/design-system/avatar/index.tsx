@@ -3,9 +3,16 @@ import purpleAvatar from "./assets/purple.png";
 import lightPurpleAvatar from "./assets/light-purple.png";
 import greenAvatar from "./assets/green.png";
 import greenLightAvatar from "./assets/light-green.png";
-import { Container, StyledImage, StyledName } from "./styled";
+import {
+  Container,
+  DataColumn,
+  DetailedInfoRow,
+  StyledImage,
+  StyledName,
+} from "./styled";
 import { Props, UndefinedImageMapType, UndefinedImageTypes } from "./types";
 import { Typography } from "../typography";
+import { Icon } from "../icon";
 
 const UNDEFINED_IMAGE_MAP: UndefinedImageMapType = {
   "0": creamAvatar,
@@ -24,8 +31,9 @@ export const Avatar = ({
   userId = 0,
   name,
   ticker = "",
-  isNameUnderlined = true,
+  occupation = "",
   isDisabled = false,
+  isVerified = false,
 }: Props) => {
   return (
     <Container>
@@ -34,22 +42,36 @@ export const Avatar = ({
         src={!!url ? url : userIdToUndefinedImageEntry(userId)}
       />
       {name && (
-        <>
-          <StyledName
-            specs={{ variant: "label2", type: "medium" }}
-            color={isDisabled ? "primaryDisable" : "primary03"}
-            isUnderlined={isNameUnderlined}
-            isDisabled={isDisabled}
-          >
-            {name}
-          </StyledName>
-          <Typography
-            specs={{ variant: "label2", type: "regular" }}
-            color={isDisabled ? "primaryDisable" : "primary03"}
-          >
-            {`$${ticker.toUpperCase()}`}
-          </Typography>
-        </>
+        <DataColumn size={size}>
+          <DetailedInfoRow>
+            <StyledName
+              specs={{ variant: "label2", type: "medium" }}
+              color={isDisabled ? "primaryDisable" : "primary01"}
+              isDisabled={isDisabled}
+            >
+              {name}
+            </StyledName>
+            {!!isVerified && <Icon name="verified-2" size={16} />}
+          </DetailedInfoRow>
+          <DetailedInfoRow>
+            {!!ticker && (
+              <Typography
+                specs={{ variant: "p3", type: "bold" }}
+                color={isDisabled ? "primaryDisable" : "primary03"}
+              >
+                {`$${ticker.toUpperCase()}`}
+              </Typography>
+            )}
+            {!!occupation && (
+              <Typography
+                specs={{ variant: "p3", type: "regular" }}
+                color={isDisabled ? "primaryDisable" : "primary03"}
+              >
+                {occupation}
+              </Typography>
+            )}
+          </DetailedInfoRow>
+        </DataColumn>
       )}
     </Container>
   );

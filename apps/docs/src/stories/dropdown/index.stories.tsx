@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Dropdown } from "@talentprotocol/design-system";
+import { Dropdown, TalentThemeProvider } from "@talentprotocol/design-system";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -19,24 +19,35 @@ export default {
 } as ComponentMeta<typeof Dropdown>;
 
 const Template: ComponentStory<typeof Dropdown> = (args) => (
-  <Container>
-    <Dropdown {...args} />
-  </Container>
+  <TalentThemeProvider>
+    <Container>
+      <Dropdown {...args} />
+    </Container>
+  </TalentThemeProvider>
 );
 
 export const Default = Template.bind({});
 Default.args = {
   options: [
-    "First option",
-    "Second option",
-    "Third option",
-    "Second option",
-    "Third option",
-    "Second option",
-    "Third option",
-    "Second option",
-    "Third option",
-    "Second option",
-    "Third option",
+    {
+      value: "First option",
+      iconName: "celo",
+    },
+    {
+      value: "Second option",
+      iconName: "polygon",
+    },
+    {
+      value: "Third option",
+      iconName: "rating",
+    },
+    {
+      value: "Fourth option",
+      iconName: "rocket",
+    },
+    {
+      value: "Fifth option",
+      iconName: "chat",
+    },
   ],
 };

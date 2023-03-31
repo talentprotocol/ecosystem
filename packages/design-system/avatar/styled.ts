@@ -1,7 +1,11 @@
 import styled, { css } from "styled-components";
-import { buildColor } from "../colors";
 import { Typography } from "../typography";
-import { ImageSizeMapType, StyledImageProps, StyledNameProps } from "./types";
+import {
+  DataColumnProps,
+  ImageSizeMapType,
+  StyledImageProps,
+  StyledNameProps,
+} from "./types";
 
 const IMAGE_SIZE_MAP: ImageSizeMapType = {
   xs: css`
@@ -20,6 +24,11 @@ const IMAGE_SIZE_MAP: ImageSizeMapType = {
     border-radius: 50%;
   `,
   lg: css`
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+  `,
+  xl: css`
     width: 120px;
     height: 120px;
     border-radius: 50%;
@@ -34,6 +43,27 @@ export const Container = styled.div`
   gap: 4px;
 `;
 
+export const DataColumn = styled.div<DataColumnProps>`
+  display: flex;
+  flex-direction: column;
+
+  ${({ size }) =>
+    size === "md"
+      ? css`
+          margin-left: 12px;
+        `
+      : css`
+          margin-left: 4px;
+        `}
+`;
+
+export const DetailedInfoRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+`;
+
 export const StyledImage = styled.img<StyledImageProps>`
   ${({ size }) => IMAGE_SIZE_MAP[size]}
   overflow: hidden;
@@ -41,15 +71,15 @@ export const StyledImage = styled.img<StyledImageProps>`
 `;
 
 export const StyledName = styled(Typography)<StyledNameProps>`
-  margin-left: 4px;
-  ${({ isUnderlined }) =>
-    isUnderlined &&
-    css`
-      text-decoration: underline !important;
-    `}
   ${({ isDisabled }) =>
     isDisabled &&
     css`
-      text-decoration: none;
+      :hover {
+        text-decoration: none;
+      }
     `}
+
+  :hover {
+    text-decoration: underline;
+  }
 `;

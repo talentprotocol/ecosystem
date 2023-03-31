@@ -98,6 +98,11 @@ import { Remove } from "./remove";
 import { LogoLight } from "./logo-light";
 import { Question } from "./question";
 import { Arrow } from "./arrow";
+import { QR } from "./qr";
+import { CheckChat } from "./check-chat";
+import { Mailbox } from "./mailbox";
+import { Flower } from "./flower";
+import { Sponsor } from "./sponsor";
 
 export const icons: IconMapType = {
   flags: Flags,
@@ -199,4 +204,9 @@ export const icons: IconMapType = {
   "logo-light": LogoLight,
   question: Question,
   arrow: Arrow,
+  qr: QR,
+  "check-chat": CheckChat,
+  "mailbox": Mailbox,
+  "flower": Flower,
+  "sponsor": Sponsor,
 };

@@ -1,5 +1,6 @@
 import { useCallback, useState, useRef, FocusEvent } from "react";
 import { Icon } from "../icon";
+import { getTheme } from "../theme";
 import { Typography } from "../typography";
 import {
   Container,
@@ -7,15 +8,18 @@ import {
   OutterContainer,
   OptionsInnerContainer,
   Option,
+  SelectedOptionContainer,
 } from "./styled";
 import { Props } from "./types";
 
 export const Dropdown = ({
   options,
   placeholder = "Dropdown",
-  value = "",
+  selectedOption = {
+    value: "",
+  },
   onBlur = () => {},
-  selectValue,
+  selectOption,
 }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
   const outterContainerRef = useRef<HTMLDivElement>(null);
@@ -38,7 +42,7 @@ export const Dropdown = ({
       ref={outterContainerRef}
     >
       <Container>
-        {!value && (
+        {!selectedOption.value && (
           <Typography
             specs={{ variant: "label2", type: "regular" }}
             color="primary04"
@@ -46,13 +50,22 @@ export const Dropdown = ({
             {placeholder}
           </Typography>
         )}
-        {!!value && (
-          <Typography
-            specs={{ variant: "label2", type: "regular" }}
-            color="primary01"
-          >
-            {value}
-          </Typography>
+        {!!selectedOption.value && (
+          <SelectedOptionContainer>
+            {selectedOption.iconName && (
+              <Icon
+                name={selectedOption.iconName}
+                color={selectedOption.iconColor}
+                size={16}
+              />
+            )}
+            <Typography
+              specs={{ variant: "label2", type: "regular" }}
+              color="primary01"
+            >
+              {selectedOption.value}
+            </Typography>
+          </SelectedOptionContainer>
         )}
         <Icon
           name={isOpen ? "order-by-active" : "order-by"}
@@ -62,20 +75,23 @@ export const Dropdown = ({
       {isOpen && (
         <OptionsContainer>
           <OptionsInnerContainer>
-            {options.map((option) => (
+            {options.map((option, index) => (
               <Option
                 tabIndex={0}
-                key={option}
+                key={option.value}
                 onClick={() => {
                   setIsOpen(false);
-                  selectValue(option);
+                  selectOption(option);
                 }}
               >
+                {option.iconName && (
+                  <Icon name={option.iconName} color={option.iconColor} />
+                )}
                 <Typography
                   specs={{ variant: "label2", type: "medium" }}
                   color="primary01"
                 >
-                  {option}
+                  {option.value}
                 </Typography>
               </Option>
             ))}
