@@ -34,6 +34,7 @@ Default.args = {
   name: "",
   ticker: "",
   occupation: "",
-  isNameUnderlined: false,
+  isVerified: false,
+  ellipsisAt: 0,
   isDisabled: false,
 };

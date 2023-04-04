@@ -110,7 +110,8 @@ export type SVGList =
   | "check-chat"
   | "mailbox"
   | "flower"
-  | "sponsor";
+  | "sponsor"
+  | "clock";
 
 export type IconMapType = Record<SVGList, ElementType>;
 

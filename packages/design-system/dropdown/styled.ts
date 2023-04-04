@@ -32,6 +32,7 @@ export const Container = styled.div`
 
 export const SelectedOptionContainer = styled.div`
   display: flex;
+  flex-grow: 1;
   align-items: center;
   gap: 16px;
 `;

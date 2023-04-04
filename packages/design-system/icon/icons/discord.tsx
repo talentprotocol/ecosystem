@@ -1,7 +1,7 @@
 import { buildColor } from "../../colors";
 import { SVGProps } from "../types";
 
-export const Discord = ({color = "primary", size = 16}: SVGProps) => (
+export const Discord = ({ color = "primary", size = 16 }: SVGProps) => (
   <svg
     width={size}
     height={size}

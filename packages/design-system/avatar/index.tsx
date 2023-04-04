@@ -34,6 +34,7 @@ export const Avatar = ({
   occupation = "",
   isDisabled = false,
   isVerified = false,
+  ellipsisAt = 0,
 }: Props) => {
   return (
     <Container>
@@ -53,7 +54,7 @@ export const Avatar = ({
             </StyledName>
             {!!isVerified && <Icon name="verified-2" size={16} />}
           </DetailedInfoRow>
-          <DetailedInfoRow>
+          <DetailedInfoRow ellipsisAt={ellipsisAt}>
             {!!ticker && (
               <Typography
                 specs={{ variant: "p3", type: "bold" }}

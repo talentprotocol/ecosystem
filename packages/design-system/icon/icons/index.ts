@@ -103,6 +103,7 @@ import { CheckChat } from "./check-chat";
 import { Mailbox } from "./mailbox";
 import { Flower } from "./flower";
 import { Sponsor } from "./sponsor";
+import { Clock } from "./clock";
 
 export const icons: IconMapType = {
   flags: Flags,
@@ -206,7 +207,8 @@ export const icons: IconMapType = {
   arrow: Arrow,
   qr: QR,
   "check-chat": CheckChat,
-  "mailbox": Mailbox,
-  "flower": Flower,
-  "sponsor": Sponsor,
+  mailbox: Mailbox,
+  flower: Flower,
+  sponsor: Sponsor,
+  clock: Clock,
 };

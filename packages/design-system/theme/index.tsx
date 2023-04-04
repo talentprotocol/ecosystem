@@ -33,6 +33,7 @@ const checkTheme = (forceDarktheme = false) => {
 };
 
 export const getTheme = () => (didCheckThemeRun ? inMemoryTheme : checkTheme());
+export const toggleTheme = () => memoizedToggleThemeCallback();
 
 export const TalentThemeUpdateContext = createContext(() => {
   console.error("Attempting to update theme outside provider");
@@ -42,7 +43,7 @@ export const TalentThemeProvider = ({ children, forceDarktheme }: Props) => {
   const [theme, setTheme] = useState<ThemeInterface>(() =>
     checkTheme(forceDarktheme)
   );
-  const toggleTheme = useCallback(() => {
+  const toggleThemeCallback = useCallback(() => {
     const updatedTheme: ThemeInterface = {
       ...theme,
       isDarkTheme: !theme.isDarkTheme,
@@ -51,10 +52,10 @@ export const TalentThemeProvider = ({ children, forceDarktheme }: Props) => {
     setTheme(updatedTheme);
   }, [theme]);
   useEffect(() => {
-    memoizedToggleThemeCallback = toggleTheme;
-  }, [toggleTheme]);
+    memoizedToggleThemeCallback = toggleThemeCallback;
+  }, [toggleThemeCallback]);
   return (
-    <TalentThemeUpdateContext.Provider value={toggleTheme}>
+    <TalentThemeUpdateContext.Provider value={toggleThemeCallback}>
       <ThemeProvider theme={theme}>{children}</ThemeProvider>
     </TalentThemeUpdateContext.Provider>
   );

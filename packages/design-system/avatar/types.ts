@@ -17,6 +17,10 @@ export interface DataColumnProps {
   size: SizeTypes;
 }
 
+export interface DataInfoRowProps {
+  ellipsisAt?: number;
+}
+
 export interface Props {
   size: SizeTypes;
   url?: string;
@@ -26,4 +30,5 @@ export interface Props {
   ticker?: string;
   isDisabled?: boolean;
   isVerified?: boolean;
+  ellipsisAt?: number;
 }
