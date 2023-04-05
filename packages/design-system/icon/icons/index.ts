@@ -104,6 +104,7 @@ import { Mailbox } from "./mailbox";
 import { Flower } from "./flower";
 import { Sponsor } from "./sponsor";
 import { Clock } from "./clock";
+import { Carret } from "./carret";
 
 export const icons: IconMapType = {
   flags: Flags,
@@ -211,4 +212,5 @@ export const icons: IconMapType = {
   flower: Flower,
   sponsor: Sponsor,
   clock: Clock,
+  carret: Carret,
 };

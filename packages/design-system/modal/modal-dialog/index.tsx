@@ -16,7 +16,7 @@ export const ModalDialog = ({ title, isOpen, children, closeModal }: Props) => {
     };
   }, [isOpen]);
   return isOpen ? (
-    <Container>
+    <Container onClick={closeModal}>
       <InnerContainer>
         <TitleRow>
           <Typography specs={{ variant: "h5", type: "bold" }} color="primary01">

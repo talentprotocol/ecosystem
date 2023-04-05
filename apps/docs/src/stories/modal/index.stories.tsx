@@ -92,5 +92,5 @@ const Template: ComponentStory<typeof Modal> = (args) => (
 export const Default = Template.bind({});
 Default.args = {
   title: "Something",
-  isOpen: true,
+  isOpen: true
 };

@@ -29,7 +29,7 @@ export const Modal = ({
     };
   }, [isOpen]);
   return isOpen ? (
-    <Container>
+    <Container onClick={closeModal}>
       <InnerContainer>
         <Wrapper>
           <TitleRow>

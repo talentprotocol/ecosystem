@@ -71,5 +71,6 @@ export const ChildrenContainer = styled.section`
   padding: 16px;
   overflow-y: auto;
   padding: 24px 16px;
+  height: 500px;
   flex-grow: 1;
 `;
