@@ -1,3 +1,7 @@
+export interface StyledChildContainer {
+  hasFooter: boolean;
+}
+
 export interface Props {
   title: string;
   isOpen: boolean;

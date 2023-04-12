@@ -74,7 +74,7 @@ export const MembersContainer = styled.div`
   margin-top: 40px;
   position: relative;
   align-items: center;
-  padding-left: 100px;
+  padding-left: 88px;
 `;
 
 export const AvatarsHorizontalStack = styled.div`
@@ -84,7 +84,7 @@ export const AvatarsHorizontalStack = styled.div`
   display: flex;
 
   & :nth-child(n + 2) {
-    margin-left: -8px;
+    margin-left: -12px;
   }
 `;
 

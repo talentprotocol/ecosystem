@@ -44,7 +44,8 @@ export const DataColumn = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 54px;
-  padding: 0 16px;flex-grow: 1;
+  padding: 0 16px;
+  flex-grow: 1;
 `;
 
 export const DataRow = styled.div`

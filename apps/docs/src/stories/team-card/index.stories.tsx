@@ -30,4 +30,5 @@ Default.args = {
     "https://picsum.photos/202",
   ],
   to: "/",
+  totalMembers: 330,
 };

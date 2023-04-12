@@ -3,6 +3,7 @@ import { buildColor } from "../colors";
 import {
   ButtonHierarchy,
   HierarchyToTextColorMapInterface,
+  StyledButtonTextContainerProps,
   StyledProps,
   StyledSizeButtonMap,
 } from "./types";
@@ -34,7 +35,7 @@ const SIZE_BUTTONS_MAP: StyledSizeButtonMap = {
 };
 
 const NO_TEXT_BUTTON_SIZE: StyledSizeButtonMap = {
-  large: css`
+  small: css`
     padding: 8px;
     width: 32px;
     height: 32px;
@@ -44,7 +45,7 @@ const NO_TEXT_BUTTON_SIZE: StyledSizeButtonMap = {
     width: 40px;
     height: 40px;
   `,
-  small: css`
+  large: css`
     padding: 16px;
     width: 52px;
     height: 52px;
@@ -201,6 +202,14 @@ export const StyledButton = styled.button<StyledProps>`
     `}
 `;
 
-export const ButtonTextContainer = styled.div`
+export const ButtonTextContainer = styled.div<StyledButtonTextContainerProps>`
   flex-grow: 1;
+  ${({ isHidden }) => isHidden && `visibility: hidden;`}
+`;
+
+export const SpinnerContainer = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;

@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 import { desktopStyles, mobileStyles } from "../../breakpoints";
 import { buildColor } from "../../colors";
+import { StyledChildContainer } from "./types";
 
 export const Container = styled.div`
   position: fixed;
@@ -67,10 +68,10 @@ export const IconContainer = styled.div`
   }
 `;
 
-export const ChildrenContainer = styled.section`
-  padding: 16px;
+export const ChildrenContainer = styled.section<StyledChildContainer>`
   overflow-y: auto;
   padding: 24px 16px;
+  ${({ hasFooter }) => !hasFooter && `padding: 24px 16px 16px;`}
   height: 500px;
   flex-grow: 1;
 `;

@@ -24,6 +24,7 @@ export const TeamCard = ({
   description,
   tags = [],
   membersImages,
+  totalMembers,
   to,
 }: Props) => (
   <Container href={to}>
@@ -51,7 +52,7 @@ export const TeamCard = ({
         {tags.map((tag) => (
           <Tag
             key={tag}
-            name={tag}
+            label={tag}
             size="small"
             backgroundColor="primaryTint02"
             textColor="primary"
@@ -71,7 +72,7 @@ export const TeamCard = ({
             specs={{ variant: "p1", type: "medium" }}
             color="primary01"
           >
-            {membersImages.length.toString()}
+            {totalMembers.toLocaleString()}
           </Typography>
           <Typography
             specs={{ variant: "p1", type: "regular" }}

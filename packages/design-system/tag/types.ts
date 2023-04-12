@@ -12,7 +12,7 @@ export interface StyledContainerProps {
 export interface Props {
   leftIcon?: SVGList;
   rightIcon?: SVGList;
-  name: string;
+  label: string;
   size: TagSize;
   backgroundColor: PaletteTokens;
   textColor: PaletteTokens;

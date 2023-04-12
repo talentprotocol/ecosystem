@@ -47,7 +47,7 @@ export const Modal = ({
               <Icon name="remove" color="primary01" />
             </IconContainer>
           </TitleRow>
-          <ChildrenContainer>{children}</ChildrenContainer>
+          <ChildrenContainer hasFooter={!!footer}>{children}</ChildrenContainer>
         </Wrapper>
         {footer}
       </InnerContainer>

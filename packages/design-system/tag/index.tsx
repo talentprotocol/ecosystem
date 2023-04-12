@@ -7,7 +7,7 @@ import { Props } from "./types";
 export const Tag = ({
   leftIcon,
   rightIcon,
-  name,
+  label,
   size,
   backgroundColor,
   textColor,
@@ -30,7 +30,7 @@ export const Tag = ({
       }}
       color={textColor}
     >
-      {name}
+      {label}
     </Typography>
     {!!rightIcon ? (
       <Icon name={rightIcon} color={textColor} size={12} />

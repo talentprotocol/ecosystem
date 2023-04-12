@@ -32,8 +32,7 @@ Default.args = {
   bannerImage: "",
   profileImage: "",
   name: "The team",
-  occupation:
-    "Super hero Software Engineer",
+  occupation: "Super hero Software Engineer",
   isVerified: true,
   ticker: "GDX",
   to: "/",

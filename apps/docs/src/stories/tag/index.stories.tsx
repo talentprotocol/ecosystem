@@ -30,7 +30,7 @@ export const Default = Template.bind({});
 Default.args = {
   backgroundColor: "primary",
   textColor: "bg01",
-  name: "Tag Label",
+  label: "Tag Label",
   leftIcon: "clock",
   rightIcon: "bulb",
 };

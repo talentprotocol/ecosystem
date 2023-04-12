@@ -9,5 +9,6 @@ export interface Props {
   description: string;
   tags?: string[];
   membersImages: string[];
+  totalMembers: number;
   to: string;
 }
