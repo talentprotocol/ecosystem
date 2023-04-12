@@ -1,7 +1,5 @@
-import { Children } from "react";
 import { Avatar } from "../avatar";
 import { Icon } from "../icon";
-import { Tag } from "../tag";
 import { Typography } from "../typography";
 import {
   AvatarContainer,

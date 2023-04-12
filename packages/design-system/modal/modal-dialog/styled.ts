@@ -19,6 +19,7 @@ export const Container = styled.div`
 export const InnerContainer = styled.section`
   width: 100%;
   max-width: 500px;
+  max-height: 80%;
   padding: 24px;
   display: flex;
   flex-direction: column;
@@ -26,6 +27,7 @@ export const InnerContainer = styled.section`
   border-radius: 24px;
   background: ${buildColor("bg01")};
   border: 1px solid ${buildColor("surfaceHover02")};
+  overflow: hidden;
 `;
 
 export const TitleRow = styled.div`

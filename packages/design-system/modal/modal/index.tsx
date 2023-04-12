@@ -37,15 +37,15 @@ export const Modal = ({
       <InnerContainer onClick={onModalClick}>
         <Wrapper>
           <TitleRow>
-            <IconContainer onClick={closeModal}>
-              <Icon name="remove" color="primary01" />
-            </IconContainer>
             <Typography
               specs={{ variant: "h5", type: "bold" }}
               color="primary01"
             >
               {title}
             </Typography>
+            <IconContainer onClick={closeModal}>
+              <Icon name="remove" color="primary01" />
+            </IconContainer>
           </TitleRow>
           <ChildrenContainer>{children}</ChildrenContainer>
         </Wrapper>

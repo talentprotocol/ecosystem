@@ -34,7 +34,7 @@ export const InnerContainer = styled.section`
 
   ${desktopStyles(css`
     max-width: 600px;
-    max-height: 670px;
+    max-height: 80%;
     margin: auto;
     border-radius: 24px;
   `)}
@@ -48,9 +48,9 @@ export const Wrapper = styled.div`
 `;
 
 export const TitleRow = styled.div`
-  width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 16px;
   padding: 16px;
   border-bottom: 1px solid ${buildColor("surfaceHover01")};

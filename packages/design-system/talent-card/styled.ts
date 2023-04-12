@@ -3,7 +3,8 @@ import { buildColor } from "../colors";
 import { StyledBannerProps } from "./types";
 
 export const Container = styled.a`
-  display: block;
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
   cursor: pointer;
   outline: none;
@@ -43,7 +44,7 @@ export const DataColumn = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 54px;
-  padding: 0 16px;
+  padding: 0 16px;flex-grow: 1;
 `;
 
 export const DataRow = styled.div`
@@ -62,9 +63,15 @@ export const OccupationContainer = styled.div`
   -webkit-box-orient: vertical;
   text-align: center;
   gap: 4px;
+  height: 45px;
 `;
 
 export const CallToActionContainer = styled.div`
   width: 100%;
-  padding: 16px 0;
+  padding-top: 16px;
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 16px;
 `;
