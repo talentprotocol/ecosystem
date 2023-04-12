@@ -48,7 +48,7 @@ export const Mailbox = ({ color = "primary", size = 40 }: SVGProps) => (
     </g>
     <defs>
       <clipPath id="clip0_11895_48181">
-        <rect width={size} height={size} fill="transparent" />
+        <rect width="40" height="40" fill="transparent" />
       </clipPath>
     </defs>
   </svg>

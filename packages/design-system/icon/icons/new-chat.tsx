@@ -31,7 +31,7 @@ export const NewChat = ({ color = "primary", size = 16 }: SVGProps) => (
     </g>
     <defs>
       <clipPath id="clip0_427_2711">
-        <rect width={size} height={size} fill="white" />
+        <rect width="16" height="16" fill="white" />
       </clipPath>
     </defs>
   </svg>

@@ -50,8 +50,8 @@ export const Trophy = ({ color = "primary", size = 16 }: SVGProps) => (
     <defs>
       <clipPath id="clip0_8121_13547">
         <rect
-          width={size}
-          height={size}
+          width="16"
+          height="16"
           fill="transparent"
           transform="translate(0.936035)"
         />

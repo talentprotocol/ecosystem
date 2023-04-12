@@ -190,7 +190,7 @@ export const StyledButton = styled.button<StyledProps>`
   label {
     cursor: pointer;
   }
-  
+
   ${({ isDisabled }) =>
     isDisabled &&
     css`

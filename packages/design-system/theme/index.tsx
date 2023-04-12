@@ -9,10 +9,13 @@ let inMemoryTheme: ThemeInterface = {
 let memoizedToggleThemeCallback = () => {};
 let didCheckThemeRun = false;
 
-const checkTheme = (forceDarktheme = false) => {
+const checkTheme = (forceDarktheme = false, forceWhiteTheme = false) => {
   didCheckThemeRun = true;
   if (forceDarktheme) {
     inMemoryTheme.isDarkTheme = true;
+    return inMemoryTheme;
+  } else if (forceWhiteTheme) {
+    inMemoryTheme.isDarkTheme = false;
     return inMemoryTheme;
   }
   // @ts-ignore
@@ -39,9 +42,13 @@ export const TalentThemeUpdateContext = createContext(() => {
   console.error("Attempting to update theme outside provider");
 });
 
-export const TalentThemeProvider = ({ children, forceDarktheme }: Props) => {
+export const TalentThemeProvider = ({
+  children,
+  forceDarktheme,
+  forceWhiteTheme,
+}: Props) => {
   const [theme, setTheme] = useState<ThemeInterface>(() =>
-    checkTheme(forceDarktheme)
+    checkTheme(forceDarktheme, forceWhiteTheme)
   );
   const toggleThemeCallback = useCallback(() => {
     const updatedTheme: ThemeInterface = {

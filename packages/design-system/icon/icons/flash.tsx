@@ -16,13 +16,8 @@ export const Flash = ({ color = "primary", size = 16 }: SVGProps) => (
       />
     </g>
     <defs>
-      <clipPath id="clip0_8160_13518">
-        <rect
-          width={size}
-          height={size}
-          fill="transparent"
-          transform="translate(0.936035)"
-        />
+      <clipPath id="clip0_9177_14085">
+        <rect width="16" height="16" fill="transparent" />
       </clipPath>
     </defs>
   </svg>

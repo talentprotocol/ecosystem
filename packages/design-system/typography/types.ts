@@ -39,7 +39,6 @@ export interface StyledLabelProps {
 
 export interface CaptionProps {
   variant: "caption";
-  color: PaletteTokens;
 }
 
 export interface StyledCaptionProps {
@@ -49,6 +48,6 @@ export interface StyledCaptionProps {
 export interface Props {
   specs: HeaderProps | ParagraphProps | LabelProps | CaptionProps;
   color: PaletteTokens;
-  children: string;
+  children: string | React.ReactNode;
   className?: string;
 }

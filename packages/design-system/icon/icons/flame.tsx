@@ -1,9 +1,9 @@
 import { SVGProps } from "../types";
 
-export const Flame = ({}: SVGProps) => (
+export const Flame = ({ size }: SVGProps) => (
   <svg
-    width="17"
-    height="17"
+    width={size}
+    height={size}
     viewBox="0 0 17 17"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

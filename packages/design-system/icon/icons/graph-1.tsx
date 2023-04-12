@@ -104,7 +104,7 @@ export const Graph1 = ({ color = "primary", size = 24 }: SVGProps) => (
     </g>
     <defs>
       <clipPath id="clip0_4154_6522">
-        <rect width={size} height={size} fill="transparent" />
+        <rect width="24" height="24" fill="transparent" />
       </clipPath>
     </defs>
   </svg>
