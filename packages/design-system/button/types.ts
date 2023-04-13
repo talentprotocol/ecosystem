@@ -19,6 +19,10 @@ export type StyledSizeButtonMap = Record<
   FlattenSimpleInterpolation
 >;
 
+export interface StyledButtonTextContainerProps {
+  isHidden: boolean;
+}
+
 export interface StyledProps {
   size: ButtonSize;
   hierarchy: ButtonHierarchy;
@@ -44,4 +48,5 @@ export interface Props {
   leftIcon?: SVGList;
   rightIcon?: SVGList;
   onClick?: MouseEventHandler;
+  isLoading?: boolean;
 }

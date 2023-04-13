@@ -10,6 +10,9 @@ const rotateAnimation = keyframes`
 `;
 
 export const Container = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   svg {
     animation-name: ${rotateAnimation};
     animation-duration: 1.25s;

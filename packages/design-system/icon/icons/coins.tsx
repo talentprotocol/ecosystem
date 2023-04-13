@@ -76,7 +76,7 @@ export const Coins = ({ color = "primary", size = 24 }: SVGProps) => (
     </g>
     <defs>
       <clipPath id="clip0_4129_6902">
-        <rect width={size} height={size} fill="transparent" />
+        <rect width="24" height="24" fill="transparent" />
       </clipPath>
     </defs>
   </svg>

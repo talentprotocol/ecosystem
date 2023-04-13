@@ -25,8 +25,8 @@ export const Success = ({ color = "primary", size = 64 }: SVGProps) => (
     <defs>
       <clipPath id="clip0_7636_14189">
         <rect
-          width={size}
-          height={size}
+          width="64"
+          height="64"
           fill="transparent"
           transform="translate(20 19)"
         />

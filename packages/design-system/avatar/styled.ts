@@ -2,6 +2,7 @@ import styled, { css } from "styled-components";
 import { Typography } from "../typography";
 import {
   DataColumnProps,
+  DataInfoRowProps,
   ImageSizeMapType,
   StyledImageProps,
   StyledNameProps,
@@ -57,11 +58,22 @@ export const DataColumn = styled.div<DataColumnProps>`
         `}
 `;
 
-export const DetailedInfoRow = styled.div`
+export const DetailedInfoRow = styled.div<DataInfoRowProps>`
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 4px;
+
+  ${({ ellipsisAt }) =>
+    !!ellipsisAt &&
+    css`
+      p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: ${ellipsisAt}px;
+      }
+    `}
 `;
 
 export const StyledImage = styled.img<StyledImageProps>`

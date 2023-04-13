@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 import { desktopStyles, mobileStyles } from "../../breakpoints";
 import { buildColor } from "../../colors";
+import { StyledChildContainer } from "./types";
 
 export const Container = styled.div`
   position: fixed;
@@ -34,7 +35,7 @@ export const InnerContainer = styled.section`
 
   ${desktopStyles(css`
     max-width: 600px;
-    max-height: 670px;
+    max-height: 80%;
     margin: auto;
     border-radius: 24px;
   `)}
@@ -48,9 +49,9 @@ export const Wrapper = styled.div`
 `;
 
 export const TitleRow = styled.div`
-  width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 16px;
   padding: 16px;
   border-bottom: 1px solid ${buildColor("surfaceHover01")};
@@ -67,9 +68,10 @@ export const IconContainer = styled.div`
   }
 `;
 
-export const ChildrenContainer = styled.section`
-  padding: 16px;
+export const ChildrenContainer = styled.section<StyledChildContainer>`
   overflow-y: auto;
   padding: 24px 16px;
+  ${({ hasFooter }) => !hasFooter && `padding: 24px 16px 16px;`}
+  height: 500px;
   flex-grow: 1;
 `;

@@ -1,3 +1,4 @@
+import { Spinner } from "../spinner";
 import { Typography } from "../typography";
 import { ButtonLabel } from "./button-label";
 import {
@@ -5,6 +6,7 @@ import {
   StyledButton,
   ButtonTextContainer,
   TEXT_COLOR_MAP,
+  SpinnerContainer,
 } from "./styled";
 import { Props, VariantToTextSizeMapInterface } from "./types";
 
@@ -25,6 +27,7 @@ export const Button = ({
   rightIcon,
   newPage,
   href,
+  isLoading = false,
   onClick,
 }: Props) => {
   return (
@@ -42,28 +45,37 @@ export const Button = ({
     >
       <ButtonLabel
         leftIcon={leftIcon}
-        iconColor={iconColor}
+        iconColor={isDisabled ? DISABLED_COLORS_MAP[hierarchy] : iconColor}
         rightIcon={rightIcon}
+        isLoading={isLoading}
+        size={size}
       >
-        {!!text ? (
-          <ButtonTextContainer>
-            <Typography
-              specs={{
-                variant: VARIANT_TO_TEXT_SIZE_MAP[size],
-                type: "medium",
-              }}
-              color={
-                isDisabled
-                  ? DISABLED_COLORS_MAP[hierarchy]
-                  : TEXT_COLOR_MAP[hierarchy]
-              }
-            >
-              {text}
-            </Typography>
-          </ButtonTextContainer>
-        ) : (
-          <></>
-        )}
+        <>
+          {!!text ? (
+            <ButtonTextContainer isHidden={isLoading}>
+              <Typography
+                specs={{
+                  variant: VARIANT_TO_TEXT_SIZE_MAP[size],
+                  type: "medium",
+                }}
+                color={
+                  isDisabled
+                    ? DISABLED_COLORS_MAP[hierarchy]
+                    : TEXT_COLOR_MAP[hierarchy]
+                }
+              >
+                {text}
+              </Typography>
+            </ButtonTextContainer>
+          ) : (
+            <></>
+          )}
+          {isLoading && (
+            <SpinnerContainer>
+              <Spinner color={TEXT_COLOR_MAP[hierarchy]} size={16} />
+            </SpinnerContainer>
+          )}
+        </>
       </ButtonLabel>
     </StyledButton>
   );

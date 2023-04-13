@@ -1,6 +1,5 @@
 import { useCallback, useState, useRef, FocusEvent } from "react";
 import { Icon } from "../icon";
-import { getTheme } from "../theme";
 import { Typography } from "../typography";
 import {
   Container,

@@ -44,8 +44,8 @@ export const Planet = ({ color = "primary", size = 16 }: SVGProps) => (
     <defs>
       <clipPath id="clip0_8118_13520">
         <rect
-          width={size}
-          height={size}
+          width="16"
+          height="16"
           fill="transparent"
           transform="translate(0.936035)"
         />

@@ -43,7 +43,7 @@ export const Support = ({ color = "primary", size = 16 }: SVGProps) => (
     </g>
     <defs>
       <clipPath id="clip0_702_3464">
-        <rect width={size} height={size} fill="transparent" />
+        <rect width="16" height="16" fill="transparent" />
       </clipPath>
     </defs>
   </svg>

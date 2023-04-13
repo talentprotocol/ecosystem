@@ -59,6 +59,11 @@ export const StyledInput = styled.input<StyledInputProps>`
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
+  color: ${buildColor("primary01")};
+
+  ::placeholder {
+    color: ${buildColor("primary04")};
+  }
 
   ${({ hasError, isDisabled }) =>
     (isDisabled &&

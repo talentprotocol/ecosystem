@@ -29,7 +29,7 @@ export default {
 } as ComponentMeta<typeof Modal>;
 
 const Template: ComponentStory<typeof Modal> = (args) => (
-  <TalentThemeProvider forceDarktheme>
+  <TalentThemeProvider>
     <Container>
       <Modal
         {...args}

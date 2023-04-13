@@ -15,9 +15,13 @@ export const ModalDialog = ({ title, isOpen, children, closeModal }: Props) => {
       }
     };
   }, [isOpen]);
+  const onModalClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    e.stopPropagation();
+    e.preventDefault();
+  };
   return isOpen ? (
-    <Container>
-      <InnerContainer>
+    <Container onClick={closeModal}>
+      <InnerContainer onClick={onModalClick}>
         <TitleRow>
           <Typography specs={{ variant: "h5", type: "bold" }} color="primary01">
             {title}

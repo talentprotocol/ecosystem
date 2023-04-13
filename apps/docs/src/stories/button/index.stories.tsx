@@ -31,4 +31,5 @@ ButtonComponent.args = {
   size: "large",
   text: "Button Content",
   iconColor: "bg01",
+  isLoading: false,
 };

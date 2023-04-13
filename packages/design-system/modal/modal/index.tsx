@@ -28,22 +28,26 @@ export const Modal = ({
       }
     };
   }, [isOpen]);
+  const onModalClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    e.stopPropagation();
+    e.preventDefault();
+  };
   return isOpen ? (
-    <Container>
-      <InnerContainer>
+    <Container onClick={closeModal}>
+      <InnerContainer onClick={onModalClick}>
         <Wrapper>
           <TitleRow>
-            <IconContainer onClick={closeModal}>
-              <Icon name="remove" color="primary01" />
-            </IconContainer>
             <Typography
               specs={{ variant: "h5", type: "bold" }}
               color="primary01"
             >
               {title}
             </Typography>
+            <IconContainer onClick={closeModal}>
+              <Icon name="remove" color="primary01" />
+            </IconContainer>
           </TitleRow>
-          <ChildrenContainer>{children}</ChildrenContainer>
+          <ChildrenContainer hasFooter={!!footer}>{children}</ChildrenContainer>
         </Wrapper>
         {footer}
       </InnerContainer>
