@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 import { buildColor } from "../colors";
 import { baseTypographyStyles } from "../typography/styled";
-import { StyledInputProps } from "./types";
+import { StyledInputProps, StyledRightIconContainerProps } from "./types";
 
 export const Container = styled.div`
   width: 100%;
@@ -48,6 +48,15 @@ export const InputContainer = styled.div<StyledInputProps>`
             box-shadow: 0px 0px 0px 3px ${buildColor("primaryTint02")};
           }
         `}
+`;
+
+export const RightIconContainer = styled.div<StyledRightIconContainerProps>`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+
+  ${({ isClickable }) => isClickable && "cursor: pointer;"}
 `;
 
 export const StyledInput = styled.input<StyledInputProps>`

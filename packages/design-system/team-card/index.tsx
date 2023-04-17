@@ -61,7 +61,7 @@ export const TeamCard = ({
       </TagsContainer>
       <MembersContainer>
         <AvatarsHorizontalStack>
-          {membersImages.slice(0, 3).map((memberImage) => (
+          {membersImages.slice(0, 4).map((memberImage) => (
             <SmallAvatarContainer key={memberImage}>
               <Avatar size="sm" url={memberImage} />
             </SmallAvatarContainer>

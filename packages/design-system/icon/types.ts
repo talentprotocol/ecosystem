@@ -113,7 +113,9 @@ export type SVGList =
   | "sponsor"
   | "clock"
   | "carret"
-  | "user";
+  | "user"
+  | "eye"
+  | "eye-disabled";
 
 export type IconMapType = Record<SVGList, ElementType>;
 

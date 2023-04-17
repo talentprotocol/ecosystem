@@ -106,6 +106,8 @@ import { Sponsor } from "./sponsor";
 import { Clock } from "./clock";
 import { Carret } from "./carret";
 import { User } from "./user";
+import { Eye } from "./eye";
+import { EyeDisabled } from "./eye-disabled";
 
 export const icons: IconMapType = {
   flags: Flags,
@@ -215,4 +217,6 @@ export const icons: IconMapType = {
   clock: Clock,
   carret: Carret,
   user: User,
+  eye: Eye,
+  "eye-disabled": EyeDisabled,
 };

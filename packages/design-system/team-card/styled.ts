@@ -74,7 +74,7 @@ export const MembersContainer = styled.div`
   margin-top: 40px;
   position: relative;
   align-items: center;
-  padding-left: 88px;
+  padding-left: 120px;
 `;
 
 export const AvatarsHorizontalStack = styled.div`

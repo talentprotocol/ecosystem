@@ -2,6 +2,7 @@ import {
   ChangeEventHandler,
   FocusEventHandler,
   HTMLInputTypeAttribute,
+  MouseEventHandler,
 } from "react";
 import { PaletteTokens } from "../colors/palette/types";
 import { SVGList } from "../icon/types";
@@ -9,6 +10,10 @@ import { SVGList } from "../icon/types";
 export interface StyledInputProps {
   isDisabled: boolean;
   hasError: boolean;
+}
+
+export interface StyledRightIconContainerProps {
+  isClickable: boolean;
 }
 
 export interface Props {
@@ -27,5 +32,7 @@ export interface Props {
   type?: HTMLInputTypeAttribute;
   iconColor?: PaletteTokens;
   rightIcon?: SVGList;
+  rightIconCallback?: MouseEventHandler<HTMLDivElement>;
   leftIcon?: SVGList;
+  leftIconCallback?: Function;
 }

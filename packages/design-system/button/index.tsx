@@ -40,7 +40,7 @@ export const Button = ({
       disabled={!href && isDisabled}
       href={href}
       target={newPage ? "_blank" : "_self"}
-      onClick={onClick}
+      onClick={!isLoading ? onClick : undefined}
       hasNoText={(!!leftIcon || !!rightIcon) && !text}
     >
       <ButtonLabel

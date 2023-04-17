@@ -1,6 +1,12 @@
 import { Icon } from "../icon";
 import { Typography } from "../typography";
-import { Container, InputContainer, LabelBar, StyledInput } from "./styled";
+import {
+  Container,
+  InputContainer,
+  LabelBar,
+  RightIconContainer,
+  StyledInput,
+} from "./styled";
 import { Props } from "./types";
 
 export const Input = ({
@@ -19,7 +25,9 @@ export const Input = ({
   type,
   iconColor,
   leftIcon,
+  leftIconCallback,
   rightIcon,
+  rightIconCallback,
 }: Props) => (
   <Container>
     <LabelBar>
@@ -49,6 +57,7 @@ export const Input = ({
       hasError={hasError}
       onClick={() => {
         inputRef?.current?.focus();
+        if (leftIconCallback) leftIconCallback();
       }}
     >
       {leftIcon && (
@@ -75,10 +84,15 @@ export const Input = ({
         type={type}
       />
       {rightIcon && (
-        <Icon
-          name={rightIcon}
-          color={isDisabled ? "primaryDisable" : iconColor}
-        />
+        <RightIconContainer
+          isClickable={!!rightIconCallback}
+          onClick={rightIconCallback}
+        >
+          <Icon
+            name={rightIcon}
+            color={isDisabled ? "primaryDisable" : iconColor}
+          />
+        </RightIconContainer>
       )}
     </InputContainer>
     {shortDescription && (
