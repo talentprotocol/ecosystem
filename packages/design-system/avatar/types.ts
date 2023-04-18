@@ -3,7 +3,7 @@ import { FlattenSimpleInterpolation } from "styled-components";
 export type SizeTypes = "xs" | "sm" | "md" | "lg" | "xl";
 export type UndefinedImageTypes = "0" | "1" | "2" | "3" | "4";
 export type ImageSizeMapType = Record<SizeTypes, FlattenSimpleInterpolation>;
-export type UndefinedImageMapType = Record<UndefinedImageTypes, string>;
+export type UndefinedImageMapType = Record<UndefinedImageTypes, any>;
 
 export interface StyledImageProps {
   size: SizeTypes;
