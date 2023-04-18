@@ -13,6 +13,7 @@ export const TextArea = ({
   shortDescription,
   caption,
   hasError = false,
+  placeholder = ""
 }: Props) => (
   <Container>
     <LabelBar>
@@ -36,7 +37,7 @@ export const TextArea = ({
     </LabelBar>
     <InputContainer isDisabled={isDisabled} hasError={hasError}>
       <StyledTextArea
-        placeholder="Input"
+        placeholder={placeholder}
         ref={textAreaRef}
         onChange={onChange}
         onFocus={onFocus}

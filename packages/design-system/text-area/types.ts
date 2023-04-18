@@ -16,4 +16,5 @@ export interface Props {
   shortDescription?: string;
   caption?: string;
   hasError?: boolean;
+  placeholder?: string;
 }

@@ -10,6 +10,7 @@ import { SVGList } from "../icon/types";
 export interface StyledInputProps {
   isDisabled: boolean;
   hasError: boolean;
+  forceLowerCase?: boolean;
 }
 
 export interface StyledRightIconContainerProps {
@@ -35,4 +36,5 @@ export interface Props {
   rightIconCallback?: MouseEventHandler<HTMLDivElement>;
   leftIcon?: SVGList;
   leftIconCallback?: Function;
+  forceLowerCase?: boolean;
 }

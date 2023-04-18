@@ -28,6 +28,7 @@ export const Input = ({
   leftIconCallback,
   rightIcon,
   rightIconCallback,
+  forceLowerCase = false,
 }: Props) => (
   <Container>
     <LabelBar>
@@ -82,6 +83,7 @@ export const Input = ({
         isDisabled={isDisabled}
         hasError={hasError}
         type={type}
+        forceLowerCase={forceLowerCase}
       />
       {rightIcon && (
         <RightIconContainer
