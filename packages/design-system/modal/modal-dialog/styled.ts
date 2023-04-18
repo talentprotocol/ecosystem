@@ -27,6 +27,7 @@ export const InnerContainer = styled.section`
   border-radius: 24px;
   background: ${buildColor("bg01")};
   border: 1px solid ${buildColor("surfaceHover02")};
+  box-shadow: 0px 8px 24px 0px ${buildColor("surfaceShadow")};
   overflow: hidden;
 `;
 

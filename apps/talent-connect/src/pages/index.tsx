@@ -1,6 +1,22 @@
 import Head from "next/head";
+import { useKeenSlider } from "keen-slider/react";
+import { TalentThemeProvider } from "@talentprotocol/design-system";
+import "keen-slider/keen-slider.min.css";
+import { Card } from "@/components/card";
 
 const Feed = () => {
+  const [ref] = useKeenSlider<HTMLDivElement>({
+    loop: true,
+    defaultAnimation: {
+      duration: 0,
+      easing: (e) => e / 2,
+    },
+    slides: {
+      origin: "center",
+      perView: 1,
+    },
+    vertical: true,
+  });
   return (
     <>
       <Head>
@@ -9,7 +25,64 @@ const Feed = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>things</main>
+      <TalentThemeProvider forceDarktheme>
+        <main ref={ref} className="keen-slider" style={{ height: "100vh" }}>
+          <div className="keen-slider__slide">
+            <Card />
+          </div>
+          <div className="keen-slider__slide">
+            <Card />
+          </div>
+          <div className="keen-slider__slide">
+            <Card />
+          </div>
+          <div className="keen-slider__slide">
+            <Card />
+          </div>
+          <div className="keen-slider__slide">
+            <Card />
+          </div>
+          <div className="keen-slider__slide">
+            <Card />
+          </div>
+          <div className="keen-slider__slide">
+            <Card />
+          </div>
+          <div className="keen-slider__slide">
+            <Card />
+          </div>
+          <div className="keen-slider__slide">
+            <Card />
+          </div>
+          <div className="keen-slider__slide">
+            <Card />
+          </div>
+          <div className="keen-slider__slide">
+            <Card />
+          </div>
+          <div className="keen-slider__slide">
+            <Card />
+          </div>
+          <div className="keen-slider__slide">
+            <Card />
+          </div>
+          <div className="keen-slider__slide">
+            <Card />
+          </div>
+          <div className="keen-slider__slide">
+            <Card />
+          </div>
+          <div className="keen-slider__slide">
+            <Card />
+          </div>
+          <div className="keen-slider__slide">
+            <Card />
+          </div>
+          <div className="keen-slider__slide">
+            <Card />
+          </div>
+        </main>
+      </TalentThemeProvider>
     </>
   );
 };

@@ -22,6 +22,8 @@ export const InnerContainer = styled.section`
   display: flex;
   flex-direction: column;
   align-items: space-between;
+  border: 1px solid ${buildColor("surfaceHover02")};
+  box-shadow: 0px 8px 24px 0px ${buildColor("surfaceShadow")};
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
   background: ${buildColor("bg01")};

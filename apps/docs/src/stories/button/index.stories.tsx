@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Button } from "@talentprotocol/design-system";
+import { Button, TalentThemeProvider } from "@talentprotocol/design-system";
 
 const Container = styled.div`
   display: flex;
@@ -20,9 +20,11 @@ export default {
 } as ComponentMeta<typeof Button>;
 
 const ButtonTemplate: ComponentStory<typeof Button> = (args) => (
-  <Container>
-    <Button {...args} />
-  </Container>
+  <TalentThemeProvider>
+    <Container>
+      <Button {...args} />
+    </Container>
+  </TalentThemeProvider>
 );
 
 export const ButtonComponent = ButtonTemplate.bind({});

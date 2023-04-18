@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Tag } from "@talentprotocol/design-system";
+import { Tag, TalentThemeProvider } from "@talentprotocol/design-system";
 
 const Container = styled.div`
   height: 100px;
@@ -21,15 +21,17 @@ export default {
 } as ComponentMeta<typeof Tag>;
 
 const Template: ComponentStory<typeof Tag> = (args) => (
-  <Container>
-    <Tag {...args} />
-  </Container>
+  <TalentThemeProvider forceWhiteTheme>
+    <Container>
+      <Tag {...args} />
+    </Container>
+  </TalentThemeProvider>
 );
 
 export const Default = Template.bind({});
 Default.args = {
-  backgroundColor: "primary",
-  textColor: "bg01",
+  backgroundColor: "warning",
+  textColor: "warningText",
   label: "Tag Label",
   leftIcon: "clock",
   rightIcon: "bulb",
