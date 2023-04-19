@@ -1,9 +1,9 @@
 import { SVGProps } from "../types";
 
-export const Facebook = ({}: SVGProps) => (
+export const Facebook = ({ size = 24 }: SVGProps) => (
   <svg
-    width="24"
-    height="24"
+    width={size}
+    height={size}
     viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

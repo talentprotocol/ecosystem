@@ -12,14 +12,14 @@ export const TEXT_COLOR_MAP: HierarchyToTextColorMapInterface = {
   primary: "bg01",
   secondary: "primary01",
   tertiary: "primary01",
-  danger: "bg01",
+  danger: "dangerText",
 };
 
 export const DISABLED_COLORS_MAP: HierarchyToTextColorMapInterface = {
   primary: "primaryDisable",
   secondary: "primaryDisable",
   tertiary: "primaryDisable",
-  danger: "dangerTint03",
+  danger: "dangerTextDisable",
 };
 
 const SIZE_BUTTONS_MAP: StyledSizeButtonMap = {
@@ -134,7 +134,7 @@ const buildHierarchyButtons = (
     case "danger":
     default:
       return css`
-        background: ${buildColor("dangerTint01")};
+        background: ${buildColor("danger")};
         border-radius: 200px;
 
         ${isDisabled
@@ -143,15 +143,15 @@ const buildHierarchyButtons = (
             `
           : css`
               :hover {
-                background: ${buildColor("danger")};
+                background: ${buildColor("danger")}80;
               }
 
               :active {
-                background: ${buildColor("dangerTint02")};
+                background: ${buildColor("dangerShade01")};
               }
 
               :focus {
-                background: ${buildColor("dangerTint01")};
+                background: ${buildColor("danger")}80;
                 box-shadow: 0px 0px 0px 3px ${buildColor("dangerTint02")};
               }
             `}

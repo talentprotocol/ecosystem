@@ -83,7 +83,9 @@ export const StyledInput = styled.input<StyledInputProps>`
       css`
         color: ${buildColor("primary01")};
       `)}
-  ${({ forceLowerCase }) => forceLowerCase && css`
-    text-transform: lowercase;
-  `}
+  ${({ forceLowerCase }) =>
+    forceLowerCase &&
+    css`
+      text-transform: lowercase;
+    `}
 `;

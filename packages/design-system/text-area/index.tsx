@@ -13,7 +13,7 @@ export const TextArea = ({
   shortDescription,
   caption,
   hasError = false,
-  placeholder = ""
+  placeholder = "",
 }: Props) => (
   <Container>
     <LabelBar>

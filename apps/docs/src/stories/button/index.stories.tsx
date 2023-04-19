@@ -20,7 +20,7 @@ export default {
 } as ComponentMeta<typeof Button>;
 
 const ButtonTemplate: ComponentStory<typeof Button> = (args) => (
-  <TalentThemeProvider>
+  <TalentThemeProvider forceDarktheme>
     <Container>
       <Button {...args} />
     </Container>

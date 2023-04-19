@@ -49,7 +49,10 @@ export type PaletteTokens =
   | "dangerDisable"
   | "dangerTint01"
   | "dangerTint02"
-  | "dangerTint03";
+  | "dangerTint03"
+  | "dangerText"
+  | "dangerTextDisable"
+  | "surfaceOverlay";
 
 export type PaletteObject = {
   [key in PaletteTokens]: string;

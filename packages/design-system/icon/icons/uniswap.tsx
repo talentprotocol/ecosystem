@@ -1,9 +1,9 @@
 import { SVGProps } from "../types";
 
-export const Uniswap = ({}: SVGProps) => (
+export const Uniswap = ({ size = 24 }: SVGProps) => (
   <svg
-    width="21"
-    height="24"
+    width={Math.floor(size * 0.875)}
+    height={size}
     viewBox="0 0 21 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

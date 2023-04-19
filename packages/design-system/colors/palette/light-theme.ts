@@ -27,6 +27,7 @@ export const lightPalette: PaletteObject = {
   surfaceHover02: "#DADDE1",
   surfaceDisable: "#F2F3F5",
   surfaceShadow: "#0000000A",
+  surfaceOverlay: "#00000080",
   bg01: "#FAFAFB",
   bgInverse: "#FAFAFB",
   secondary: "#BBED55",
@@ -52,4 +53,6 @@ export const lightPalette: PaletteObject = {
   dangerTint01: "#FF5555",
   dangerTint02: "#FFBFBF",
   dangerTint03: "#FFF3F3",
+  dangerTextDisable: "#FEE5E5",
+  dangerText: "#FFFFFF",
 } as const;

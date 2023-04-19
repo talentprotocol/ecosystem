@@ -1,9 +1,9 @@
 import { SVGProps } from "../types";
 
-export const Unstoppable = ({}: SVGProps) => (
+export const Unstoppable = ({ size = 16 }: SVGProps) => (
   <svg
-    width="17"
-    height="16"
+    width={size}
+    height={size}
     viewBox="0 0 17 16"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
