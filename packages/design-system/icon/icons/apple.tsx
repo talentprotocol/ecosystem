@@ -1,6 +1,6 @@
 import { SVGProps } from "../types";
 
-export const Apple = ({size = 24 }: SVGProps) => (
+export const Apple = ({ size = 24 }: SVGProps) => (
   <svg
     width={size}
     height={size}
