@@ -37,4 +37,5 @@ Default.args = {
   isVerified: false,
   ellipsisAt: 0,
   isDisabled: false,
+  profileURL: "",
 };

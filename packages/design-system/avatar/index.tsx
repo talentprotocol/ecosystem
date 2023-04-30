@@ -7,6 +7,7 @@ import {
   Container,
   DataColumn,
   DetailedInfoRow,
+  LinkWrapper,
   StyledImage,
   StyledName,
 } from "./styled";
@@ -35,23 +36,32 @@ export const Avatar = ({
   isDisabled = false,
   isVerified = false,
   ellipsisAt = 0,
+  profileURL = "",
 }: Props) => {
+  const computedProfileURL = !isDisabled ? profileURL : "";
   return (
     <Container>
-      <StyledImage
-        size={size}
-        src={!!url ? url : userIdToUndefinedImageEntry(userId)}
-      />
+      <LinkWrapper href={computedProfileURL} profileURL={computedProfileURL}>
+        <StyledImage
+          size={size}
+          src={!!url ? url : userIdToUndefinedImageEntry(userId)}
+        />
+      </LinkWrapper>
       {name && (
         <DataColumn size={size}>
           <DetailedInfoRow>
-            <StyledName
-              specs={{ variant: "label2", type: "medium" }}
-              color={isDisabled ? "primaryDisable" : "primary01"}
-              isDisabled={isDisabled}
+            <LinkWrapper
+              href={computedProfileURL}
+              profileURL={computedProfileURL}
             >
-              {name}
-            </StyledName>
+              <StyledName
+                specs={{ variant: "label2", type: "medium" }}
+                color={isDisabled ? "primaryDisable" : "primary01"}
+                isDisabled={isDisabled}
+              >
+                {name}
+              </StyledName>
+            </LinkWrapper>
             {!!isVerified && <Icon name="verified-2" size={16} />}
           </DetailedInfoRow>
           <DetailedInfoRow ellipsisAt={ellipsisAt}>

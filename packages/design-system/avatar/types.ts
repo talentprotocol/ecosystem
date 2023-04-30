@@ -21,6 +21,10 @@ export interface DataInfoRowProps {
   ellipsisAt?: number;
 }
 
+export interface LinkWrapperProps {
+  profileURL: string;
+}
+
 export interface Props {
   size: SizeTypes;
   url?: string;
@@ -31,4 +35,5 @@ export interface Props {
   isDisabled?: boolean;
   isVerified?: boolean;
   ellipsisAt?: number;
+  profileURL?: string;
 }

@@ -4,6 +4,7 @@ import {
   DataColumnProps,
   DataInfoRowProps,
   ImageSizeMapType,
+  LinkWrapperProps,
   StyledImageProps,
   StyledNameProps,
 } from "./types";
@@ -73,6 +74,17 @@ export const DetailedInfoRow = styled.div<DataInfoRowProps>`
         text-overflow: ellipsis;
         max-width: ${ellipsisAt}px;
       }
+    `}
+`;
+
+export const LinkWrapper = styled.a<LinkWrapperProps>`
+  text-decoration: none;
+  cursor: pointer;
+  ${({ profileURL }) =>
+    !profileURL &&
+    css`
+      pointer-events: none;
+      cursor: default;
     `}
 `;
 
