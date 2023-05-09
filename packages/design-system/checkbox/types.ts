@@ -1,7 +1,8 @@
-import { ChangeEventHandler } from "react";
+import { ChangeEventHandler, MouseEventHandler } from "react";
 
 export interface CheckSquareProps {
   isDisabled: boolean;
+  hasNoAction: boolean;
 }
 
 export interface Props {
@@ -9,5 +10,7 @@ export interface Props {
   label?: string;
   isDisabled?: boolean;
   onChange?: ChangeEventHandler<HTMLInputElement>;
+  onCheckboxClick: MouseEventHandler<HTMLInputElement>;
   ref?: React.Ref<HTMLInputElement>;
+  hasNoAction?: boolean;
 }

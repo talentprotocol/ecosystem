@@ -8,6 +8,7 @@ export * from "./text-link";
 export * from "./dropdown";
 export * from "./checkbox";
 export * from "./radio-button";
+export * from "./members-list";
 export * from "./breakpoints";
 export * from "./spinner";
 export * from "./card";

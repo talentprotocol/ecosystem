@@ -1,11 +1,12 @@
 import { Typography } from "../typography";
-import { CheckSquare, Container, InnerRadiContainer } from "./styled";
+import { CheckSquare, Container, InnerRadioContainer } from "./styled";
 import { Props } from "./types";
 
 export const RadioButton = ({
   isChecked,
   isDisabled = false,
   ref,
+  label,
   onChange,
 }: Props) => (
   <Container>
@@ -17,12 +18,14 @@ export const RadioButton = ({
       checked={isChecked}
       onChange={onChange}
     />
-    {isChecked && <InnerRadiContainer isDisabled={isDisabled} />}
-    <Typography
-      specs={{ variant: "p2", type: "regular" }}
-      color={isDisabled ? "primaryDisable" : "primary01"}
-    >
-      Label
-    </Typography>
+    {isChecked && <InnerRadioContainer isDisabled={isDisabled} />}
+    {label && (
+      <Typography
+        specs={{ variant: "p2", type: "regular" }}
+        color={isDisabled ? "primaryDisable" : "primary01"}
+      >
+        {label}
+      </Typography>
+    )}
   </Container>
 );

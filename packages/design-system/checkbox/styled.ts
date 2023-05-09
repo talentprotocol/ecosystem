@@ -20,6 +20,7 @@ export const CheckSquare = styled.input<CheckSquareProps>`
   cursor: pointer;
   transition-duration: 0.25s;
 
+  ${({ hasNoAction }) => hasNoAction && "cursor: default;"}
   :checked {
     background-color: ${buildColor("primary")};
     border: 1px solid ${buildColor("primary")};
@@ -33,11 +34,6 @@ export const CheckSquare = styled.input<CheckSquareProps>`
       `}
   }
 
-  :hover {
-    background: ${buildColor("primaryHover")};
-    border: 1px solid ${buildColor("primary")};
-  }
-
   ${({ isDisabled }) =>
     isDisabled &&
     css`
@@ -47,8 +43,8 @@ export const CheckSquare = styled.input<CheckSquareProps>`
 
 export const IconContainer = styled.div`
   position: absolute;
-  top: 8px;
-  left: 8px;
+  width: 16px;
+  height: 16px;
   display: flex;
   align-items: center;
   justify-content: center;

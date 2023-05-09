@@ -12,7 +12,6 @@ export const Container = styled.div`
 
 export const CheckSquare = styled.input<CheckSquareProps>`
   appearance: none;
-  color: red;
   width: 20px;
   height: 20px;
   background: transparent;
@@ -32,10 +31,6 @@ export const CheckSquare = styled.input<CheckSquareProps>`
       `}
   }
 
-  :hover {
-    border: 1px solid ${buildColor("primaryHover")};
-  }
-
   ${({ isDisabled }) =>
     isDisabled &&
     css`
@@ -43,14 +38,13 @@ export const CheckSquare = styled.input<CheckSquareProps>`
     `}
 `;
 
-export const InnerRadiContainer = styled.div<CheckSquareProps>`
+export const InnerRadioContainer = styled.div<CheckSquareProps>`
   position: absolute;
-  top: 8px;
-  left: 10px;
+  width: 20px;
+  height: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: red;
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -63,8 +57,4 @@ export const InnerRadiContainer = styled.div<CheckSquareProps>`
     css`
       background-color: ${buildColor("primaryDisable")};
     `}
-
-  :hover {
-    background-color: ${buildColor("primaryHover")};
-  }
 `;
