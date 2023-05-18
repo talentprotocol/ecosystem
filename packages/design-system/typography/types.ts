@@ -50,4 +50,5 @@ export interface Props {
   color: PaletteTokens;
   children: string | React.ReactNode;
   className?: string;
+  typographyRef?: React.RefObject<any>
 }

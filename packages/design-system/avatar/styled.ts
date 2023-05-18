@@ -8,6 +8,7 @@ import {
   StyledImageProps,
   StyledNameProps,
 } from "./types";
+import { mobileStyles } from "../breakpoints";
 
 const IMAGE_SIZE_MAP: ImageSizeMapType = {
   xs: css`
@@ -95,6 +96,16 @@ export const StyledImage = styled.img<StyledImageProps>`
 `;
 
 export const StyledName = styled(Typography)<StyledNameProps>`
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  display: inline-block;
+  max-width: 140px;
+
+  ${mobileStyles(css`
+    max-width: 110px;
+  `)}
+
   ${({ isDisabled }) =>
     isDisabled &&
     css`

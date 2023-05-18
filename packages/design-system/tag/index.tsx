@@ -25,7 +25,7 @@ export const Tag = ({
     )}
     <Typography
       specs={{
-        variant: size === "small" ? "label2" : "label3",
+        variant: size === "small" ? "label3" : "label2",
         type: "medium",
       }}
       color={textColor}

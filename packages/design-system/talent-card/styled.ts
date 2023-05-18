@@ -54,6 +54,13 @@ export const DataRow = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
+
+  p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+    white-space: nowrap;
+  }
 `;
 
 export const OccupationContainer = styled.div`

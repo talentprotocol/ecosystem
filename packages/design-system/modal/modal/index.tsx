@@ -30,7 +30,6 @@ export const Modal = ({
   }, [isOpen]);
   const onModalClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     e.stopPropagation();
-    e.preventDefault();
   };
   return isOpen ? (
     <Container onClick={closeModal}>
