@@ -81,6 +81,8 @@ export const DetailedInfoRow = styled.div<DataInfoRowProps>`
 export const LinkWrapper = styled.a<LinkWrapperProps>`
   text-decoration: none;
   cursor: pointer;
+  display: flex;
+  
   ${({ profileURL }) =>
     !profileURL &&
     css`
