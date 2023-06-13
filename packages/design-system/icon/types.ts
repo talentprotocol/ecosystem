@@ -115,7 +115,8 @@ export type SVGList =
   | "carret"
   | "user"
   | "eye"
-  | "eye-disabled";
+  | "eye-disabled"
+  | "multiple-users";
 
 export type IconMapType = Record<SVGList, ElementType>;
 

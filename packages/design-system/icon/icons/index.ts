@@ -108,6 +108,7 @@ import { Carret } from "./carret";
 import { User } from "./user";
 import { Eye } from "./eye";
 import { EyeDisabled } from "./eye-disabled";
+import { MultipleUsers } from "./multiple-users";
 
 export const icons: IconMapType = {
   flags: Flags,
@@ -219,4 +220,5 @@ export const icons: IconMapType = {
   user: User,
   eye: Eye,
   "eye-disabled": EyeDisabled,
+  "multiple-users": MultipleUsers
 };

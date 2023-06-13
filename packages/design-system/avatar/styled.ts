@@ -82,7 +82,7 @@ export const LinkWrapper = styled.a<LinkWrapperProps>`
   text-decoration: none;
   cursor: pointer;
   display: flex;
-  
+
   ${({ profileURL }) =>
     !profileURL &&
     css`
@@ -98,9 +98,9 @@ export const StyledImage = styled.img<StyledImageProps>`
 `;
 
 export const StyledName = styled(Typography)<StyledNameProps>`
-  white-space: nowrap; 
+  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; 
+  text-overflow: ellipsis;
   display: inline-block;
   max-width: 140px;
 
