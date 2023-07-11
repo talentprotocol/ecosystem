@@ -11,10 +11,13 @@ export const Container = styled.div<StyledContainerProps>`
   ${({ borderColor }) =>
     borderColor && `border: 1px solid ${buildColor(borderColor)};`}
   background-color: ${({ backgroundColor }) => buildColor(backgroundColor)};
-  ${({ size }) => (size === "small" ? "padding: 0 8px;" : "padding: 2px 8px;")};
+  ${({ size }) => (size === "small" ? "padding: 0 0;" : "padding: 2px 0;")};
 `;
 
-export const TagLabelContainer = styled.div`
-  display: flex;
-  align-items: center;
+export const LeftIconContainer = styled.div`
+  margin-left: 8px;
+`;
+
+export const RightIconContainer = styled.div`
+  margin-right: 8px;
 `;

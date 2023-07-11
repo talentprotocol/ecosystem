@@ -7,6 +7,7 @@ export type UndefinedImageMapType = Record<UndefinedImageTypes, any>;
 
 export interface StyledImageProps {
   size: SizeTypes;
+  square?: boolean;
 }
 
 export interface StyledNameProps {
@@ -36,4 +37,5 @@ export interface Props {
   isVerified?: boolean;
   ellipsisAt?: number;
   profileURL?: string;
+  square?: boolean;
 }
