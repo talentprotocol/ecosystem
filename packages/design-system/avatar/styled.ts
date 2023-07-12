@@ -14,27 +14,22 @@ const IMAGE_SIZE_MAP: ImageSizeMapType = {
   xs: css`
     width: 24px;
     height: 24px;
-    border-radiux: 50%;
   `,
   sm: css`
     width: 32px;
     height: 32px;
-    border-radius: 50%;
   `,
   md: css`
     width: 40px;
     height: 40px;
-    border-radius: 50%;
   `,
   lg: css`
     width: 88px;
     height: 88px;
-    border-radius: 50%;
   `,
   xl: css`
     width: 120px;
     height: 120px;
-    border-radius: 50%;
   `,
 };
 
@@ -93,6 +88,11 @@ export const LinkWrapper = styled.a<LinkWrapperProps>`
 
 export const StyledImage = styled.img<StyledImageProps>`
   ${({ size }) => IMAGE_SIZE_MAP[size]}
+  ${({ square }) => square ? css`
+    border-radius: 8px;
+  ` : css`
+    border-radius: 50%;
+  `}
   overflow: hidden;
   object-fit: cover;
 `;

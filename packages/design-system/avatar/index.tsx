@@ -3,6 +3,7 @@ import purpleAvatar from "./assets/purple.png";
 import lightPurpleAvatar from "./assets/light-purple.png";
 import greenAvatar from "./assets/green.png";
 import greenLightAvatar from "./assets/light-green.png";
+import PurpleRectangle from "./assets/purple-rectangle.png";
 import {
   Container,
   DataColumn,
@@ -23,8 +24,13 @@ const UNDEFINED_IMAGE_MAP: UndefinedImageMapType = {
   "4": greenLightAvatar,
 };
 
-const userIdToUndefinedImageEntry = (userId: number): string =>
-  UNDEFINED_IMAGE_MAP[(userId % 5).toString() as UndefinedImageTypes];
+const userIdToUndefinedImageEntry = (userId: number, square: boolean): string => {
+  if (square) {
+    return PurpleRectangle as UndefinedImageTypes;
+  } else {
+    return UNDEFINED_IMAGE_MAP[(userId % 5).toString() as UndefinedImageTypes];
+  }
+}
 
 export const Avatar = ({
   size,
@@ -37,6 +43,7 @@ export const Avatar = ({
   isVerified = false,
   ellipsisAt = 0,
   profileURL = "",
+  square = false,
 }: Props) => {
   const computedProfileURL = !isDisabled ? profileURL : "";
   return (
@@ -44,7 +51,8 @@ export const Avatar = ({
       <LinkWrapper href={computedProfileURL} profileURL={computedProfileURL}>
         <StyledImage
           size={size}
-          src={!!url ? url : userIdToUndefinedImageEntry(userId)}
+          src={!!url ? url : userIdToUndefinedImageEntry(userId, square)}
+          square={square}
         />
       </LinkWrapper>
       {name && (

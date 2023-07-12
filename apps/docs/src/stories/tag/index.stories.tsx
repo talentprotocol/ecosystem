@@ -33,6 +33,6 @@ Default.args = {
   backgroundColor: "warning",
   textColor: "warningText",
   label: "Tag Label",
-  leftIcon: "clock",
-  rightIcon: "bulb",
+  leftIcon: undefined,
+  rightIcon: undefined,
 };

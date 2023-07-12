@@ -28,7 +28,7 @@ export const lightPalette: PaletteObject = {
   surfaceDisable: "#F2F3F5",
   surfaceShadow: "#0000000A",
   surfaceOverlay: "#00000080",
-  bg01: "#FAFAFB",
+  bg01: "#ffffff",
   bgInverse: "#FAFAFB",
   secondary: "#BBED55",
   secondaryShade01: "#83A63B",

@@ -8,24 +8,18 @@ export const MembersContainer = styled.div`
   align-items: center;
   position: relative;
   align-items: center;
-  padding-left: 120px;
 `;
 
 export const AvatarsHorizontalStack = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
+  align-items: center;
   display: flex;
-
-  & :nth-child(n + 2) {
-    margin-left: -12px;
-  }
+  margin-left: 10px;
 `;
 
 export const SmallAvatarContainer = styled.div`
-  border-radius: 50%;
   border: 2px solid ${buildColor("bg01")};
-  overflow: hidden;
+  border-radius: 50%;
+  margin-left: -10px;
 `;
 
 export const MembersCounterContainer = styled.div`

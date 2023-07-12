@@ -7,8 +7,8 @@ export const Container = styled.a`
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  width: 311px;
-  height: 335px;
+  width: 359px;
+  height: 333px;
   border: 1px solid ${buildColor("surfaceHover02")};
   border-radius: 16px;
   overflow: hidden;
@@ -33,7 +33,7 @@ export const AvatarContainer = styled.div`
   position: absolute;
   left: 16px;
   top: 34px;
-  border-radius: 50%;
+  border-radius: 8px;
   border: 2px solid ${buildColor("bg01")};
 `;
 
@@ -65,4 +65,5 @@ export const TagsContainer = styled.div`
   align-items: center;
   margin-top: 16px;
   margin-bottom: 40px;
+  height: 24px;
 `;
