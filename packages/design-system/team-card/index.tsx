@@ -55,6 +55,9 @@ export const TeamCard = ({
             size={tag.size}
             backgroundColor={tag.backgroundColor}
             textColor={tag.textColor}
+            borderColor={tag.borderColor}
+            leftIcon={tag.leftIcon}
+            rightIcon={tag.rightIcon}
           />
         ))}
         {tags.length > NUMBER_OF_TAGS && (
