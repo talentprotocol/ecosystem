@@ -34,14 +34,19 @@ const IMAGE_SIZE_MAP: ImageSizeMapType = {
   `,
 };
 
-export const Container = styled.div`
+export const Container = styled.div<{ square: boolean }>`
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 4px;
-  border-radius: 8px;
-  background: ${buildColor("bg01")};
+
+  ${({ square }) =>
+    square &&
+    css`
+      border-radius: 8px;
+      background: ${buildColor("bg01")};
+    `}
 `;
 
 export const DataColumn = styled.div<DataColumnProps>`
