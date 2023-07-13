@@ -220,5 +220,5 @@ export const icons: IconMapType = {
   user: User,
   eye: Eye,
   "eye-disabled": EyeDisabled,
-  "multiple-users": MultipleUsers
+  "multiple-users": MultipleUsers,
 };

@@ -24,13 +24,16 @@ const UNDEFINED_IMAGE_MAP: UndefinedImageMapType = {
   "4": greenLightAvatar,
 };
 
-const userIdToUndefinedImageEntry = (userId: number, square: boolean): string => {
+const userIdToUndefinedImageEntry = (
+  userId: number,
+  square: boolean
+): string => {
   if (square) {
     return PurpleRectangle as UndefinedImageTypes;
   } else {
     return UNDEFINED_IMAGE_MAP[(userId % 5).toString() as UndefinedImageTypes];
   }
-}
+};
 
 export const Avatar = ({
   size,

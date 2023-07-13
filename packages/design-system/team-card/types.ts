@@ -1,3 +1,5 @@
+import { Props as TagProps } from "../tag/types";
+
 export interface StyledBannerProps {
   bannerImage?: string;
 }
@@ -7,7 +9,7 @@ export interface Props {
   bannerImage?: string;
   name: string;
   description: string;
-  tags?: string[];
+  tags: TagProps[];
   membersImages: string[];
   totalMembers: number;
   to: string;

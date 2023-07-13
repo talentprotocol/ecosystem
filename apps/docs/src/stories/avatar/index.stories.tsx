@@ -38,5 +38,5 @@ Default.args = {
   ellipsisAt: 0,
   isDisabled: false,
   profileURL: "",
-  square: false
+  square: false,
 };

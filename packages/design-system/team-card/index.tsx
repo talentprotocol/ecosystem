@@ -48,17 +48,18 @@ export const TeamCard = ({
         </Typography>
       </DescriptionContainer>
       <TagsContainer>
-        {tags.filter((_tag, index) => index < NUMBER_OF_TAGS).map((tag) => (
+        {[...tags].slice(0, 3).map((tag) => (
           <Tag
-            key={tag}
-            label={tag}
-            size="small"
-            backgroundColor="primaryTint02"
-            textColor="primary"
+            key={tag.label}
+            label={tag.label}
+            size={tag.size}
+            backgroundColor={tag.backgroundColor}
+            textColor={tag.textColor}
           />
         ))}
         {tags.length > NUMBER_OF_TAGS && (
-          <Tag key={tags.length - NUMBER_OF_TAGS}
+          <Tag
+            key={tags.length - NUMBER_OF_TAGS}
             label={`+${tags.length - NUMBER_OF_TAGS}`}
             size="small"
             backgroundColor="primaryTint02"
