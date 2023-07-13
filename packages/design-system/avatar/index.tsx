@@ -27,9 +27,9 @@ const UNDEFINED_IMAGE_MAP: UndefinedImageMapType = {
 const userIdToUndefinedImageEntry = (
   userId: number,
   square: boolean
-): string => {
+) => {
   if (square) {
-    return PurpleRectangle as UndefinedImageTypes;
+    return PurpleRectangle;
   } else {
     return UNDEFINED_IMAGE_MAP[(userId % 5).toString() as UndefinedImageTypes];
   }
