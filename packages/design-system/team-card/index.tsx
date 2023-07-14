@@ -14,7 +14,7 @@ import {
 } from "./styled";
 import { Props } from "./types";
 
-const NUMBER_OF_TAGS = 2;
+const NUMBER_OF_TAGS = 4;
 
 export const TeamCard = ({
   bannerImage,
@@ -48,7 +48,7 @@ export const TeamCard = ({
         </Typography>
       </DescriptionContainer>
       <TagsContainer>
-        {[...tags].slice(0, 3).map((tag) => (
+        {[...tags].slice(0, NUMBER_OF_TAGS).map((tag) => (
           <Tag
             key={tag.label}
             label={tag.label}
@@ -60,15 +60,6 @@ export const TeamCard = ({
             rightIcon={tag.rightIcon}
           />
         ))}
-        {tags.length > NUMBER_OF_TAGS && (
-          <Tag
-            key={tags.length - NUMBER_OF_TAGS}
-            label={`+${tags.length - NUMBER_OF_TAGS}`}
-            size="small"
-            backgroundColor="primaryTint02"
-            textColor="primary"
-          />
-        )}
       </TagsContainer>
       <MembersList membersImages={membersImages} totalMembers={totalMembers} />
     </DataColumn>
