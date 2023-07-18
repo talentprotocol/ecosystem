@@ -23,7 +23,21 @@ Default.args = {
   name: "The team",
   description:
     "This is a random description,a random description,a random description,a random description,a random description,a random description",
-  tags: ["tag1", "tag2", "tag3", "tag4", "tag5", "tag6"],
+  tags: [
+    {
+      backgroundColor: "cyan",
+      label: "tag1",
+      size: "small",
+      textColor: "danger",
+      borderColor: "primaryText"
+    },
+    {
+      backgroundColor: "cyan",
+      label: "tag2",
+      size: "small",
+      textColor: "danger",
+    },
+  ],
   membersImages: [
     "https://picsum.photos/200",
     "https://picsum.photos/201",

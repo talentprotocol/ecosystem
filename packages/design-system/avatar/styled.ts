@@ -9,6 +9,7 @@ import {
   StyledNameProps,
 } from "./types";
 import { mobileStyles } from "../breakpoints";
+import { buildColor } from "../colors";
 
 const IMAGE_SIZE_MAP: ImageSizeMapType = {
   xs: css`
@@ -33,12 +34,19 @@ const IMAGE_SIZE_MAP: ImageSizeMapType = {
   `,
 };
 
-export const Container = styled.div`
+export const Container = styled.div<{ square: boolean }>`
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 4px;
+
+  ${({ square }) =>
+    square &&
+    css`
+      border-radius: 8px;
+      background: ${buildColor("bg01")};
+    `}
 `;
 
 export const DataColumn = styled.div<DataColumnProps>`
@@ -88,11 +96,14 @@ export const LinkWrapper = styled.a<LinkWrapperProps>`
 
 export const StyledImage = styled.img<StyledImageProps>`
   ${({ size }) => IMAGE_SIZE_MAP[size]}
-  ${({ square }) => square ? css`
-    border-radius: 8px;
-  ` : css`
-    border-radius: 50%;
-  `}
+  ${({ square }) =>
+    square
+      ? css`
+          border-radius: 8px;
+        `
+      : css`
+          border-radius: 50%;
+        `}
   overflow: hidden;
   object-fit: cover;
 `;

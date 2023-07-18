@@ -24,13 +24,13 @@ const UNDEFINED_IMAGE_MAP: UndefinedImageMapType = {
   "4": greenLightAvatar,
 };
 
-const userIdToUndefinedImageEntry = (userId: number, square: boolean): string => {
+const userIdToUndefinedImageEntry = (userId: number, square: boolean) => {
   if (square) {
-    return PurpleRectangle as UndefinedImageTypes;
+    return PurpleRectangle;
   } else {
     return UNDEFINED_IMAGE_MAP[(userId % 5).toString() as UndefinedImageTypes];
   }
-}
+};
 
 export const Avatar = ({
   size,
@@ -47,7 +47,7 @@ export const Avatar = ({
 }: Props) => {
   const computedProfileURL = !isDisabled ? profileURL : "";
   return (
-    <Container>
+    <Container square={square}>
       <LinkWrapper href={computedProfileURL} profileURL={computedProfileURL}>
         <StyledImage
           size={size}

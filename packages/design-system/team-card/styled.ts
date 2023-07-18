@@ -25,7 +25,7 @@ export const Banner = styled.div<StyledBannerProps>`
   ${({ bannerImage }) =>
     bannerImage && `background-image: url(${bannerImage});`}
   background-position: center;
-  background-size: 100% 100%;
+  background-size: cover;
   position: relative;
 `;
 
