@@ -40,6 +40,7 @@ export const InnerContainer = styled.section`
     max-height: 80%;
     margin: auto;
     border-radius: 24px;
+    overflow-y: auto;
   `)}
 `;
 
