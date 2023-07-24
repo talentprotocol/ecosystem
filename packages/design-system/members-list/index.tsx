@@ -13,17 +13,22 @@ export const MembersList = ({ membersImages, totalMembers }: Props) => (
     <AvatarsHorizontalStack>
       {membersImages.slice(0, 4).map((memberImage) => (
         <SmallAvatarContainer key={memberImage}>
-          <Avatar size="sm" url={memberImage} />
+          <Avatar size="xs" url={memberImage} />
         </SmallAvatarContainer>
       ))}
     </AvatarsHorizontalStack>
-    <MembersCounterContainer>
-      <Typography specs={{ variant: "p1", type: "medium" }} color="primary01">
-        {totalMembers.toLocaleString()}
-      </Typography>
-      <Typography specs={{ variant: "p1", type: "regular" }} color="primary04">
-        members
-      </Typography>
-    </MembersCounterContainer>
+    {!!totalMembers && (
+      <MembersCounterContainer>
+        <Typography specs={{ variant: "p1", type: "medium" }} color="primary01">
+          {totalMembers.toLocaleString()}
+        </Typography>
+        <Typography
+          specs={{ variant: "p1", type: "regular" }}
+          color="primary04"
+        >
+          members
+        </Typography>
+      </MembersCounterContainer>
+    )}
   </MembersContainer>
 );

@@ -1,4 +1,4 @@
 export interface Props {
   membersImages: string[];
-  totalMembers: number;
+  totalMembers?: number;
 }
