@@ -6,6 +6,7 @@ export * from "./tabs";
 export * from "./modal";
 export * from "./text-link";
 export * from "./dropdown";
+export * from "./button-dropdown";
 export * from "./checkbox";
 export * from "./radio-button";
 export * from "./members-list";
