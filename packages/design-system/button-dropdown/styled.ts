@@ -4,12 +4,11 @@ import { getTheme } from "../theme";
 
 export const OutterContainer = styled.div`
   position: relative;
-  width: 100%;
   cursor: pointer;
 `;
 
 export const OptionsContainer = styled.div`
-  width: 100%;
+  width: auto;
   position: absolute;
   bottom: -4px;
   transform: translate(0, 100%);
