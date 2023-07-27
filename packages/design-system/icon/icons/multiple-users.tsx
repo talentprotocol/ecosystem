@@ -9,7 +9,7 @@ export const MultipleUsers = ({ color = "primary", size = 16 }: SVGProps) => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <g clip-path="url(#clip0_10000_14932)">
+    <g clipPath="url(#clip0_10000_14932)">
       <path
         d="M5.93604 8C7.45482 8 8.68604 6.76878 8.68604 5.25C8.68604 3.73122 7.45482 2.5 5.93604 2.5C4.41725 2.5 3.18604 3.73122 3.18604 5.25C3.18604 6.76878 4.41725 8 5.93604 8Z"
         stroke={buildColor(color)}
@@ -40,7 +40,7 @@ export const MultipleUsers = ({ color = "primary", size = 16 }: SVGProps) => (
         <rect
           width="16"
           height="16"
-          fill="white"
+          fill="transparent"
           transform="translate(0.936035)"
         />
       </clipPath>
