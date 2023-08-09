@@ -114,6 +114,7 @@ import { EyeDisabled } from "./eye-disabled";
 import { MultipleUsers } from "./multiple-users";
 import { Add } from "./add";
 import { Notification } from "./notification";
+import { TalentLogo } from "./talent-logo";
 
 export const icons: IconMapType = {
   flags: Flags,
@@ -231,4 +232,5 @@ export const icons: IconMapType = {
   "multiple-users": MultipleUsers,
   add: Add,
   notification: Notification,
+  "talent-logo": TalentLogo,
 };

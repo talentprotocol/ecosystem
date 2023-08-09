@@ -1,14 +1,16 @@
 export interface PaginationItemObject {
   value: string;
   disabled: boolean;
+  index: number;
 }
 
 export interface PaginationItemProps {
   selected: boolean;
+  disabled: boolean;
 }
 
 export interface Props {
   totalPages: number;
-  selectedPage: number;
-  onSelectPage: (page: number) => void;
+  initialSelectedPage: number;
+  onSelectPage: (page: PaginationItemObject) => void;
 }

@@ -20,21 +20,30 @@ export const PaginationItem = styled.div<PaginationItemProps>`
   padding: 5px;
   cursor: pointer;
 
-  ${({ selected }) =>
+  * {
+    cursor: pointer;
+  }
+
+  ${({ selected, disabled }) =>
     selected
       ? css`
           background: ${buildColor("primary")};
           color: ${buildColor("bg01")};
         `
       : css`
-          :hover {
-            background: ${buildColor("surfaceHover01")};
-          }
+          ${!disabled
+            ? css`
+                :hover {
+                  background: ${buildColor("surfaceHover01")};
+                }
+              `
+            : css`
+                cursor: default;
+                label2 {
+                  cursor: default;
+                }
+              `}
         `}
-
-  * {
-    cursor: pointer;
-  }
 `;
 
 export const MirroredIconContainer = styled.div`

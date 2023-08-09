@@ -121,7 +121,8 @@ export type SVGList =
   | "eye-disabled"
   | "multiple-users"
   | "add"
-  | "notification";
+  | "notification"
+  | "talent-logo";
 
 export type IconMapType = Record<SVGList, ElementType>;
 
