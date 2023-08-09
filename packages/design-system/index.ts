@@ -23,3 +23,7 @@ export * from "./icon";
 export * from "./slider-selector";
 export * from "./typography";
 export * from "./switch";
+export * from "./alert";
+export * from "./global-styles";
+export * from "./notification-icon";
+export * from "./pagination";

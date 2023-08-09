@@ -19,7 +19,10 @@ export const MembersList = ({ membersImages, totalMembers }: Props) => (
     </AvatarsHorizontalStack>
     {!!totalMembers && (
       <MembersCounterContainer>
-        <Typography specs={{ variant: "label3", type: "medium" }} color="primary01">
+        <Typography
+          specs={{ variant: "label3", type: "medium" }}
+          color="primary01"
+        >
           {totalMembers.toLocaleString()}
         </Typography>
         <Typography

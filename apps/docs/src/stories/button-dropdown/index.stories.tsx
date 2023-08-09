@@ -1,5 +1,9 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Button, ButtonDropdown, TalentThemeProvider } from "@talentprotocol/design-system";
+import {
+  Button,
+  ButtonDropdown,
+  TalentThemeProvider,
+} from "@talentprotocol/design-system";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -22,14 +26,21 @@ const Template: ComponentStory<typeof ButtonDropdown> = (args) => (
   <TalentThemeProvider>
     <Container>
       <ButtonDropdown {...args}>
-        <Button hierarchy="secondary" size="small" onClick={() => {}} iconColor="primary01" leftIcon="navigation" />
-        </ButtonDropdown>
+        <Button
+          hierarchy="secondary"
+          size="small"
+          onClick={() => {}}
+          iconColor="primary01"
+          leftIcon="navigation"
+        />
+      </ButtonDropdown>
     </Container>
   </TalentThemeProvider>
 );
 
 export const Default = Template.bind({});
 Default.args = {
+  opensOnRight: false,
   options: [
     {
       value: "First option",

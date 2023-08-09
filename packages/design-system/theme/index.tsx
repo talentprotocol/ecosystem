@@ -1,4 +1,5 @@
 import { createContext, useCallback, useEffect, useState } from "react";
+import { GlobalStyles } from "../global-styles";
 import { ThemeProvider } from "styled-components";
 import { Props, ThemeInterface } from "./types";
 
@@ -63,6 +64,7 @@ export const TalentThemeProvider = ({
   }, [toggleThemeCallback]);
   return (
     <TalentThemeUpdateContext.Provider value={toggleThemeCallback}>
+      <GlobalStyles />
       <ThemeProvider theme={theme}>{children}</ThemeProvider>
     </TalentThemeUpdateContext.Provider>
   );

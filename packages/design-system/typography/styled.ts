@@ -13,7 +13,7 @@ import {
 } from "./types";
 
 export const baseTypographyStyles = (color: PaletteTokens) => css`
-  font-family: "AcidGrotesk";
+  font-family: "Mona-Sans", sans-serif;
   font-style: normal;
   color: ${buildColor(color)};
   margin: 0;

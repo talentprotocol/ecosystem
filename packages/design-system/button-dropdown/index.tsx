@@ -1,11 +1,11 @@
 import { useCallback, useState, useRef, FocusEvent } from "react";
 import { Icon } from "../icon";
-import { Typography } from "../typography";
 import {
   OptionsContainer,
   OutterContainer,
   OptionsInnerContainer,
-  Option
+  Option,
+  OptionLabel,
 } from "./styled";
 import { Props } from "./types";
 
@@ -14,6 +14,7 @@ export const ButtonDropdown = ({
   options,
   onBlur = () => {},
   selectOption,
+  opensOnRight = false,
 }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
   const outterContainerRef = useRef<HTMLDivElement>(null);
@@ -37,9 +38,9 @@ export const ButtonDropdown = ({
     >
       {children}
       {isOpen && (
-        <OptionsContainer>
+        <OptionsContainer opensOnRight={opensOnRight}>
           <OptionsInnerContainer>
-            {options.map((option, index) => (
+            {options.map((option) => (
               <Option
                 tabIndex={0}
                 key={option.value}
@@ -51,12 +52,12 @@ export const ButtonDropdown = ({
                 {option.iconName && (
                   <Icon name={option.iconName} color={option.iconColor} />
                 )}
-                <Typography
+                <OptionLabel
                   specs={{ variant: "label2", type: "medium" }}
                   color="primary01"
                 >
                   {option.value}
-                </Typography>
+                </OptionLabel>
               </Option>
             ))}
           </OptionsInnerContainer>
