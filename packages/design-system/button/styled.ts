@@ -74,9 +74,6 @@ const buildHierarchyButtons = (
 
               :active {
                 background: ${buildColor("primaryText")};
-              }
-
-              :focus {
                 box-shadow: 0px 0px 0px 3px ${buildColor("primaryTint02")};
               }
             `}
@@ -99,10 +96,6 @@ const buildHierarchyButtons = (
 
               :active {
                 background: ${buildColor("surface01")};
-              }
-
-              :focus {
-                border-color: ${buildColor("surfaceHover02")};
                 box-shadow: 0px 0px 0px 3px ${buildColor("primaryTint02")};
               }
             `}
@@ -115,19 +108,25 @@ const buildHierarchyButtons = (
         ${isDisabled
           ? css`
               border: none;
-              background: ${buildColor("surfaceDisable")};
+                
+                label {
+                  color: ${buildColor("primaryDisable")}};
+                }
             `
           : css`
               :hover {
-                background: ${buildColor("surfaceHover01")};
+                
+                label {
+                  color: ${buildColor("primary03")}};
+                }
               }
 
               :active {
-                background: ${buildColor("surfaceHover02")};
-              }
-
-              :focus {
                 box-shadow: 0px 0px 0px 3px ${buildColor("primaryTint02")};
+
+                label {
+                  color: ${buildColor("primary04")}};
+                }
               }
             `}
       `;
@@ -140,19 +139,19 @@ const buildHierarchyButtons = (
         ${isDisabled
           ? css`
               background: ${buildColor("dangerDisable")};
+
+              label {
+                color: ${buildColor("dangerTextDisable")};
+              }
             `
           : css`
               :hover {
-                background: ${buildColor("danger")}80;
+                background: ${buildColor("dangerTint01")};
               }
 
               :active {
                 background: ${buildColor("dangerShade01")};
-              }
-
-              :focus {
-                background: ${buildColor("danger")}80;
-                box-shadow: 0px 0px 0px 3px ${buildColor("dangerTint02")};
+                box-shadow: 0px 0px 0px 3px ${buildColor("dangerTint01")};
               }
             `}
       `;

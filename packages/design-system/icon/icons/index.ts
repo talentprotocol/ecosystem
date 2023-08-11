@@ -1,6 +1,9 @@
 import { Flags } from "./flags";
 import { Pin } from "./pin";
-import { Alert } from "./alert";
+import { AlertInformation } from "./alert-information";
+import { AlertPositive } from "./alert-positive";
+import { AlertDanger } from "./alert-danger";
+import { AlertWarning } from "./alert-warning";
 import { Amazon } from "./amazon";
 import { Apple } from "./apple";
 import { Binance } from "./binance";
@@ -109,11 +112,17 @@ import { User } from "./user";
 import { Eye } from "./eye";
 import { EyeDisabled } from "./eye-disabled";
 import { MultipleUsers } from "./multiple-users";
+import { Add } from "./add";
+import { Notification } from "./notification";
+import { TalentLogo } from "./talent-logo";
 
 export const icons: IconMapType = {
   flags: Flags,
   pin: Pin,
-  alert: Alert,
+  "alert-information": AlertInformation,
+  "alert-positive": AlertPositive,
+  "alert-danger": AlertDanger,
+  "alert-warning": AlertWarning,
   amazon: Amazon,
   apple: Apple,
   binance: Binance,
@@ -221,4 +230,7 @@ export const icons: IconMapType = {
   eye: Eye,
   "eye-disabled": EyeDisabled,
   "multiple-users": MultipleUsers,
+  add: Add,
+  notification: Notification,
+  "talent-logo": TalentLogo,
 };

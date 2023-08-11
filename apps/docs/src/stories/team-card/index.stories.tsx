@@ -29,7 +29,7 @@ Default.args = {
       label: "tag1",
       size: "small",
       textColor: "danger",
-      borderColor: "primaryText"
+      borderColor: "primaryText",
     },
     {
       backgroundColor: "cyan",

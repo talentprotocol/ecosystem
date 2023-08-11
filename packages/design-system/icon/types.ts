@@ -9,7 +9,10 @@ export interface SVGProps {
 export type SVGList =
   | "flags"
   | "pin"
-  | "alert"
+  | "alert-information"
+  | "alert-positive"
+  | "alert-warning"
+  | "alert-danger"
   | "amazon"
   | "apple"
   | "binance"
@@ -116,7 +119,10 @@ export type SVGList =
   | "user"
   | "eye"
   | "eye-disabled"
-  | "multiple-users";
+  | "multiple-users"
+  | "add"
+  | "notification"
+  | "talent-logo";
 
 export type IconMapType = Record<SVGList, ElementType>;
 
