@@ -21,13 +21,13 @@ export const MembersList = ({ membersImages, totalMembers }: Props) => (
       <MembersCounterContainer>
         <Typography
           specs={{ variant: "label3", type: "medium" }}
-          color="primary01"
+          color="primary02"
         >
           {totalMembers.toLocaleString()}
         </Typography>
         <Typography
           specs={{ variant: "label3", type: "medium" }}
-          color="primary04"
+          color="primary02"
         >
           members
         </Typography>
