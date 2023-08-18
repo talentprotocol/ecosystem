@@ -57,7 +57,7 @@ export const Avatar = ({
       </LinkWrapper>
       {name && (
         <DataColumn size={size}>
-          <DetailedInfoRow>
+          <DetailedInfoRow ellipsisAt={!!isVerified ? ellipsisAt - 20 : ellipsisAt}>
             <LinkWrapper
               href={computedProfileURL}
               profileURL={computedProfileURL}
