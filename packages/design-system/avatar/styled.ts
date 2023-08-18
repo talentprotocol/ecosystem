@@ -72,7 +72,7 @@ export const DetailedInfoRow = styled.div<DataInfoRowProps>`
   ${({ ellipsisAt }) =>
     !!ellipsisAt &&
     css`
-      p {
+      p, label {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -109,16 +109,6 @@ export const StyledImage = styled.img<StyledImageProps>`
 `;
 
 export const StyledName = styled(Typography)<StyledNameProps>`
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: inline-block;
-  max-width: 140px;
-
-  ${mobileStyles(css`
-    max-width: 110px;
-  `)}
-
   ${({ isDisabled }) =>
     isDisabled &&
     css`
