@@ -115,6 +115,15 @@ import { MultipleUsers } from "./multiple-users";
 import { Add } from "./add";
 import { Notification } from "./notification";
 import { TalentLogo } from "./talent-logo";
+import { Behance } from "./behance";
+import { Dribbble } from "./dribbble";
+import { Farcaster } from "./farcaster";
+import { Figma } from "./figma";
+import { GitHub } from "./github";
+import { Instagram } from "./instagram";
+import { Lens } from "./lens";
+import { TikTok } from "./tik-tok";
+import { Youtube } from "./youtube";
 
 export const icons: IconMapType = {
   flags: Flags,
@@ -233,4 +242,13 @@ export const icons: IconMapType = {
   add: Add,
   notification: Notification,
   "talent-logo": TalentLogo,
+  behance: Behance,
+  dribbble: Dribbble,
+  farcaster: Farcaster,
+  figma: Figma,
+  github: GitHub,
+  instagram: Instagram,
+  lens: Lens,
+  tiktok: TikTok,
+  youtube: Youtube,
 };
