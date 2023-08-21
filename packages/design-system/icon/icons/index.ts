@@ -101,6 +101,7 @@ import { Remove } from "./remove";
 import { LogoLight } from "./logo-light";
 import { Question } from "./question";
 import { Arrow } from "./arrow";
+import { BackArrow } from "./back-arrow";
 import { QR } from "./qr";
 import { CheckChat } from "./check-chat";
 import { Mailbox } from "./mailbox";
@@ -124,6 +125,7 @@ import { Instagram } from "./instagram";
 import { Lens } from "./lens";
 import { TikTok } from "./tik-tok";
 import { Youtube } from "./youtube";
+import { PositionPlaceholder } from "./position-placeholder";
 
 export const icons: IconMapType = {
   flags: Flags,
@@ -228,6 +230,7 @@ export const icons: IconMapType = {
   "logo-light": LogoLight,
   question: Question,
   arrow: Arrow,
+  "back-arrow": BackArrow,
   qr: QR,
   "check-chat": CheckChat,
   mailbox: Mailbox,
@@ -251,4 +254,5 @@ export const icons: IconMapType = {
   lens: Lens,
   tiktok: TikTok,
   youtube: Youtube,
+  "position-placeholder": PositionPlaceholder,
 };

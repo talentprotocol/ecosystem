@@ -32,6 +32,7 @@ Default.args = {
     {
       value: "First option",
       iconName: "celo",
+      isDisabled: true
     },
     {
       value: "Second option",
@@ -48,6 +49,7 @@ Default.args = {
     {
       value: "Fifth option",
       iconName: "chat",
+      isDisabled: true
     },
   ],
 };

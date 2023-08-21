@@ -5,6 +5,7 @@ export interface OptionProps {
   value: string;
   iconName?: SVGList;
   iconColor?: PaletteTokens;
+  isDisabled?: boolean;
 }
 
 export interface Props {
