@@ -72,7 +72,8 @@ export const DetailedInfoRow = styled.div<DataInfoRowProps>`
   ${({ ellipsisAt }) =>
     !!ellipsisAt &&
     css`
-      p, label {
+      p,
+      label {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;

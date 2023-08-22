@@ -101,6 +101,7 @@ import { Remove } from "./remove";
 import { LogoLight } from "./logo-light";
 import { Question } from "./question";
 import { Arrow } from "./arrow";
+import { BackArrow } from "./back-arrow";
 import { QR } from "./qr";
 import { CheckChat } from "./check-chat";
 import { Mailbox } from "./mailbox";
@@ -115,6 +116,16 @@ import { MultipleUsers } from "./multiple-users";
 import { Add } from "./add";
 import { Notification } from "./notification";
 import { TalentLogo } from "./talent-logo";
+import { Behance } from "./behance";
+import { Dribbble } from "./dribbble";
+import { Farcaster } from "./farcaster";
+import { Figma } from "./figma";
+import { GitHub } from "./github";
+import { Instagram } from "./instagram";
+import { Lens } from "./lens";
+import { TikTok } from "./tik-tok";
+import { Youtube } from "./youtube";
+import { PositionPlaceholder } from "./position-placeholder";
 
 export const icons: IconMapType = {
   flags: Flags,
@@ -219,6 +230,7 @@ export const icons: IconMapType = {
   "logo-light": LogoLight,
   question: Question,
   arrow: Arrow,
+  "back-arrow": BackArrow,
   qr: QR,
   "check-chat": CheckChat,
   mailbox: Mailbox,
@@ -233,4 +245,14 @@ export const icons: IconMapType = {
   add: Add,
   notification: Notification,
   "talent-logo": TalentLogo,
+  behance: Behance,
+  dribbble: Dribbble,
+  farcaster: Farcaster,
+  figma: Figma,
+  github: GitHub,
+  instagram: Instagram,
+  lens: Lens,
+  tiktok: TikTok,
+  youtube: Youtube,
+  "position-placeholder": PositionPlaceholder,
 };

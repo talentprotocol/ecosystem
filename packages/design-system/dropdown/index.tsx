@@ -74,7 +74,7 @@ export const Dropdown = ({
       {isOpen && (
         <OptionsContainer>
           <OptionsInnerContainer>
-            {options.map((option, index) => (
+            {options.map((option) => (
               <Option
                 tabIndex={0}
                 key={option.value}
@@ -82,9 +82,10 @@ export const Dropdown = ({
                   setIsOpen(false);
                   selectOption(option);
                 }}
+                {...option}
               >
                 {option.iconName && (
-                  <Icon name={option.iconName} color={option.iconColor} />
+                  <Icon name={option.iconName} color={option.isDisabled ? "primaryDisable" : option.iconColor} />
                 )}
                 <Typography
                   specs={{ variant: "label2", type: "medium" }}

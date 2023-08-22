@@ -109,6 +109,7 @@ export type SVGList =
   | "logo-light"
   | "question"
   | "arrow"
+  | "back-arrow"
   | "qr"
   | "check-chat"
   | "mailbox"
@@ -122,7 +123,17 @@ export type SVGList =
   | "multiple-users"
   | "add"
   | "notification"
-  | "talent-logo";
+  | "talent-logo"
+  | "behance"
+  | "dribbble"
+  | "farcaster"
+  | "figma"
+  | "github"
+  | "instagram"
+  | "lens"
+  | "tiktok"
+  | "youtube"
+  | "position-placeholder";
 
 export type IconMapType = Record<SVGList, ElementType>;
 

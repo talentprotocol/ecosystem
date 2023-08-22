@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 import { buildColor } from "../colors";
 import { getTheme } from "../theme";
+import { OptionProps } from "./types";
 
 export const OutterContainer = styled.div`
   position: relative;
@@ -65,7 +66,7 @@ export const OptionsInnerContainer = styled.div`
   flex-direction: column;
 `;
 
-export const Option = styled.div`
+export const Option = styled.div<OptionProps>`
   cursor: pointer;
   padding: 8px;
   border-radius: 4px;
@@ -80,4 +81,17 @@ export const Option = styled.div`
   :hover {
     background: ${buildColor("surface02")};
   }
+
+  ${({ isDisabled }) => isDisabled && css`
+    cursor: not-allowed;
+
+    label {
+      cursor: not-allowed;
+      color: ${buildColor("primaryDisable")};
+    }
+
+    :hover {
+      background: transparent;
+    }
+  `}
 `;
