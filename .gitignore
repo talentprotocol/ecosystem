@@ -9,9 +9,9 @@ node_modules
 .pnp.js
 
 # public packages
-packages/design-system/**/*.d.ts
-packages/design-system/**/*.d.ts.map
-packages/design-system/**/*.js
+packages/**/*.d.ts
+packages/**/*.d.ts.map
+packages/**/*.js
 
 # testing
 coverage

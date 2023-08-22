@@ -1,8 +1,8 @@
-const create = require("zustand");
+import create from "zustand";
 
-const _storeMap = {};
+const _storeMap:{[key: string]: any} = {};
 
-const createStore = (name, blueprintCallback) => {
+const createStore = (name: string, blueprintCallback: any) => {
   if (!!_storeMap[name])
     throw `ERROR: Trying to memoize a store that already exists - ${name}`;
 
