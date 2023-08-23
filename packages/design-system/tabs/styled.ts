@@ -1,13 +1,14 @@
 import styled, { css } from "styled-components";
 import { buildColor } from "../colors";
 import { StyledBottomBarProps, StyledTabContainerProps } from "./types";
+import { Typography } from "../typography";
 
 export const Container = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
   gap: 24px;
+  overflow: scroll;
 `;
 
 export const TabContainer = styled.div<StyledTabContainerProps>`
@@ -40,4 +41,8 @@ export const BottomBar = styled.div<StyledBottomBarProps>`
     css`
       background-color: ${buildColor("primary")};
     `}
+`;
+
+export const StyledTypography = styled(Typography)`
+  text-wrap: nowrap;
 `;

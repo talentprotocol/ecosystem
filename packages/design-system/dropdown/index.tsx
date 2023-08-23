@@ -85,7 +85,12 @@ export const Dropdown = ({
                 {...option}
               >
                 {option.iconName && (
-                  <Icon name={option.iconName} color={option.isDisabled ? "primaryDisable" : option.iconColor} />
+                  <Icon
+                    name={option.iconName}
+                    color={
+                      option.isDisabled ? "primaryDisable" : option.iconColor
+                    }
+                  />
                 )}
                 <Typography
                   specs={{ variant: "label2", type: "medium" }}

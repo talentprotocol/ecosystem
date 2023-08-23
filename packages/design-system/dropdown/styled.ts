@@ -82,16 +82,18 @@ export const Option = styled.div<OptionProps>`
     background: ${buildColor("surface02")};
   }
 
-  ${({ isDisabled }) => isDisabled && css`
-    cursor: not-allowed;
-
-    label {
+  ${({ isDisabled }) =>
+    isDisabled &&
+    css`
       cursor: not-allowed;
-      color: ${buildColor("primaryDisable")};
-    }
 
-    :hover {
-      background: transparent;
-    }
-  `}
+      label {
+        cursor: not-allowed;
+        color: ${buildColor("primaryDisable")};
+      }
+
+      :hover {
+        background: transparent;
+      }
+    `}
 `;

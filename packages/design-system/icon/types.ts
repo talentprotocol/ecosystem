@@ -133,7 +133,8 @@ export type SVGList =
   | "lens"
   | "tiktok"
   | "youtube"
-  | "position-placeholder";
+  | "position-placeholder"
+  | "mastodon";
 
 export type IconMapType = Record<SVGList, ElementType>;
 

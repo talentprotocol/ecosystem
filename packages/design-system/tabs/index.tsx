@@ -1,5 +1,4 @@
-import { Typography } from "../typography";
-import { BottomBar, Container, TabContainer } from "./styled";
+import { BottomBar, Container, StyledTypography, TabContainer } from "./styled";
 import { Props } from "./types";
 
 export * from "./hooks/use-tabs";
@@ -22,7 +21,7 @@ export const Tabs = ({
             onClick && !disabledList[index] ? () => onClick(index) : undefined
           }
         >
-          <Typography
+          <StyledTypography
             specs={{ variant: "label1", type: "medium" }}
             color={
               disabledList[index]
@@ -33,7 +32,7 @@ export const Tabs = ({
             }
           >
             {tab}
-          </Typography>
+          </StyledTypography>
           {!noBottomBar && <BottomBar isActive={isActive} />}
         </TabContainer>
       );
