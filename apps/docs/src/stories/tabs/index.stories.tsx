@@ -3,11 +3,12 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Tabs } from "@talentprotocol/design-system";
 
 const Container = styled.div`
-  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
+  background: grey;
+  width: 200px;
 `;
 
 export default {

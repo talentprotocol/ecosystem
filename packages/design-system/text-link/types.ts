@@ -15,4 +15,5 @@ export interface Props {
   size: TextLinkSizes;
   href: string;
   newPage?: boolean;
+  onClick?: () => void;
 }

@@ -9,6 +9,10 @@ export const Container = styled.div`
   align-items: center;
   gap: 24px;
   overflow: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 export const TabContainer = styled.div<StyledTabContainerProps>`

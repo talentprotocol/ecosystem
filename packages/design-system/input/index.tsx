@@ -38,7 +38,7 @@ export const Input = ({
           color={
             (isDisabled && "primaryDisable") ||
             (hasError && "dangerTint01") ||
-            "primary04"
+            "primary01"
           }
         >
           {label}

@@ -11,12 +11,14 @@ export const TextLink = ({
   size,
   href,
   newPage = false,
+  onClick
 }: Props) => (
   <Container>
     <InnerContainer
       href={href}
       color={color}
       target={newPage ? "_blank" : "_self"}
+      onClick={onClick}
     >
       {!!leftIcon && <Icon name={leftIcon} color={color} />}
       <Typography
