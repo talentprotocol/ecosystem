@@ -93,6 +93,7 @@ export type SVGList =
   | "swap"
   | "talent-protocol"
   | "talent"
+  | "target"
   | "telegram"
   | "tool-box"
   | "trophy"

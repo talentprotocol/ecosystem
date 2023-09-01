@@ -84,6 +84,7 @@ import { Supporting } from "./supporting";
 import { Swap } from "./swap";
 import { TalentProtocol } from "./talent-protocol";
 import { Talent } from "./talent";
+import { Target } from "./target";
 import { Telegram } from "./telegram";
 import { ToolBox } from "./tool-box";
 import { Trophy } from "./trophy";
@@ -215,6 +216,7 @@ export const icons: IconMapType = {
   swap: Swap,
   "talent-protocol": TalentProtocol,
   talent: Talent,
+  target: Target,
   telegram: Telegram,
   "tool-box": ToolBox,
   trophy: Trophy,
