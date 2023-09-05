@@ -18,9 +18,10 @@ export const TagsInput = ({
   onTagAdded = () => {},
   onNewQueryTerm = () => {},
   suggestions,
+  defaultTags = [],
 }: TagsInputProps) => {
   const inputAreaRef = useRef<HTMLDivElement>(null);
-  const [tags, setTags] = useState<string[]>([]);
+  const [tags, setTags] = useState<string[]>(defaultTags);
   const addTag = useCallback(
     (tag: string) => {
       onTagAdded(tag);
@@ -78,7 +79,7 @@ export const TagsInput = ({
           onKeyDown={handleKeyDown}
         />
       </InputContainer>
-      {suggestions && (
+      {!!suggestions.length && (
         <SuggestionsContainer>
             <SuggestionsList>
             {suggestions.map((suggestion) => (
