@@ -11,7 +11,7 @@ export const TextLink = ({
   size,
   href,
   newPage = false,
-  onClick
+  onClick,
 }: Props) => (
   <Container>
     <InnerContainer

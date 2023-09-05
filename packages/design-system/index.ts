@@ -27,3 +27,4 @@ export * from "./alert";
 export * from "./global-styles";
 export * from "./notification-icon";
 export * from "./pagination";
+export * from "./tags-input";
