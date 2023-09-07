@@ -15,7 +15,7 @@ export const TagsInput = ({
   label,
   description,
   placeholder = "",
-  onTagAdded = () => {},
+  onTagsUpdate = () => {},
   onNewQueryTerm = () => {},
   suggestions,
   defaultTags = [],
@@ -24,13 +24,23 @@ export const TagsInput = ({
   const [tags, setTags] = useState<string[]>(defaultTags);
   const addTag = useCallback(
     (tag: string) => {
-      onTagAdded(tag);
-      setTags([...tags, tag]);
+      const newTags = [...tags, tag];
+      onTagsUpdate(newTags);
+      setTags(newTags);
       if (inputAreaRef.current) {
         inputAreaRef.current.innerText = "";
       }
     },
     [inputAreaRef, tags]
+  );
+  const removeTag = useCallback(
+    (index: number) => {
+      const newTags = [...tags];
+      newTags.splice(index, 1);
+      setTags(newTags);
+      onTagsUpdate(newTags);
+    },
+    [tags, onTagsUpdate, setTags]
   );
   useEffect(() => {
     if (inputAreaRef.current) {
@@ -62,7 +72,7 @@ export const TagsInput = ({
         </Typography>
       )}
       <InputContainer>
-        {tags.map((tag) => (
+        {tags.map((tag, index) => (
           <Tag
             key={tag}
             label={tag}
@@ -70,6 +80,8 @@ export const TagsInput = ({
             textColor="primary01"
             size="small"
             borderColor="primary01"
+            rightIcon="remove"
+            rightIconCallback={() => removeTag(index)}
           />
         ))}
         <InputArea
@@ -81,21 +93,21 @@ export const TagsInput = ({
       </InputContainer>
       {!!suggestions.length && (
         <SuggestionsContainer>
-            <SuggestionsList>
+          <SuggestionsList>
             {suggestions.map((suggestion) => (
-                <SuggestionOption
+              <SuggestionOption
                 key={suggestion}
                 onClick={() => addTag(suggestion)}
-                >
+              >
                 <Typography
-                    specs={{ type: "regular", variant: "p2" }}
-                    color="primary04"
+                  specs={{ type: "regular", variant: "p2" }}
+                  color="primary04"
                 >
-                    {suggestion}
+                  {suggestion}
                 </Typography>
-                </SuggestionOption>
+              </SuggestionOption>
             ))}
-            </SuggestionsList>
+          </SuggestionsList>
         </SuggestionsContainer>
       )}
       {description && (

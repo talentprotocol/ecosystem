@@ -2,7 +2,7 @@ export interface TagsInputProps {
   label?: string;
   description?: string;
   placeholder?: string;
-  onTagAdded?: (tag: string) => void;
+  onTagsUpdate?: (tags: string[]) => void;
   suggestions: string[];
   onNewQueryTerm: (query: string) => void;
   defaultTags?: string[];

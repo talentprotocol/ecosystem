@@ -22,5 +22,5 @@ Default.args = {
   description: "Min 3, up to 10",
   placeholder: "Search skills, interests, roles",
   suggestions: ["test"],
-  defaultTags: ["asdasd"]
+  defaultTags: ["asdasd"],
 };
