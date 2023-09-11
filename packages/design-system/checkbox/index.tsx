@@ -1,4 +1,4 @@
-import { SyntheticEvent, useCallback } from "react";
+import { MouseEventHandler, SyntheticEvent, useCallback, useState } from "react";
 import { Icon } from "../icon";
 import { Typography } from "../typography";
 import { CheckSquare, Container, IconContainer } from "./styled";
@@ -7,32 +7,42 @@ import { Props } from "./types";
 export const Checkbox = ({
   isChecked,
   isDisabled = false,
-  ref,
+  checkboxRef,
   label,
   onChange,
   onCheckboxClick,
   hasNoAction = false,
 }: Props) => {
+  const [updatedState, setUpdatedState] = useState(isChecked);
   const dummyEventClogger = useCallback(
     (e: SyntheticEvent<HTMLInputElement>) => {
+      setUpdatedState(!updatedState);
       e.preventDefault();
       e.stopPropagation();
     },
-    []
+    [setUpdatedState, updatedState]
   );
+  const callbackWrapper = useCallback<MouseEventHandler<HTMLInputElement>>((e) => { 
+    e.preventDefault();
+    e.stopPropagation();
+    setUpdatedState(!updatedState);
+    onCheckboxClick(e);
+  }, [setUpdatedState, updatedState, onCheckboxClick]);
+
+  console.log(hasNoAction)
   return (
     <Container>
       <CheckSquare
-        ref={ref}
+        ref={checkboxRef}
         type="checkbox"
-        defaultChecked={isChecked}
+        isChecked={updatedState}
         isDisabled={isDisabled}
         onChange={onChange}
-        onClick={hasNoAction ? dummyEventClogger : onCheckboxClick}
+        onClick={hasNoAction ? dummyEventClogger : callbackWrapper}
         hasNoAction={hasNoAction}
       />
-      {isChecked && (
-        <IconContainer>
+      {updatedState && (
+        <IconContainer onClick={hasNoAction ? dummyEventClogger : callbackWrapper}>
           <Icon name="check-chat" size={8} color="bg01" />
         </IconContainer>
       )}

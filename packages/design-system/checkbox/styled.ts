@@ -20,19 +20,20 @@ export const CheckSquare = styled.input<CheckSquareProps>`
   cursor: pointer;
   transition-duration: 0.25s;
 
-  ${({ hasNoAction }) => hasNoAction && "cursor: default;"}
-  :checked {
+  ${({ hasNoAction }) => !!hasNoAction && "cursor: default;"}
+
+
+  ${({ isChecked, isDisabled }) => isChecked && `
     background-color: ${buildColor("primary")};
     border: 1px solid ${buildColor("primary")};
 
-    ${({ isDisabled }) =>
-      isDisabled &&
+    ${isDisabled &&
       css`
         pointer-events: none;
         background-color: ${buildColor("primaryTint01")};
         border: 1px solid ${buildColor("primaryTint01")};
       `}
-  }
+  `}
 
   ${({ isDisabled }) =>
     isDisabled &&

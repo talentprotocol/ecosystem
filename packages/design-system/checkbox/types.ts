@@ -3,6 +3,7 @@ import { ChangeEventHandler, MouseEventHandler } from "react";
 export interface CheckSquareProps {
   isDisabled: boolean;
   hasNoAction: boolean;
+  isChecked: boolean;
 }
 
 export interface Props {
@@ -11,6 +12,6 @@ export interface Props {
   isDisabled?: boolean;
   onChange?: ChangeEventHandler<HTMLInputElement>;
   onCheckboxClick: MouseEventHandler<HTMLInputElement>;
-  ref?: React.Ref<HTMLInputElement>;
+  checkboxRef?: React.Ref<HTMLInputElement>;
   hasNoAction?: boolean;
 }
