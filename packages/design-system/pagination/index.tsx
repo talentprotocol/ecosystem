@@ -46,7 +46,6 @@ export const Pagination = ({
           />
         );
       }
-      console.log(state.selectedPage);
       return (
         <PaginationItem
           key={page.value}

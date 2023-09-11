@@ -16,6 +16,7 @@ export const CheckSquare = styled.input<CheckSquareProps>`
   width: 16px;
   height: 16px;
   border: 1px solid ${buildColor("primary04")};
+  background: ${buildColor("bg01")};
   border-radius: 4px;
   cursor: pointer;
   transition-duration: 0.25s;

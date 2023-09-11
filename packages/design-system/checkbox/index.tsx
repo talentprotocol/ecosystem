@@ -35,7 +35,6 @@ export const Checkbox = ({
     onCheckboxClick(e);
   }, [setUpdatedState, updatedState, onCheckboxClick, checkboxRef]);
 
-  console.log(hasNoAction)
   return (
     <Container>
       <CheckSquare
