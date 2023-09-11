@@ -11,7 +11,7 @@ export interface Props {
   label?: string;
   isDisabled?: boolean;
   onChange?: ChangeEventHandler<HTMLInputElement>;
-  onCheckboxClick: MouseEventHandler<HTMLInputElement>;
-  checkboxRef?: React.Ref<HTMLInputElement>;
+  onCheckboxClick?: MouseEventHandler<HTMLInputElement>;
+  checkboxRef: React.Ref<HTMLInputElement>;
   hasNoAction?: boolean;
 }

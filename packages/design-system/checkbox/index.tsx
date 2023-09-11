@@ -1,8 +1,10 @@
-import { MouseEventHandler, SyntheticEvent, useCallback, useState } from "react";
+import { MouseEventHandler, SyntheticEvent, createRef, useCallback, useRef, useState } from "react";
 import { Icon } from "../icon";
 import { Typography } from "../typography";
 import { CheckSquare, Container, IconContainer } from "./styled";
 import { Props } from "./types";
+
+// TODO: Fix issues on the checkbox component ref (not working)
 
 export const Checkbox = ({
   isChecked,
@@ -10,7 +12,7 @@ export const Checkbox = ({
   checkboxRef,
   label,
   onChange,
-  onCheckboxClick,
+  onCheckboxClick = () =>{},
   hasNoAction = false,
 }: Props) => {
   const [updatedState, setUpdatedState] = useState(isChecked);
@@ -25,9 +27,13 @@ export const Checkbox = ({
   const callbackWrapper = useCallback<MouseEventHandler<HTMLInputElement>>((e) => { 
     e.preventDefault();
     e.stopPropagation();
+    // @ts-ignore
+    if (!checkboxRef.current) return;
+    // @ts-ignore
+    checkboxRef.current.checked = !updatedState;
     setUpdatedState(!updatedState);
     onCheckboxClick(e);
-  }, [setUpdatedState, updatedState, onCheckboxClick]);
+  }, [setUpdatedState, updatedState, onCheckboxClick, checkboxRef]);
 
   console.log(hasNoAction)
   return (
@@ -36,6 +42,7 @@ export const Checkbox = ({
         ref={checkboxRef}
         type="checkbox"
         isChecked={updatedState}
+        defaultChecked={updatedState}
         isDisabled={isDisabled}
         onChange={onChange}
         onClick={hasNoAction ? dummyEventClogger : callbackWrapper}
