@@ -1,3 +1,4 @@
+import { ReactEventHandler } from "react";
 import { PaletteTokens } from "../colors/palette/types";
 import { SVGList } from "../icon/types";
 
@@ -17,4 +18,5 @@ export interface Props {
   backgroundColor: PaletteTokens;
   textColor: PaletteTokens;
   borderColor?: PaletteTokens;
+  rightIconCallback?: ReactEventHandler;
 }

@@ -258,5 +258,5 @@ export const icons: IconMapType = {
   tiktok: TikTok,
   youtube: Youtube,
   "position-placeholder": PositionPlaceholder,
-  "mastodon": Mastodon
+  mastodon: Mastodon,
 };

@@ -12,6 +12,7 @@ export const Tag = ({
   backgroundColor,
   textColor,
   borderColor,
+  rightIconCallback,
 }: Props) => (
   <Container
     backgroundColor={backgroundColor}
@@ -35,7 +36,7 @@ export const Tag = ({
       {label}
     </Typography>
     {!!rightIcon ? (
-      <RightIconContainer>
+      <RightIconContainer onClick={rightIconCallback}>
         <Icon name={rightIcon} color={textColor} size={12} />
       </RightIconContainer>
     ) : (

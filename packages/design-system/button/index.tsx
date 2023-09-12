@@ -29,9 +29,11 @@ export const Button = ({
   href,
   isLoading = false,
   onClick,
+  buttonRef
 }: Props) => {
   return (
     <StyledButton
+      ref={buttonRef}
       as={!!href ? "a" : "button"}
       hierarchy={hierarchy}
       size={size}

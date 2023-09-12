@@ -1,4 +1,4 @@
-import { MouseEventHandler } from "react";
+import { MouseEventHandler, Ref } from "react";
 import { FlattenSimpleInterpolation } from "styled-components";
 import { PaletteTokens } from "../colors/palette/types";
 import { SVGList } from "../icon/types";
@@ -49,4 +49,5 @@ export interface Props {
   rightIcon?: SVGList;
   onClick?: MouseEventHandler;
   isLoading?: boolean;
+  buttonRef?: Ref<HTMLButtonElement>;
 }
