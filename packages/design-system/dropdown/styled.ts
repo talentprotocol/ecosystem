@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 import { buildColor } from "../colors";
 import { getTheme } from "../theme";
-import { OptionProps } from "./types";
+import { OptionProps, StyledContainerProps } from "./types";
 
 export const OutterContainer = styled.div`
   position: relative;
@@ -9,7 +9,7 @@ export const OutterContainer = styled.div`
   cursor: pointer;
 `;
 
-export const Container = styled.div`
+export const Container = styled.div<StyledContainerProps>`
   display: flex;
   align-items: center;
   padding: 8px 10px;
@@ -21,6 +21,7 @@ export const Container = styled.div`
     flex-grow: 1;
   }
 
+ ${({ isDisabled }) => !isDisabled ? css`
   :hover {
     border: 1px solid ${buildColor("primary")};
   }
@@ -29,6 +30,9 @@ export const Container = styled.div`
     border: 1px solid ${buildColor("primary")};
     box-shadow: 0px 0px 0px 3px ${buildColor("primaryTint02")};
   }
+ ` : `
+    background: ${buildColor("primaryDisable")};
+ `}
 `;
 
 export const SelectedOptionContainer = styled.div`

@@ -1,6 +1,10 @@
 import { PaletteTokens } from "../colors/palette/types";
 import { SVGList } from "../icon/types";
 
+export interface StyledContainerProps {
+  isDisabled: boolean;
+}
+
 export interface OptionProps {
   value: string;
   iconName?: SVGList;
@@ -14,4 +18,5 @@ export interface Props {
   selectedOption?: OptionProps;
   selectOption: (value: OptionProps) => void;
   onBlur?: () => void;
+  isDisabled?: boolean;
 }

@@ -19,6 +19,7 @@ export const Dropdown = ({
   },
   onBlur = () => {},
   selectOption,
+  isDisabled = false,
 }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
   const outterContainerRef = useRef<HTMLDivElement>(null);
@@ -35,12 +36,12 @@ export const Dropdown = ({
   );
   return (
     <OutterContainer
-      onFocus={() => setIsOpen(true)}
+      onFocus={() => !isDisabled && setIsOpen(true)}
       onBlur={onBlurCallback}
       tabIndex={0}
       ref={outterContainerRef}
     >
-      <Container>
+      <Container isDisabled={isDisabled}>
         {!selectedOption.value && (
           <Typography
             specs={{ variant: "label2", type: "regular" }}
