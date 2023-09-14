@@ -29,7 +29,8 @@ export const Button = ({
   href,
   isLoading = false,
   onClick,
-  buttonRef
+  buttonRef,
+  children
 }: Props) => {
   return (
     <StyledButton
@@ -70,7 +71,7 @@ export const Button = ({
               </Typography>
             </ButtonTextContainer>
           ) : (
-            <></>
+            <ButtonTextContainer isHidden={isLoading}>{children}</ButtonTextContainer>
           )}
           {isLoading && (
             <SpinnerContainer>

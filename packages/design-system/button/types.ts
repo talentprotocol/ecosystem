@@ -50,4 +50,5 @@ export interface Props {
   onClick?: MouseEventHandler;
   isLoading?: boolean;
   buttonRef?: Ref<HTMLButtonElement>;
+  children?: React.ReactNode;
 }
