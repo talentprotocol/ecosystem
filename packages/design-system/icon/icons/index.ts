@@ -128,6 +128,7 @@ import { TikTok } from "./tik-tok";
 import { Youtube } from "./youtube";
 import { PositionPlaceholder } from "./position-placeholder";
 import { Mastodon } from "./mastodon";
+import { Pinned } from "./pinned";
 
 export const icons: IconMapType = {
   flags: Flags,
@@ -259,4 +260,5 @@ export const icons: IconMapType = {
   youtube: Youtube,
   "position-placeholder": PositionPlaceholder,
   mastodon: Mastodon,
+  pinned: Pinned,
 };
