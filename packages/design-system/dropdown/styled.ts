@@ -101,3 +101,9 @@ export const Option = styled.div<OptionProps>`
       }
     `}
 `;
+
+export const Label = styled.div`
+  display: flex;
+  gap: 4px;
+  margin-bottom: 10px;
+`;

@@ -4,6 +4,7 @@ import {
   Container,
   InputContainer,
   LabelBar,
+  Label,
   RightIconContainer,
   StyledInput,
 } from "./styled";
@@ -29,9 +30,11 @@ export const Input = ({
   rightIcon,
   rightIconCallback,
   forceLowerCase = false,
+  required = false
 }: Props) => (
   <Container>
     <LabelBar>
+      <Label>
       {label && (
         <Typography
           specs={{ variant: "p2", type: "bold" }}
@@ -44,6 +47,15 @@ export const Input = ({
           {label}
         </Typography>
       )}
+      {required && (
+        <Typography
+          specs={{ variant: "p2", type: "bold" }}
+          color="dangerTint01"
+        >
+          *
+        </Typography>
+      )}
+      </Label>
       {caption && (
         <Typography
           specs={{ variant: "p3", type: "bold" }}

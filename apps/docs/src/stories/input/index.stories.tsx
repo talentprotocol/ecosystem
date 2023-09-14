@@ -36,4 +36,5 @@ Default.args = {
   caption: "",
   isDisabled: false,
   hasError: false,
+  required: false,
 };
