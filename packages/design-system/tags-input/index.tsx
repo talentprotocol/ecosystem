@@ -47,7 +47,7 @@ export const TagsInput = ({
       inputAreaRef.current.focus();
     }
   }, [inputAreaRef]);
-  const handleKeyDown = useCallback(
+  const handleKeyUp = useCallback(
     (event: React.KeyboardEvent<HTMLDivElement>) => {
       const { key } = event;
       if (key === "Enter") {
@@ -88,7 +88,7 @@ export const TagsInput = ({
           ref={inputAreaRef}
           contentEditable
           placeholder={placeholder}
-          onKeyDown={handleKeyDown}
+          onKeyUp={handleKeyUp}
         />
       </InputContainer>
       {!!suggestions.length && (

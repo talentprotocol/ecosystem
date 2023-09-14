@@ -23,4 +23,7 @@ Default.args = {
   placeholder: "Search skills, interests, roles",
   suggestions: ["test"],
   defaultTags: ["asdasd"],
+  onNewQueryTerm(query) {
+    console.log("New query term", query);
+  },
 };
