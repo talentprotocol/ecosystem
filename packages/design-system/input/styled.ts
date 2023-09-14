@@ -15,6 +15,11 @@ export const LabelBar = styled.div`
   grid-template-columns: 1fr auto;
 `;
 
+export const Label = styled.div`
+  display: flex;
+  gap: 4px;
+`;
+
 export const InputContainer = styled.div<StyledInputProps>`
   color: ${buildColor("primary04")};
   display: flex;

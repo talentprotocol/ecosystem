@@ -19,4 +19,6 @@ export interface Props {
   selectOption: (value: OptionProps) => void;
   onBlur?: () => void;
   isDisabled?: boolean;
+  label?: string;
+  required?: boolean;
 }

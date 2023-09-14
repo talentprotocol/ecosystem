@@ -37,4 +37,5 @@ export interface Props {
   leftIcon?: SVGList;
   leftIconCallback?: Function;
   forceLowerCase?: boolean;
+  required?: boolean;
 }

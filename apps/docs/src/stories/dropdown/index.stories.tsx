@@ -52,5 +52,7 @@ Default.args = {
       isDisabled: true,
     },
   ],
-  isDisabled: false
+  isDisabled: false,
+  label: "",
+  required: false,
 };

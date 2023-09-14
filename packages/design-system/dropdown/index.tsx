@@ -8,6 +8,7 @@ import {
   OptionsInnerContainer,
   Option,
   SelectedOptionContainer,
+  Label,
 } from "./styled";
 import { Props } from "./types";
 
@@ -20,6 +21,8 @@ export const Dropdown = ({
   onBlur = () => {},
   selectOption,
   isDisabled = false,
+  label,
+  required = false,
 }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
   const outterContainerRef = useRef<HTMLDivElement>(null);
@@ -41,6 +44,24 @@ export const Dropdown = ({
       tabIndex={0}
       ref={outterContainerRef}
     >
+      <Label>
+        {label && (
+          <Typography
+            specs={{ variant: "p2", type: "bold" }}
+            color={(isDisabled && "primaryDisable") || "primary01"}
+          >
+            {label}
+          </Typography>
+        )}
+        {required && (
+          <Typography
+            specs={{ variant: "p2", type: "bold" }}
+            color="dangerTint01"
+          >
+            *
+          </Typography>
+        )}
+      </Label>
       <Container isDisabled={isDisabled}>
         {!selectedOption.value && (
           <Typography
