@@ -1,6 +1,6 @@
 {
   "name": "@talentprotocol/design-system",
-  "version": "0.1.92",
+  "version": "0.1.95",
   "main": "./index",
   "types": "./index.d.ts",
   "license": "MIT",
