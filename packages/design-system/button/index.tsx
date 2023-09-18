@@ -54,7 +54,7 @@ export const Button = ({
         size={size}
       >
         <>
-          {!!text ? (
+          {!!text && (
             <ButtonTextContainer isHidden={isLoading}>
               <Typography
                 specs={{
@@ -70,7 +70,8 @@ export const Button = ({
                 {text}
               </Typography>
             </ButtonTextContainer>
-          ) : (
+          )}
+          {!!children && (
             <ButtonTextContainer isHidden={isLoading}>{children}</ButtonTextContainer>
           )}
           {isLoading && (

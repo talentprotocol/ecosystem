@@ -1,22 +1,20 @@
 {
   "name": "@talentprotocol/design-system",
-  "version": "0.1.82",
+  "version": "0.1.97",
   "main": "./index",
   "types": "./index.d.ts",
   "license": "MIT",
   "scripts": {
     "lint": "eslint *.ts*",
     "build": "tsc",
-    "patch-release": "tsc && pnpm version patch && npm publish",
+    "patch-release": "tsc && pnpm version patch && pnpm publish",
     "clean-build": "find . -name '*.js' -delete && find . -name '*.d.ts*' -delete"
   },
   "devDependencies": {
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "eslint": "^7.32.0",
-    "eslint-config-custom": "workspace:*",
     "react": "^18.2.0",
-    "tsconfig": "workspace:*",
     "typescript": "latest"
   }
 }
