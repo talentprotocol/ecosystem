@@ -33,7 +33,7 @@ export const Input = ({
   required = false
 }: Props) => (
   <Container>
-    <LabelBar>
+    {!!(label || caption) && <LabelBar>
       <Label>
       {label && (
         <Typography
@@ -64,7 +64,7 @@ export const Input = ({
           {caption}
         </Typography>
       )}
-    </LabelBar>
+    </LabelBar>}
     <InputContainer
       isDisabled={isDisabled}
       hasError={hasError}
