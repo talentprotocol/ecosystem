@@ -22,5 +22,6 @@ export const Default = Template.bind({});
 Default.args = {
   isChecked: true,
   isDisabled: false,
-  label: "label"
+  label: "label",
+  hasNoAction: false
 };
