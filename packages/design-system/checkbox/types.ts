@@ -14,4 +14,5 @@ export interface Props {
   onCheckboxClick?: MouseEventHandler<HTMLInputElement>;
   checkboxRef: React.Ref<HTMLInputElement>;
   hasNoAction?: boolean;
+  children?: React.ReactNode;
 }
