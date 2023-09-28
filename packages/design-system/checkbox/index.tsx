@@ -11,6 +11,7 @@ export const Checkbox = ({
   isDisabled = false,
   checkboxRef,
   label,
+  children,
   onChange,
   onCheckboxClick = () =>{},
   hasNoAction = false,
@@ -60,6 +61,7 @@ export const Checkbox = ({
           {label}
         </Typography>
       )}
+      {children}
     </Container>
   );
 };
