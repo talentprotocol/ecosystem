@@ -7,6 +7,8 @@ export type TagSize = "small" | "medium";
 export interface StyledContainerProps {
   backgroundColor: PaletteTokens;
   borderColor?: PaletteTokens;
+  hoverBackgroundColor?: PaletteTokens;
+  hoverBorderColor?: PaletteTokens;
   size: TagSize;
 }
 
@@ -18,5 +20,7 @@ export interface Props {
   backgroundColor: PaletteTokens;
   textColor: PaletteTokens;
   borderColor?: PaletteTokens;
+  hoverBackgroundColor?: PaletteTokens;
+  hoverBorderColor?: PaletteTokens;
   rightIconCallback?: ReactEventHandler;
 }
