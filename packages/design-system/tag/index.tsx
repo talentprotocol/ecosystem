@@ -12,12 +12,16 @@ export const Tag = ({
   backgroundColor,
   textColor,
   borderColor,
+  hoverBackgroundColor,
+  hoverBorderColor,
   rightIconCallback,
 }: Props) => (
   <Container
     backgroundColor={backgroundColor}
     size={size}
     borderColor={borderColor}
+    hoverBackgroundColor={hoverBackgroundColor}
+    hoverBorderColor={hoverBorderColor}
   >
     {!!leftIcon ? (
       <LeftIconContainer>

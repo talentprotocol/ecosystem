@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { buildColor } from "../colors";
 import { StyledContainerProps } from "./types";
 
@@ -12,6 +12,20 @@ export const Container = styled.div<StyledContainerProps>`
     borderColor && `border: 1px solid ${buildColor(borderColor)};`}
   background-color: ${({ backgroundColor }) => buildColor(backgroundColor)};
   ${({ size }) => (size === "small" ? "padding: 0 0;" : "padding: 2px 0;")};
+  ${({ hoverBackgroundColor }) =>
+    hoverBackgroundColor &&
+    css`
+      &:hover {
+        background-color: ${buildColor(hoverBackgroundColor)}
+      }
+    `}
+  ${({ hoverBorderColor }) =>
+    hoverBorderColor &&
+    css`
+      &:hover {
+        border-color: ${buildColor(hoverBorderColor)}
+      }
+    `}
 `;
 
 export const LeftIconContainer = styled.div`
@@ -20,4 +34,5 @@ export const LeftIconContainer = styled.div`
 
 export const RightIconContainer = styled.div`
   margin-right: 8px;
+  cursor: pointer;
 `;

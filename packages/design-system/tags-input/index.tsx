@@ -79,9 +79,11 @@ export const TagsInput = ({
             backgroundColor="bg01"
             textColor="primary01"
             size="small"
-            borderColor="primary01"
+            borderColor="surfaceHover02"
             rightIcon="remove"
             rightIconCallback={() => removeTag(index)}
+            hoverBackgroundColor="surfaceHover01"
+            hoverBorderColor="surfaceHover02"
           />
         ))}
         <InputArea
