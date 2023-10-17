@@ -66,7 +66,7 @@ export const Dropdown = ({
         {!selectedOption.value && (
           <Typography
             specs={{ variant: "label2", type: "regular" }}
-            color="primary04"
+            color={(isDisabled && "primaryDisable") || "primary04"}
           >
             {placeholder}
           </Typography>
@@ -82,7 +82,7 @@ export const Dropdown = ({
             )}
             <Typography
               specs={{ variant: "label2", type: "regular" }}
-              color="primary01"
+              color={(isDisabled && "primaryDisable") || "primary01"}
             >
               {selectedOption.value}
             </Typography>
@@ -90,7 +90,7 @@ export const Dropdown = ({
         )}
         <Icon
           name={isOpen ? "order-by-active" : "order-by"}
-          color="primary03"
+          color={(isDisabled && "primaryDisable") || "primary03"}
         />
       </Container>
       {isOpen && (
