@@ -31,7 +31,7 @@ export const Container = styled.div<StyledContainerProps>`
     box-shadow: 0px 0px 0px 3px ${buildColor("primaryTint02")};
   }
  ` : `
-    background: ${buildColor("primaryDisable")};
+    border: 1px solid ${buildColor("surfaceHover01")};
  `}
 `;
 
