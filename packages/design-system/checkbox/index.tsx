@@ -1,4 +1,4 @@
-import { MouseEventHandler, SyntheticEvent, createRef, useCallback, useRef, useState } from "react";
+import { MouseEventHandler, SyntheticEvent, useEffect, useCallback, useState } from "react";
 import { Icon } from "../icon";
 import { Typography } from "../typography";
 import { CheckSquare, Container, IconContainer } from "./styled";
@@ -35,6 +35,10 @@ export const Checkbox = ({
     setUpdatedState(!updatedState);
     onCheckboxClick(e);
   }, [setUpdatedState, updatedState, onCheckboxClick, checkboxRef]);
+
+  useEffect(() => {
+    setUpdatedState(isChecked)
+  }, [isChecked])
 
   return (
     <Container>
