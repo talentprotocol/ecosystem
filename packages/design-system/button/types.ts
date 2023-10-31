@@ -51,4 +51,5 @@ export interface Props {
   isLoading?: boolean;
   buttonRef?: Ref<HTMLButtonElement>;
   children?: React.ReactNode;
+  ariaLabel?: string;
 }

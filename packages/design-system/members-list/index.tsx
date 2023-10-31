@@ -8,7 +8,7 @@ import {
 } from "./styled";
 import { Props } from "./types";
 
-export const MembersList = ({ membersImages, totalMembers }: Props) => (
+export const MembersList = ({ membersImages, totalMembers, label = "members" }: Props) => (
   <MembersContainer>
     <AvatarsHorizontalStack>
       {membersImages.slice(0, 4).map((memberImage) => (
@@ -29,7 +29,7 @@ export const MembersList = ({ membersImages, totalMembers }: Props) => (
           specs={{ variant: "label3", type: "medium" }}
           color="primary02"
         >
-          members
+          {label}
         </Typography>
       </MembersCounterContainer>
     )}
