@@ -34,4 +34,5 @@ ButtonComponent.args = {
   text: "Button Content",
   iconColor: "bg01",
   isLoading: false,
+  ariaLabel: "Button Label"
 };

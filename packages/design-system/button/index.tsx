@@ -30,7 +30,8 @@ export const Button = ({
   isLoading = false,
   onClick,
   buttonRef,
-  children
+  children,
+  ariaLabel
 }: Props) => {
   return (
     <StyledButton
@@ -45,6 +46,7 @@ export const Button = ({
       target={newPage ? "_blank" : "_self"}
       onClick={!isLoading ? onClick : undefined}
       hasNoText={(!!leftIcon || !!rightIcon) && !text}
+      aria-label={ariaLabel || text}
     >
       <ButtonLabel
         leftIcon={leftIcon}

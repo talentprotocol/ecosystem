@@ -30,5 +30,5 @@ Default.args = {
     "https://i.pravatar.cc/303?img=1",
   ],
   totalMembers: 100,
-  label: "Members"
+  label: "new label"
 };
