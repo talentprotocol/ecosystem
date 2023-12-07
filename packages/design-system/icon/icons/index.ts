@@ -129,6 +129,7 @@ import { Youtube } from "./youtube";
 import { PositionPlaceholder } from "./position-placeholder";
 import { Mastodon } from "./mastodon";
 import { Pinned } from "./pinned";
+import { ActivityBadge } from "./activity-badge";
 
 export const icons: IconMapType = {
   flags: Flags,
@@ -261,4 +262,5 @@ export const icons: IconMapType = {
   "position-placeholder": PositionPlaceholder,
   mastodon: Mastodon,
   pinned: Pinned,
+  "activity-badge": ActivityBadge
 };

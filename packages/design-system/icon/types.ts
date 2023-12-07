@@ -136,7 +136,8 @@ export type SVGList =
   | "youtube"
   | "position-placeholder"
   | "mastodon"
-  | "pinned";
+  | "pinned"
+  | "activity-badge";
 
 export type IconMapType = Record<SVGList, ElementType>;
 
