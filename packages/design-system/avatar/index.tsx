@@ -44,6 +44,7 @@ export const Avatar = ({
   ellipsisAt = 0,
   profileURL = "",
   square = false,
+  isActive = false,
 }: Props) => {
   const computedProfileURL = !isDisabled ? profileURL : "";
   return (
@@ -73,6 +74,7 @@ export const Avatar = ({
               </StyledName>
             </LinkWrapper>
             {!!isVerified && <Icon name="verified-2" size={16} />}
+            {!!isActive && <Icon name="activity-badge" size={16} />}
           </DetailedInfoRow>
           <DetailedInfoRow ellipsisAt={ellipsisAt}>
             {!!ticker && (

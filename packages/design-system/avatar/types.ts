@@ -38,4 +38,5 @@ export interface Props {
   ellipsisAt?: number;
   profileURL?: string;
   square?: boolean;
+  isActive?: boolean;
 }
