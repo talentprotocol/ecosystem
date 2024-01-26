@@ -1,13 +1,13 @@
 {
   "name": "@talentprotocol/design-system",
-  "version": "0.1.110",
+  "version": "0.1.116",
   "main": "./index",
   "types": "./index.d.ts",
   "license": "MIT",
   "scripts": {
     "lint": "eslint *.ts*",
     "build": "tsc",
-    "patch-release": "tsc && pnpm version patch && pnpm publish",
+    "patch-release": "tsc && pnpm version patch && pnpm publish --no-git-checks",
     "clean-build": "find . -name '*.js' -delete && find . -name '*.d.ts*' -delete"
   },
   "devDependencies": {
