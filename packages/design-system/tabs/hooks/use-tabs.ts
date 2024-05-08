@@ -1,7 +1,7 @@
 import { useCallback, useState } from "react";
 
-export const useTabs = () => {
-  const [selectedIndex, setSelectedIndex] = useState(0);
+export const useTabs = (initialIndex = 0) => {
+  const [selectedIndex, setSelectedIndex] = useState(initialIndex);
   const selectElement = useCallback(
     (index: number) => {
       setSelectedIndex(index);
