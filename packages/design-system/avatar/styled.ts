@@ -3,15 +3,17 @@ import { Typography } from "../typography";
 import {
   DataColumnProps,
   DataInfoRowProps,
-  ImageSizeMapType,
+  SizeMapType,
   LinkWrapperProps,
   StyledImageProps,
   StyledNameProps,
+  BadgeProps,
+  BadgeBorderProps,
 } from "./types";
 import { mobileStyles } from "../breakpoints";
 import { buildColor } from "../colors";
 
-const IMAGE_SIZE_MAP: ImageSizeMapType = {
+const IMAGE_SIZE_MAP: SizeMapType = {
   xs: css`
     width: 24px;
     height: 24px;
@@ -33,6 +35,65 @@ const IMAGE_SIZE_MAP: ImageSizeMapType = {
     height: 120px;
   `,
 };
+
+const AVATAR_SIZE_MAP: SizeMapType = {
+  xs: css`
+    width: 8px;
+    height: 8px;
+  `,
+  sm: css`
+    width: 11px;
+    height: 11px;
+  `,
+  md: css`
+    width: 15px;
+    height: 15px;
+  `,
+  lg: css`
+    width: 30px;
+    height: 30px;
+  `,
+  xl: css`
+    width: 41px;
+    height: 41px;
+  `,
+};
+
+const AVATAR_FONT_SIZE_MAP: SizeMapType = {
+  xs: css`
+  font-size: 0.21rem;
+  `,
+  sm: css`
+  font-size: 0.29rem;
+  `,
+  md: css`
+  font-size: 0.36rem;
+  `,
+  lg: css`
+  font-size: 0.80rem;
+  `,
+  xl: css`
+  font-size: 1rem;
+  `,
+};
+
+const getBackgroundColorFromScore = (score: number) => {
+  if (score < 20) {
+      return "#636B74";
+  }
+  if (score < 40) {
+      return "#C38D94";
+  }
+  if (score < 60) {
+      return "#E600E6";
+  }
+  if (score < 80) {
+      return "#1AC8ED";
+  }
+  return "#826AEE";
+};
+
+const getTextColorFromScore = (score: number) => (score > 60 && score < 80) ? "black" : "white";
 
 export const Container = styled.div<{ square: boolean }>`
   display: flex;
@@ -122,3 +183,36 @@ export const StyledName = styled(Typography)<StyledNameProps>`
     text-decoration: underline;
   }
 `;
+
+export const Badge = styled.div<BadgeProps>`
+${({ size }) => AVATAR_SIZE_MAP[size]}
+${({ size }) => AVATAR_FONT_SIZE_MAP[size]}
+background-color: ${({ score }) => getBackgroundColorFromScore(score)};
+color: ${({ score }) => getTextColorFromScore(score)};
+display: flex;
+position: absolute;
+bottom: 14%;
+left: 14%;
+transform: scale(1) translate(-50%, 50%);
+align-items: center;
+justify-content: center;
+align-self: center;
+border-radius: 50%;
+border: 2px solid white;
+letter-spacing: 1px;
+z-index: 1000;
+`
+
+export const BadgeBorder = styled.div<BadgeBorderProps>`
+display: flex;
+position: relative;
+border: 2px solid ${({ score }) => getBackgroundColorFromScore(score)};
+border-radius: 50%;
+`
+
+export const BadgeBorderTransparent = styled.div`
+display: flex;
+position: relative;
+border: 2px solid transparent;
+border-radius: 50%;
+`

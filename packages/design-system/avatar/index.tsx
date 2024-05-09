@@ -5,6 +5,9 @@ import greenAvatar from "./assets/green.png";
 import greenLightAvatar from "./assets/light-green.png";
 import PurpleRectangle from "./assets/purple-rectangle.png";
 import {
+  Badge,
+  BadgeBorder,
+  BadgeBorderTransparent,
   Container,
   DataColumn,
   DetailedInfoRow,
@@ -45,16 +48,35 @@ export const Avatar = ({
   profileURL = "",
   square = false,
   isActive = false,
+  score = 0,
+  showBadge = false,
 }: Props) => {
   const computedProfileURL = !isDisabled ? profileURL : "";
   return (
     <Container square={square}>
       <LinkWrapper href={computedProfileURL} profileURL={computedProfileURL}>
-        <StyledImage
-          size={size}
-          src={!!url ? url : userIdToUndefinedImageEntry(userId, square)}
-          square={square}
-        />
+        {!showBadge ? (
+          <StyledImage
+            size={size}
+            src={!!url ? url : userIdToUndefinedImageEntry(userId, square)}
+            square={square}
+          />
+        ) : (
+          <BadgeBorder score={score}>
+            <BadgeBorderTransparent>
+              <StyledImage
+                size={size}
+                src={!!url ? url : userIdToUndefinedImageEntry(userId, square)}
+                square={square}
+              />
+              {size !== "xs" && size !== "sm" && (
+                <Badge score={score} size={size}>
+                  {score}
+                </Badge>
+              )}
+            </BadgeBorderTransparent>
+          </BadgeBorder>
+        )}
       </LinkWrapper>
       {name && (
         <DataColumn size={size}>

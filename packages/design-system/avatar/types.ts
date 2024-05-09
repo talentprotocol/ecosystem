@@ -2,7 +2,7 @@ import { FlattenSimpleInterpolation } from "styled-components";
 
 export type SizeTypes = "xs" | "sm" | "md" | "lg" | "xl";
 export type UndefinedImageTypes = "0" | "1" | "2" | "3" | "4";
-export type ImageSizeMapType = Record<SizeTypes, FlattenSimpleInterpolation>;
+export type SizeMapType = Record<SizeTypes, FlattenSimpleInterpolation>;
 export type UndefinedImageMapType = Record<UndefinedImageTypes, any>;
 
 export interface StyledImageProps {
@@ -26,6 +26,15 @@ export interface LinkWrapperProps {
   profileURL: string;
 }
 
+export interface BadgeProps {
+  size: SizeTypes;
+  score: number
+}
+
+export interface BadgeBorderProps {
+  score: number
+}
+
 export interface Props {
   size: SizeTypes;
   url?: string;
@@ -39,4 +48,6 @@ export interface Props {
   profileURL?: string;
   square?: boolean;
   isActive?: boolean;
+  score?: number;
+  showBadge?: boolean;
 }
