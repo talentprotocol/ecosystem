@@ -39,4 +39,6 @@ Default.args = {
   isDisabled: false,
   profileURL: "",
   square: false,
+  showBadge: true,
+  score: 45,
 };
