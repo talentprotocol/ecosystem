@@ -42,35 +42,35 @@ const AVATAR_SIZE_MAP: SizeMapType = {
     height: 8px;
   `,
   sm: css`
-    width: 11px;
-    height: 11px;
+    width: 12px;
+    height: 12px;
   `,
   md: css`
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
   `,
   lg: css`
     width: 30px;
     height: 30px;
   `,
   xl: css`
-    width: 41px;
-    height: 41px;
+    width: 42px;
+    height: 42px;
   `,
 };
 
 const AVATAR_FONT_SIZE_MAP: SizeMapType = {
   xs: css`
-  font-size: 0.21rem;
+  font-size: 0.2rem;
   `,
   sm: css`
-  font-size: 0.29rem;
+  font-size: 0.3rem;
   `,
   md: css`
-  font-size: 0.36rem;
+  font-size: 0.6rem;
   `,
   lg: css`
-  font-size: 0.80rem;
+  font-size: 0.8rem;
   `,
   xl: css`
   font-size: 1rem;
