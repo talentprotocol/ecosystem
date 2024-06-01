@@ -54,7 +54,7 @@ export const Avatar = ({
   const computedProfileURL = !isDisabled ? profileURL : "";
   return (
     <Container square={square}>
-      <LinkWrapper href={computedProfileURL} profileURL={computedProfileURL}>
+      <LinkWrapper href={computedProfileURL} target="_blank" profileURL={computedProfileURL}>
         {!showBadge ? (
           <StyledImage
             size={size}

@@ -200,7 +200,7 @@ align-self: center;
 border-radius: 50%;
 border: 2px solid white;
 letter-spacing: 1px;
-z-index: 1000;
+z-index: 500;
 `
 
 export const BadgeBorder = styled.div<BadgeBorderProps>`
